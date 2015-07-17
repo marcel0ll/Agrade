@@ -1,0 +1,2452 @@
+{
+    "nome": "MU 2004/1 - LICENCIATURA EM MÚSICA - EDUCAÇÃO MUSICAL",
+    "disciplinas": [
+        {
+            "id": "281484",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "280305"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "INTRODUÇÃO AO SOM",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "281549",
+            "requisitos": [
+                "(281484",
+                "280305)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "SOM I",
+            "creditos": "6",
+            "aulas": "2",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "282014",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PRÁTICA INSTRUMENTAL ORFF",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283002",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "280755"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CONSTRUCAO DE INSTRUMENTOS E ORGANOLOGIA I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283096",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                "283347"
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "EDUCACAO MUSICAL: PRATICA E ENSINO I",
+            "creditos": "6",
+            "aulas": "2",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "283185",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "FLAUTA DOCE I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283240",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "INICIACAO A PESQUISA EM EDUCACAO MUSICAL",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283258",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "LINGUAGEM E ESTRUTURACAO MUSICAL I",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283347",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PERCEPCAO E NOTACAO MUSICAL I",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283380",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PERCUSSAO I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "282146",
+            "requisitos": [
+                "283347"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PRÁTICA DE LEITURA E ESCRITA RÍTMICA 1",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "282154",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "MÚSICA ELETROACÚSTICA I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "282200",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "VOZES DO MUNDO",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283010",
+            "requisitos": [
+                "(283002",
+                "280755)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "280534"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CONSTRUCAO DE INSTRUMENTOS E ORGANOLOGIA 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283100",
+            "requisitos": [
+                "283096"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "EDUCACAO MUSICAL: PRATICA E ENSINO 2",
+            "creditos": "6",
+            "aulas": "2",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "283193",
+            "requisitos": [
+                "283185"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "FLAUTA DOCE 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283266",
+            "requisitos": [
+                "283258"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "LINGUAGEM E ESTRUTURACAO MUSICAL 2",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283355",
+            "requisitos": [
+                "283347"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PERCEPCAO E NOTACAO MUSICAL 2",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283398",
+            "requisitos": [
+                "283380"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PERCUSSAO 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283495",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "TOPICOS EM EDUCACAO, CULTURA E SOCIEDADE I",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283533",
+            "requisitos": [
+                "(283347 E 283258)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "VIOLAO POPULAR I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283550",
+            "requisitos": [
+                "(283347 E 283258)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "VOZ E EXPRESSAO I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283738",
+            "requisitos": [
+                "283185"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "ENSINO COLETIVO DE SOPROS",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283746",
+            "requisitos": [
+                "283185"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "ENSINO COLETIVO DE SOPROS II",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "064190",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "LEITURA EM LÍNGUA INGLESA PARA EDUCAÇÃO MUSICAL",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "192007",
+            "requisitos": [
+                "283258"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "METODOLOGIA E PRATICA DE ENSINO EM EDUCACAO MUSICAL",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "280046",
+            "requisitos": [
+                "283347",
+                "283185",
+                "283533",
+                "283380"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PRÁTICA INSTRUMENTAL 1",
+            "creditos": "4",
+            "aulas": "0",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "281018",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "CANTO CORAL 1",
+            "creditos": "4",
+            "aulas": "0",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "282162",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PRÁTICA DE LEITURA E ESCRITA RÍTMICA 2",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "282170",
+            "requisitos": [
+                "282154"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "MÚSICA ELETROACÚSTICA II",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283029",
+            "requisitos": [
+                "283002"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "CONSTRUCAO DE INSTRUMENTOS E ORGANOLOGIA 3",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283118",
+            "requisitos": [
+                "283100"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "EDUCACAO MUSICAL: PRATICA E ENSINO 3",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283207",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "FUNDAMENTOS DE ARTE-EDUCACAO",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283223",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "HISTORIA SOCIAL DA MUSICA I",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283274",
+            "requisitos": [
+                "283266"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "LINGUAGEM E ESTRUTURACAO MUSICAL 3",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283304",
+            "requisitos": [
+                "(283347",
+                "283258)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "MUSICA E TECNOLOGIA PARA EDUCACAO MUSICAL",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283363",
+            "requisitos": [
+                "283355"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PERCEPCAO E NOTACAO MUSICAL 3",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283460",
+            "requisitos": [
+                "283347"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "TECLADO I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283487",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "TOPICOS EM MUSICA NA EDUCACAO ESPECIAL",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283541",
+            "requisitos": [
+                "283533"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "VIOLAO POPULAR 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283568",
+            "requisitos": [
+                "283550"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "VOZ E EXPRESSAO 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283665",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "INTRODUCAO À APRECIACAO MUSICAL",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "190900",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "191345",
+                "190080",
+                "191906",
+                "192660",
+                "340995",
+                "450014"
+            ],
+            "dispensadaPor": [
+                "344249",
+                "(210129 E 210404)",
+                "530069"
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "DIDÁTICA GERAL",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "280020",
+            "requisitos": [
+                "283568"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "VOZ E EXPRESSÃO 3",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "280062",
+            "requisitos": [
+                "280046"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PRÁTICA INSTRUMENTAL 2",
+            "creditos": "4",
+            "aulas": "0",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "280070",
+            "requisitos": [
+                "283479"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "TECLADO 3",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "281026",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "CANTO CORAL 2",
+            "creditos": "4",
+            "aulas": "0",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "281034",
+            "requisitos": [
+                "283541"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "VIOLÃO POPULAR 3",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "281204",
+            "requisitos": [
+                "283274"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "LINGUAGEM E ESTRUTURAÇÃO MUSICAL 4",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "281360",
+            "requisitos": [
+                "283002"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "CONSTRUÇÃO DE INSTRUMENTOS E ORGANOLOGIA 4",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283037",
+            "requisitos": [
+                "283266"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CRIACAO MUSICAL I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283126",
+            "requisitos": [
+                "283118"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "EDUCACAO MUSICAL: PRATICA E ENSINO 4",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283231",
+            "requisitos": [
+                "283223"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "HISTORIA SOCIAL DA MUSICA 2",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283282",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "METODOS, TECNICAS E FUNDAMENTOS EM EDUCACAO MUSICAL I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283371",
+            "requisitos": [
+                "283363"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PERCEPCAO E NOTACAO MUSICAL 4",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283479",
+            "requisitos": [
+                "283460"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "TECLADO 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283509",
+            "requisitos": [
+                "283495"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "TOPICOS EM EDUCACAO, CULTURA E SOCIEDADE 2",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283754",
+            "requisitos": [
+                "283398"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PERCUSSÃO 3",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "171018",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "(170070 E 170089)",
+                "(170631 E 170640)",
+                "(170658)",
+                "(170666)",
+                "(170089 E 170550)",
+                "(170550 E 170631)",
+                "(171000)",
+                "(170585)",
+                "(170593 E 170631)",
+                "((170070) E (170089",
+                "170992))",
+                "(170682 E 170593)",
+                "(170640 E 170992)",
+                "(065013 E 065021)",
+                "(170550 E 170089)",
+                "(170070 E 170631)",
+                "(065013 E 170089)",
+                "(170992 E 170550)",
+                "(170593 E 170992)",
+                "(170593 E 170607)"
+            ],
+            "dispensadaPor": [
+                "344052",
+                "(170593 E 171093)"
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ESTRUTURA E FUNCIONAMENTO DA EDUCAÇÃO BÁSICA",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "200018",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "050016",
+                "201049",
+                "201065",
+                "201057"
+            ],
+            "dispensadaPor": [
+                "200280",
+                "344087",
+                "341312",
+                "215503"
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PSICOLOGIA DA EDUCACAO 1-APRENDIZAGEM",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "200085",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "(050253",
+                "050130)"
+            ],
+            "dispensadaPor": [
+                "200468 E 200476"
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PSICOLOGIA DO DESENVOLVIMENTO",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "281263",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "INTRODUÇÃO À SIGNIFICAÇÃO MUSICAL",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "281514",
+            "requisitos": [
+                "280020"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "VOZ E EXPRESSÃO 4",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283045",
+            "requisitos": [
+                "283037"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CRIACAO MUSICAL 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283061",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "CULTURA MUSICAL BRASILEIRA",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283070",
+            "requisitos": [
+                "(283258 E 283347)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "DIRECAO DE CONJUNTOS MUSICAIS I",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283134",
+            "requisitos": [
+                "283126"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "EDUCACAO MUSICAL: PRATICA E ENSINO 5",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283169",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "EXPRESSAO CORPORAL, MOVIMENTO E DANCA",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283290",
+            "requisitos": [
+                "283282"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "METODOS, TECNICAS E FUNDAMENTOS EM EDUCACAO MUSICAL 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283452",
+            "requisitos": [
+                "283347"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "SOM E PRODUCAO MUSICAL",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283606",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "ESTUDOS AVANCADOS EM FLAUTA DOCE 1",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283614",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PRATICA MUSICAL - ORQUESTRA 1",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283622",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "ESTUDOS COMPLEMENTARES EM RITMICA",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283630",
+            "requisitos": [
+                "283347 E 283355 E 283363 E 283371"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PERCEPCAO MUSICAL APLICADA",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283649",
+            "requisitos": [
+                "283096"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "ENSINO COLETIVO DE CORDAS",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283711",
+            "requisitos": [
+                "283550"
+            ],
+            "coRequisitos": [
+                "283070"
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "INTRODUCAO AO CORO CENICO",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283762",
+            "requisitos": [
+                "283614"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PRÁTICA MUSICAL: ORQUESTRA 2",
+            "creditos": "4",
+            "aulas": "0",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "170542",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "(213012 E 213020)",
+                "345806",
+                "340952",
+                "345008",
+                "171387"
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "EDUCAÇÃO E SOCIEDADE",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283053",
+            "requisitos": [
+                "(283274",
+                "283037)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CRIACAO MUSICAL 3",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283088",
+            "requisitos": [
+                "283070"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "DIRECAO DE CONJUNTOS MUSICAIS 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283142",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "ELABORACAO DE PROJETOS E LEGISLACAO",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283150",
+            "requisitos": [
+                "283169"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "EXPRESSÃO CORPORAL, MOVIMENTO E DANÇA 2",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283320",
+            "requisitos": [
+                "(283347",
+                "283258)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "MUSICOTERAPIA",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283410",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PRODUCAO CENICA DE ESPETACULOS MUSICAIS",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283517",
+            "requisitos": [
+                "283509"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "TOPICOS EM EDUCACAO, CULTURA E SOCIEDADE 3",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283657",
+            "requisitos": [
+                "283223"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "MUSICOLOGIA E ETNO-MUSICOLOGIA",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283681",
+            "requisitos": [
+                "283649"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "ENSINO COLETIVO DE CORDAS 2",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "192236",
+            "requisitos": [
+                "283517 E 283282"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PRATICA DE ENSINO E ESTAGIO SUPERVISIONADO EM EDUC.MUSICAL 1",
+            "creditos": "14",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "12"
+        },
+        {
+            "id": "283215",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "GESTAO DA QUALIDADE EM ORGANIZACOES MUSICAIS",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283339",
+            "requisitos": [
+                "(283258",
+                "283282)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "OFICINA DE ATIVIDADES LUDICAS",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "283428",
+            "requisitos": [
+                "283126"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PROJETO EM EDUCACAO MUSICAL I",
+            "creditos": "6",
+            "aulas": "2",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "283703",
+            "requisitos": [
+                "283614"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "PRATICA MUSICAL: ORQUESTRA 3",
+            "creditos": "4",
+            "aulas": "0",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "283720",
+            "requisitos": [
+                "283550 E 283533"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "CANCAO NA EDUCACAO MUSICAL",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "192350",
+            "requisitos": [
+                "(283517 E 283282)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PRÁTICA DE ENSINO E ESTÁGIO SUPERVIS. EM EDUCAÇÃO MUSICAL 2",
+            "creditos": "14",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "12"
+        },
+        {
+            "id": "201006",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "INTRODUÇÃO À LINGUA BRASILEIRA DE SINAIS - LIBRAS I",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "202207",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "INTRODUÇÃO À LÍNGUA BRASILEIRA DE SINAIS - LIBRAS II",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283401",
+            "requisitos": [
+                "283240"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PESQUISA EM EDUCACAO MUSICAL",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "283436",
+            "requisitos": [
+                "283134"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PROJETO EM ED. MUSICAL 2 - TRABALHO DE CONCLUSÃO DE CURSO",
+            "creditos": "6",
+            "aulas": "2",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "283525",
+            "requisitos": [
+                "283517"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "TOPICOS EM EDUCACAO, CULTURA E SOCIEDADE 4",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "283673",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "OPTATIVAS"
+            },
+            "nome": "INTRODUCAO A LEITURA MUSICAL",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        }
+    ]
+}
