@@ -13,8 +13,6 @@
  *
  * @author Brian Reavis <brian@thirdroute.com>
  */
-//asdasdasd
-//a
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
         define('sifter', factory);

@@ -1,12 +1,4 @@
-// Generated on 2015-07-17 using
-// generator-webapp 1.0.1
 'use strict';
-
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// If you want to recursively match all subfolders, use:
-// 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
 
@@ -20,8 +12,8 @@ module.exports = function (grunt) {
 
   // Configurable paths
   var config = {
-    app: 'app',
-    dist: 'dist'
+    app: 'src',
+    dist: 'build'
   };
 
   // Define the configuration for all the tasks
