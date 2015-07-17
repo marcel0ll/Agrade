@@ -1,0 +1,2212 @@
+{
+    "nome": "CC 2006/1 - CIÊNCIA DA COMPUTAÇÃO",
+    "disciplinas": [
+        {
+            "id": "020001",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ORIENTACAO PROFISSIONAL EM COMPUTACAO",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "020338",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "343110",
+                "480118"
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "INTRODUÇÃO À LÓGICA",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "025070",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "343137",
+                "((481114",
+                "343323) E 481220)"
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CONSTRUÇÃO DE ALGORITMOS E PROGRAMAÇÃO",
+            "creditos": "8",
+            "aulas": "4",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "081116",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "081019",
+                "081515"
+            ],
+            "dispensadaPor": [
+                "342017",
+                "524182",
+                "342190",
+                "343510",
+                "349623",
+                "345083",
+                "345970",
+                "(215279 E (215384",
+                "215201))",
+                "524204"
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "GEOMETRIA ANALITICA",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "089109",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "082210",
+                "344001",
+                "524034",
+                "342009",
+                "342211",
+                "340456",
+                "341258",
+                "(082619 E 082627)",
+                "(215171 E 215287)",
+                "(215287 E 215384)"
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CÁLCULO 1",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "096130",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "343129",
+                "520217",
+                "345482"
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "FUNDAMENTOS DE FISICA PARA A COMPUTACAO",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "201006",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "1",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "INTRODUÇÃO À LINGUA BRASILEIRA DE SINAIS - LIBRAS I",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "020281",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "343153",
+                "480223"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ESTRUTURAS DISCRETAS",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "024376",
+            "requisitos": [
+                "020338",
+                "343110"
+            ],
+            "coRequisitos": [
+                "024384"
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "027324",
+                "020257",
+                "025046",
+                "343170",
+                "482110"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CIRCUITOS DIGITAIS",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "024384",
+            "requisitos": [
+                "020338",
+                "343110",
+                "480118"
+            ],
+            "coRequisitos": [
+                "024376",
+                "482110",
+                "343170"
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "027332",
+                "020214",
+                "025046"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "LABORATÓRIO DE CIRCUITOS DIGITAIS",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "025020",
+            "requisitos": [
+                "025011",
+                "020184",
+                "025054",
+                "025070",
+                "343137",
+                "((481114",
+                "343323) E 481220)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "020192"
+            ],
+            "dispensadaPor": [
+                "343188"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PROGRAMAÇÃO DE COMPUTADORES",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "080136",
+            "requisitos": [
+                "081116",
+                "(215279 E 215384)",
+                "343510",
+                "342017",
+                "342190",
+                "081515",
+                "345083",
+                "345970",
+                "524182"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "(080039",
+                "080535)"
+            ],
+            "dispensadaPor": [
+                "343145",
+                "215201"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ALGEBRA LINEAR 1",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "082260",
+            "requisitos": [
+                "082210",
+                "089109",
+                "524034",
+                "344001",
+                "342009",
+                "342211",
+                "340456",
+                "082015",
+                "(082619 E 082627)",
+                "(215171 E 215287)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "082228",
+                "082023"
+            ],
+            "dispensadaPor": [
+                "342475",
+                "(089206 E 089400)",
+                "(215538 E 210056)"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CALCULO DIFERENCIAL E SERIES",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "110124",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "113077",
+                "113018"
+            ],
+            "dispensadaPor": [
+                "492140",
+                "342114",
+                "(342203 E 344117)",
+                "492108"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "MICROECONOMIA",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "112194",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "112100",
+                "112011",
+                "342432",
+                "342343"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "TEORIA DAS ORGANIZAÇÕES",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "152056",
+            "requisitos": [
+                "082210",
+                "089109",
+                "524034",
+                "344001",
+                "342009",
+                "342211",
+                "340456",
+                "(215171 E 215287)",
+                "(082619 E 082627)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "(150010",
+                "023248)",
+                "(152005 E 152013)"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "INTRODUCAO A PROBABILIDADE 1",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "162078",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "052078"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "HISTORIA DAS REVOLUCOES MODERNAS",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "180017",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "051098"
+            ],
+            "dispensadaPor": [
+                "161896"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "METODOS E TECNICAS DE PESQUISA",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "180025",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "(053031",
+                "180076)"
+            ],
+            "dispensadaPor": [
+                "180858"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "FILOSOFIA DA CIÊNCIA",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "180041",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "(180254 E 180262)"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "INTRODUCAO A FILOSOFIA",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "370053",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "161578",
+                "161209",
+                "161004",
+                "370088"
+            ],
+            "dispensadaPor": [
+                "(161101 E 161144 E 161152)",
+                "161012",
+                "161004",
+                "370053",
+                "346799",
+                "(161012 E 370061)"
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "INTRODUÇÃO À SOCIOLOGIA GERAL",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "370088",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "161209",
+                "161004",
+                "161578",
+                "370053"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "2",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "SOCIOLOGIA INDUSTRIAL E DO TRABALHO",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "025208",
+            "requisitos": [
+                "(025020",
+                "020192",
+                "343188)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "(020036",
+                "025259)",
+                "(020036 E 020044)"
+            ],
+            "dispensadaPor": [
+                "343161"
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ESTRUTURAS DE DADOS",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "025607",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "026018",
+                "(026018 E 026034)"
+            ],
+            "dispensadaPor": [
+                "343269",
+                "483559"
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "INTRODUCAO AOS SISTEMAS DE INFORMACAO",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027359",
+            "requisitos": [
+                "024376",
+                "482110",
+                "343170",
+                "027324",
+                "020257",
+                "025046"
+            ],
+            "coRequisitos": [
+                "027367",
+                "482331",
+                "343560"
+            ],
+            "equivalencia": [
+                "027120"
+            ],
+            "dispensadaPor": [
+                "343200",
+                "482226"
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ARQUITETURA E ORGANIZACAO DE COMPUTADORES 1",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027367",
+            "requisitos": [
+                "024376",
+                "482110",
+                "343170",
+                "027324",
+                "020257",
+                "025046"
+            ],
+            "coRequisitos": [
+                "027359",
+                "482226",
+                "343200"
+            ],
+            "equivalencia": [
+                "027138"
+            ],
+            "dispensadaPor": [
+                "343560",
+                "482331"
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "LABORATORIO DE ARQUITETURA E ORGANIZACAO DE COMPUTADORES 1",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "061085",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "061018"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "INGLES INSTRUMENTAL PARA COMPUTACAO 1",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "061093",
+            "requisitos": [
+                "(061085",
+                "061018)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "061026"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "INGLES INSTRUMENTAL PARA COMPUTACAO 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "062014",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "063126",
+                "061700",
+                "062014",
+                "063215",
+                "062057",
+                "062154"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "COMUNICACAO E EXPRESSAO",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "083020",
+            "requisitos": [
+                "(082210",
+                "089109",
+                "524034",
+                "082015",
+                "344001",
+                "342009",
+                "342211",
+                "340456",
+                "(082619 E 082627)",
+                "(215171 E 215287)) E (081116",
+                "524182",
+                "345970",
+                "081019",
+                "081515",
+                "342017",
+                "342190",
+                "343510",
+                "345083) E (020320",
+                "020109",
+                "020168",
+                "025070",
+                "((481114",
+                "343323) E 481220)",
+                "020184",
+                "020125",
+                "025011",
+                "025054",
+                "092410",
+                "020583",
+                "105180",
+                "025070",
+                "343137",
+                "342068",
+                "025470",
+                "025488",
+                "430048",
+                "580015",
+                "092410)",
+                "345970"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "(092410",
+                "020168) E (092444",
+                "083429)"
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CÁLCULO NUMÉRICO",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "164003",
+            "requisitos": [
+                ""
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "(054003",
+                "054046)",
+                "494135"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "ECONOMIA GERAL",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "164054",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "343242"
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "ECONOMIA DA EMPRESA",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "180050",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "054208",
+                "180068",
+                "054216",
+                "550620"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "NOCOES GERAIS DE DIREITO",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "370223",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "161217",
+                "161586"
+            ],
+            "taxonomia": {
+                "perfil": "3",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "TECNOLOGIA E SOCIEDADE",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "020265",
+            "requisitos": [
+                "((020338",
+                "343110) E (020281",
+                "480223",
+                "343153))",
+                "(025054 E 025062)",
+                "025070",
+                "((481114",
+                "343323) E 481220)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "LINGUAGENS FORMAIS E AUTOMATOS",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "020346",
+            "requisitos": [
+                "((025020",
+                "343188) E (020281",
+                "480223",
+                "343153))",
+                "025054"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "020303"
+            ],
+            "dispensadaPor": [
+                "341118"
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "TEORIA DOS GRAFOS",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "022667",
+            "requisitos": [
+                "025208",
+                "025259",
+                "343161",
+                "(020036 E 020044)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "022624",
+                "(020044 E 025216)"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ORGANIZACAO E RECUPERACAO DA INFORMACAO",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "025089",
+            "requisitos": [
+                "025208",
+                "343161"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "343250"
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PROJETO E ANÁLISE DE ALGORITMOS",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "025216",
+            "requisitos": [
+                "025208",
+                "343161",
+                "020036",
+                "025259",
+                "025020",
+                "343188"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "022640"
+            ],
+            "dispensadaPor": [
+                "341177"
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "BANCO DE DADOS",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "025666",
+            "requisitos": [
+                "(025607",
+                "483559",
+                "026018",
+                "343269) E (025020",
+                "343188)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "025615"
+            ],
+            "dispensadaPor": [
+                "341169"
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ENGENHARIA DE SOFTWARE 1",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "027375",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                "027383",
+                "027111"
+            ],
+            "equivalencia": [
+                "027103"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES 2",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027383",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                "027375"
+            ],
+            "equivalencia": [
+                "027111"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "4",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "LABORATÓRIO DE ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES 2",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "021130",
+            "requisitos": [
+                "(025208",
+                "343161",
+                "020036",
+                "025259) E 020265"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "025119",
+                "021113"
+            ],
+            "dispensadaPor": [
+                "025119"
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CONSTRUÇÃO DE COMPILADORES 1",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "021270",
+            "requisitos": [
+                "027359",
+                "482226",
+                "027120",
+                "((021067",
+                "021040) E (027367",
+                "482331",
+                "343560))",
+                "343200"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "025305"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "SISTEMAS OPERACIONAIS 1",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "025097",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "025100"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PARADIGMAS DE LINGUAGENS DE PROGRAMACAO",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "025224",
+            "requisitos": [
+                "025216",
+                "022640",
+                "341177"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "022659"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "LABORATORIO DE BANCO DE DADOS",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "025674",
+            "requisitos": [
+                "025666",
+                "025615",
+                "341169"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ENGENHARIA DE SOFTWARE 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "026093",
+            "requisitos": [
+                "025020",
+                "343188",
+                "020192"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                "343315",
+                "488224"
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "PROJETO ACADÊMICO EM COMPUTAÇÃO",
+            "creditos": "2",
+            "aulas": "1",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "301540",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "054100",
+                "164100"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "5",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "ADMINISTRAÇÃO DE EMPRESAS 1",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "021148",
+            "requisitos": [
+                "021130",
+                "025119"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "CONSTRUÇÃO DE COMPILADORES 2",
+            "creditos": "4",
+            "aulas": "1",
+            "laboratorios": "3",
+            "estagio": "0"
+        },
+        {
+            "id": "021237",
+            "requisitos": [
+                "025305",
+                "021270"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "024511"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "REDES DE COMPUTADORES",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "021288",
+            "requisitos": [
+                "021270",
+                "025305"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "SISTEMAS OPERACIONAIS 2",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "022705",
+            "requisitos": [
+                "025259",
+                "025208",
+                "343161",
+                "020036",
+                "020044",
+                "020338",
+                "343110",
+                "025089",
+                "343250"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "INTELIGÊNCIA ARTIFICIAL",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "025232",
+            "requisitos": [
+                "025216",
+                "022640",
+                "020656",
+                "020672",
+                "341177"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "022659"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "PROJETO DE BANCO DE DADOS",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "025526",
+            "requisitos": [
+                "(080136",
+                "080535",
+                "343145) E (025020",
+                "343188)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "025518"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "COMPUTAÇÃO GRÁFICA E MULTIMÍDIA",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "025593",
+            "requisitos": [
+                "025674"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "025631"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "METODOLOGIAS DE DESENVOLVIMENTO DE SISTEMAS 1",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "027022",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "022950"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "TOPICOS EM INFORMATICA",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027030",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "TOPICOS EM INFORMATICA 2",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027073",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "SISTEMAS DE TEMPO REAL",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027081",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "PLANEJAMENTO E GERENCIAMENTO DE SISTEMAS DE INFORMACAO",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027090",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "027499"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "EMPREENDEDORES EM INFORMATICA",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027170",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "TOPICOS DE INFORMATICA 3",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027189",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "TOPICOS EM INFORMATICA 4",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027260",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "PROJETO E MANUFATURA ASSISTIDOS POR COMPUTADOR",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027278",
+            "requisitos": [
+                "027375",
+                "027324"
+            ],
+            "coRequisitos": [
+                "027286"
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "MICROCONTROLADORES E APLICAÇÕES",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027286",
+            "requisitos": [
+                "027375",
+                "027324"
+            ],
+            "coRequisitos": [
+                "027278"
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "LABORATÓRIO DE MICROCONTROLADORES E APLICAÇÕES",
+            "creditos": "2",
+            "aulas": "0",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "027430",
+            "requisitos": [
+                "021270",
+                "025305"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "TECNOLOGIA E COMUNICAÇÃO DE DADOS",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "027448",
+            "requisitos": [
+                "027359",
+                "482226",
+                "343200"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "ARQUITETURA DE SISTEMAS COMPUTACIONAIS DE ALTO DESEMPENHO",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "027456",
+            "requisitos": [
+                "150010",
+                "152056"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "ANÁLISE DE DESEMPENHO DE SISTEMAS COMPUTACIONAIS",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "027464",
+            "requisitos": [
+                "(025208",
+                "343161) E (025089",
+                "343250) E (025216",
+                "341177)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "INTRODUÇÃO À BIOINFORMÁTICA",
+            "creditos": "4",
+            "aulas": "0",
+            "laboratorios": "4",
+            "estagio": "0"
+        },
+        {
+            "id": "027499",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "027090"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "EMPREENDEDORISMO E DESENVOLVIMENTO DE NEGÓCIOS",
+            "creditos": "4",
+            "aulas": "2",
+            "laboratorios": "2",
+            "estagio": "0"
+        },
+        {
+            "id": "029009",
+            "requisitos": [
+                "025607",
+                "483559",
+                "026018",
+                "343269"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "METODOLOGIA CIENTÍFICA E GERENCIAMENTO DE PROJETOS",
+            "creditos": "4",
+            "aulas": "3",
+            "laboratorios": "1",
+            "estagio": "0"
+        },
+        {
+            "id": "281190",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "6",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "TEORIAS DOS JOGOS",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "020290",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "TÓPICOS AVANÇADOS A",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "020362",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OPT HUM/COMP"
+            },
+            "nome": "TÓPICOS AVANÇADOS B",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "020680",
+            "requisitos": [
+                "025070",
+                "343137",
+                "((481114",
+                "343323) E 481220)"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "020672",
+                "020656"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "DESENVOLVIMENTO DE SOFTWARE PARA A WEB",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "023582",
+            "requisitos": [
+                "(025089",
+                "025054",
+                "020184",
+                "025011",
+                "025070",
+                "((481114",
+                "343323) E 481220)",
+                "343137",
+                "343250) E (083020",
+                "((092410",
+                "020168) E 092444))"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                " "
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OPT.PROFIS."
+            },
+            "nome": "MATEMÁTICA COMPUTACIONAL",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "025321",
+            "requisitos": [
+                "025305",
+                "021270",
+                "021245"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "021229"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "7",
+                "conjunto": "OBRIGATORIAS"
+            },
+            "nome": "SISTEMAS DISTRIBUIDOS",
+            "creditos": "4",
+            "aulas": "4",
+            "laboratorios": "0",
+            "estagio": "0"
+        },
+        {
+            "id": "026182",
+            "requisitos": [
+                "140 créditos"
+            ],
+            "coRequisitos": [
+                " "
+            ],
+            "equivalencia": [
+                "(026158",
+                "022942",
+                "022926)"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "ESTAGIO"
+            },
+            "nome": "TRABALHO DE GRADUACAO",
+            "creditos": "26",
+            "aulas": "0",
+            "laboratorios": "26",
+            "estagio": "0"
+        },
+        {
+            "id": "026190",
+            "requisitos": [
+                "160 créditos"
+            ],
+            "coRequisitos": [
+                "026239"
+            ],
+            "equivalencia": [
+                "026166",
+                "026158",
+                "022942",
+                "022926"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "ESTAGIO"
+            },
+            "nome": "ESTÁGIO EM COMPUTAÇÃO",
+            "creditos": "24",
+            "aulas": "0",
+            "laboratorios": "0",
+            "estagio": "24"
+        },
+        {
+            "id": "026239",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+                "026190"
+            ],
+            "equivalencia": [
+                "027014"
+            ],
+            "dispensadaPor": [
+                " "
+            ],
+            "taxonomia": {
+                "perfil": "8",
+                "conjunto": "ESTAGIO"
+            },
+            "nome": "SEMINÁRIOS EM COMPUTAÇÃO",
+            "creditos": "2",
+            "aulas": "2",
+            "laboratorios": "0",
+            "estagio": "0"
+        }
+    ]
+}
