@@ -1,6 +1,7 @@
 {
-    'Ciência da Computação': 'cienciaDaComputacao',
-	'Engenharia da Computação': 'engenhariaDaComputacao',
-	'Matemática' : 'matematica',
-	'Matemática - Licenciatura' : 'matematicaLicenciatura'
+	"Engenharia da Computação": "engenhariaDaComputacao",
+    "Ciência da Computação": "cienciaDaComputacao",
+	"Matemática" : "matematica",
+    "Matemática - Licenciatura" : "matematicaLicenciatura",
+	"Música - Licenciatura" : "musicaLicenciatura"
 }
