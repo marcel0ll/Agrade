@@ -166,7 +166,8 @@ $(document).ready(function(){
         datatype: 'json'
     }).done(function ( json ) {
         // console.log(json);
-        var data = JSON.parse(json);
+
+        var data = typeof json === 'string' ? JSON.parse(json) : json;
 
         for(x in data){
             cursos.push({nomeCurso: x, url:data[x]+'.json'});
@@ -196,7 +197,7 @@ $(document).ready(function(){
                 url:'./config/cursos/'+cursoJsonPath,
                 datatype: 'json'
             }).done(function ( json ) {
-                data = JSON.parse(json);
+                var data = typeof json === 'string' ? JSON.parse(json) : json;
 
                 // console.log(data.nome);
 
