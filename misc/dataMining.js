@@ -62,10 +62,10 @@
 
         // debugger;
         disciplina.nome = row1Data[2].innerText;
-        disciplina.creditos = row1Data[3].innerText;
-        disciplina.aulas = row1Data[4].innerText;
-        disciplina.laboratorios = row1Data[5].innerText;
-        disciplina.estagio = row1Data[6].innerText;
+        disciplina.creditos = parseInt(row1Data[3].innerText);
+        disciplina.aulas = parseInt(row1Data[4].innerText);
+        disciplina.laboratorios = parseInt(row1Data[5].innerText);
+        disciplina.estagio = parseInt(row1Data[6].innerText);
 
         // debugger;
         disciplina.requisitos = row2Data[4].innerText.split(' OU ');
@@ -73,13 +73,15 @@
         disciplina.equivalencia = row2Data[6].innerText.split(' OU ');
         disciplina.dispensadaPor = row2Data[7].innerText.split(' OU ');
 
-        disciplina.taxonomia.perfil = row1Data[0].innerText;
+        disciplina.taxonomia.perfil = parseInt(row1Data[0].innerText);
         disciplina.taxonomia.conjunto = row1Data[7].innerText;
 
         curso.disciplinas.push(disciplina);
         
         // console.log(disciplina.id, disciplina.nome);
     }
+
+    //TODO: Ler data da ultima tabela que contem os conjuntos e a quantidade de creditos de cada um
 
    
     // console.log(curso)

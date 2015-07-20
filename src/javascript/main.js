@@ -15,6 +15,7 @@ $(document).ready(function(){
         $camadaQuery = $('#query'),
         $queryInput = $('#query-input'),
         query,
+        selectedId,
         disciplinas = [];
 
 
@@ -23,10 +24,10 @@ $(document).ready(function(){
             queryTokens,
             token,
             tokenString,
-            elements = ['<h3 class="separador">', '<h4 class="separador">', '<p class="separador">'];
+            elements = ['<h3 class="separador col-md-12 col-sm-12 col-xs-12">', '<h4 class="separador col-md-12 col-sm-12 col-xs-12">', '<p class="separador col-md-12 col-sm-12 col-xs-12">'];
 
         $('.separador').remove();
-        query = $queryInput.val();
+        query = $queryInput.val().toLowerCase();
         console.log(query);
         queryTokens = [];
         valuesRaw = [];
@@ -71,18 +72,27 @@ $(document).ready(function(){
         $('.disciplinas').empty();
 
         for(i=0;i<disciplinas.length;i++){
-                    var disciplina = disciplinas[i];                    
+            var disciplina = disciplinas[i];                    
 
-                    var $disciplina = $('<div class="checkbox disciplina" data-id="' + disciplina.id + '">'
-                                    +   '<input type="checkbox">'
-                                    +   '   <label>'
-                                    +   disciplina.id + ' - ' + disciplina.nome
-                                    +   '   </label>'
-                                    +   '</div>');
+            var $disciplinaRow = $(
+                                '<div class="row">'
+                            +   '   <div class="checkbox disciplina col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1" data-id="' + disciplina.id + '">'
+                            +   '       <label>'
+                            +               disciplina.id + ' - ' + disciplina.nome
+                            +   '       </label>'
+                            +   '   </div>'
+                            +   '   <div class="info col-md-1 col-xs-1 col-sm-10 " data-id="' + disciplina.id + '">'
+                            +   '       <span class="glyphicon glyphicon-info-sign"></span>'
+                            +   '   </div>'
+                            +   '</div>');
 
-                    $('.disciplinas', $camadaLista).append($disciplina);                   
-                }
-       
+            // debugger;            
+            if(disciplina.feita){
+                 $('.checkbox', $disciplinaRow).addClass( 'feita' );                
+            }
+
+            $('.disciplinas', $camadaLista).append($disciplinaRow);                   
+        }       
 
         for(j = 0; j<uniqueTokens.length;j++){
             var element = j < elements.length ? elements[j] : elements[elements.length-1];
@@ -131,17 +141,22 @@ $(document).ready(function(){
                             
                         $('.checkbox')
                         .removeClass('selected')
+                        // .removeClass('feita')
                         .removeClass('requisito')
                         .removeClass('libera');
 
+                        $disciplina = $(this);
+                        id = $disciplina.attr('data-id');
+                        selectedId = id;
+
+                        disciplina = $.grep(disciplinas, function(e){ return e.id == id; })[0];
+                        // debugger;
+                        disciplina.feita = !disciplina.feita;                         
+                        $disciplina.toggleClass( 'feita' );
+
                         if(!jaSelecionado){
-                            $disciplina = $(this);
                             $disciplina.addClass( 'selected' );
 
-
-                            id = $disciplina.attr('data-id');
-
-                            disciplina = $.grep(disciplinas, function(e){ return e.id == id; })[0];
                             // debugger;
                             disciplina.requisitos.forEach(function(element){                           
                                 var $requisito = $('.checkbox[data-id="'+ element + '"]');
@@ -156,9 +171,15 @@ $(document).ready(function(){
 
                                 $libera.addClass( 'libera' );
                             });
+                        }else{
+                            selectedId = undefined;
                         }
 
+                        
                       });
+
+        // if(selectedId)
+        //     $('.checkbox[data-id='+ selectedId +']').click();
     }
 
     $.ajax({
@@ -166,7 +187,8 @@ $(document).ready(function(){
         datatype: 'json'
     }).done(function ( json ) {
         // console.log(json);
-        var data = JSON.parse(json);
+
+        var data = typeof json === 'string' ? JSON.parse(json) : json;
 
         for(x in data){
             cursos.push({nomeCurso: x, url:data[x]+'.json'});
@@ -180,14 +202,12 @@ $(document).ready(function(){
                     labelField: 'nomeCurso',
                     searchField: 'nomeCurso',
                     options: cursos,
+                    items: [cursos[0].url],
                     create: false
-                });
-
-        // $seletor[0].selectize.addItem( 2, true);
-
-         $camadaCarregando.hide();
-
-         $('#carregar').click(function(){                    
+                });      
+        $camadaCarregando.hide();        
+        
+        $('#carregar').click(function(){                    
             var i;
 
             cursoJsonPath = $seletor[0].selectize.getValue();
@@ -196,7 +216,7 @@ $(document).ready(function(){
                 url:'./config/cursos/'+cursoJsonPath,
                 datatype: 'json'
             }).done(function ( json ) {
-                data = JSON.parse(json);
+                var data = typeof json === 'string' ? JSON.parse(json) : json;
 
                 // console.log(data.nome);
 
@@ -208,84 +228,14 @@ $(document).ready(function(){
                 $('.nomeCurso', $camadaLista).text(data.nome);
 
                 // debugger;
-                disciplinas = data.disciplinas.sort(function(a, b) {
-                    var x1 = a.taxonomia.perfil,
-                        y1 = b.taxonomia.perfil,
-                        x2 = a.taxonomia.conjunto,
-                        y2 = b.taxonomia.conjunto,
-                        x3 = a.nome.toLowerCase(),
-                        y3 = b.nome.toLowerCase();
-
-                    if (x1 < y1) return -1;
-                    if (x1 > y1) return 1;
-                    if (x2 < y2) return -1;
-                    if (x2 > y2) return 1;
-                    if (x3 < y3) return -1;
-                    if (x3 > y3) return 1;
-
-                    return 0;
+                disciplinas = data.disciplinas;
+                disciplinas.forEach(function (disciplina){
+                    disciplina.feita = false;
                 });
 
-                for(i=0;i<disciplinas.length;i++){
-                    var disciplina = disciplinas[i];
-                    disciplina.feito = false;
-
-                    var $disciplina = $('<div class="checkbox disciplina" data-id="' + disciplina.id + '">'
-                                    +   '<input type="checkbox">'
-                                    +   '   <label>'
-                                    +   disciplina.id + ' - ' + disciplina.nome
-                                    +   '   </label>'
-                                    +   '</div>');
-
-                    $('.disciplinas', $camadaLista).append($disciplina);                   
-                }
-
-                $('.disciplina', $camadaLista).click(
-                      function() {
-                        //mouseEnter
-                        var $disciplina,
-                            disciplina,
-                            requisitos,
-                            libera,
-                            jaSelecionado,
-                            id;
-
-                        jaSelecionado = $(this)[0] === $('.checkbox.selected')[0];
-                            
-                        $('.checkbox')
-                        .removeClass('selected')
-                        .removeClass('requisito')
-                        .removeClass('libera');
-
-                        if(!jaSelecionado){
-                            $disciplina = $(this);
-                            $disciplina.addClass( 'selected' );
-
-
-                            id = $disciplina.attr('data-id');
-
-                            disciplina = $.grep(disciplinas, function(e){ return e.id == id; })[0];
-                            // debugger;
-                            disciplina.requisitos.forEach(function(element){                           
-                                var $requisito = $('.checkbox[data-id="'+ element + '"]');
-
-                                $requisito.addClass( 'requisito' );
-
-                            });
-                            libera = $.grep(disciplinas, function(e){ return $.inArray(id, e.requisitos) !== -1});
-                            console.log(libera);
-                            libera.forEach(function(disciplina){
-                                var $libera = $('.checkbox[data-id="'+ disciplina.id + '"]');
-
-                                $libera.addClass( 'libera' );
-                            });
-                        }
-
-                      });
-
-                // $queryInput.change(aplicarQuery);
+                
                 $queryInput.keyup(aplicarQuery);
-               
+                // debugger;
                 aplicarQuery();
 
 

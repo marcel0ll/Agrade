@@ -16,14 +16,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "1",
+                "perfil": 1,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ORIENTACAO PROFISSIONAL EM COMPUTACAO",
-            "creditos": "2",
-            "aulas": "2",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 2,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "020338",
@@ -41,14 +41,14 @@
                 "480118"
             ],
             "taxonomia": {
-                "perfil": "1",
+                "perfil": 1,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "INTRODUÇÃO À LÓGICA",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "025070",
@@ -67,14 +67,14 @@
                 "343323) E 481220)"
             ],
             "taxonomia": {
-                "perfil": "1",
+                "perfil": 1,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "CONSTRUÇÃO DE ALGORITMOS E PROGRAMAÇÃO",
-            "creditos": "8",
-            "aulas": "4",
-            "laboratorios": "4",
-            "estagio": "0"
+            "creditos": 8,
+            "aulas": 4,
+            "laboratorios": 4,
+            "estagio": 0
         },
         {
             "id": "081116",
@@ -101,14 +101,14 @@
                 "524204"
             ],
             "taxonomia": {
-                "perfil": "1",
+                "perfil": 1,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "GEOMETRIA ANALITICA",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "089109",
@@ -134,14 +134,14 @@
                 "(215287 E 215384)"
             ],
             "taxonomia": {
-                "perfil": "1",
+                "perfil": 1,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "CÁLCULO 1",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "096130",
@@ -160,14 +160,14 @@
                 "345482"
             ],
             "taxonomia": {
-                "perfil": "1",
+                "perfil": 1,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "FUNDAMENTOS DE FISICA PARA A COMPUTACAO",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "201006",
@@ -184,14 +184,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "1",
+                "perfil": 1,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "INTRODUÇÃO À LINGUA BRASILEIRA DE SINAIS - LIBRAS I",
-            "creditos": "2",
-            "aulas": "2",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 2,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "020281",
@@ -209,14 +209,14 @@
                 "480223"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ESTRUTURAS DISCRETAS",
-            "creditos": "2",
-            "aulas": "2",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 2,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "024376",
@@ -238,14 +238,14 @@
                 "482110"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "CIRCUITOS DIGITAIS",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "024384",
@@ -268,14 +268,14 @@
                 "025046"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "LABORATÓRIO DE CIRCUITOS DIGITAIS",
-            "creditos": "2",
-            "aulas": "0",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 0,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "025020",
@@ -298,14 +298,14 @@
                 "343188"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "PROGRAMAÇÃO DE COMPUTADORES",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "080136",
@@ -332,14 +332,14 @@
                 "215201"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ALGEBRA LINEAR 1",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "082260",
@@ -368,14 +368,14 @@
                 "(215538 E 210056)"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "CALCULO DIFERENCIAL E SERIES",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "110124",
@@ -396,14 +396,14 @@
                 "492108"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "MICROECONOMIA",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "112194",
@@ -423,14 +423,14 @@
                 "342343"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "TEORIA DAS ORGANIZAÇÕES",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "152056",
@@ -457,14 +457,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "INTRODUCAO A PROBABILIDADE 1",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "162078",
@@ -481,14 +481,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "HISTORIA DAS REVOLUCOES MODERNAS",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "180017",
@@ -505,14 +505,14 @@
                 "161896"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "METODOS E TECNICAS DE PESQUISA",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "180025",
@@ -530,14 +530,14 @@
                 "180858"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "FILOSOFIA DA CIÊNCIA",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "180041",
@@ -554,14 +554,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "INTRODUCAO A FILOSOFIA",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "370053",
@@ -586,14 +586,14 @@
                 "(161012 E 370061)"
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "INTRODUÇÃO À SOCIOLOGIA GERAL",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "370088",
@@ -613,14 +613,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "2",
+                "perfil": 2,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "SOCIOLOGIA INDUSTRIAL E DO TRABALHO",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "025208",
@@ -641,14 +641,14 @@
                 "343161"
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ESTRUTURAS DE DADOS",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "025607",
@@ -667,14 +667,14 @@
                 "483559"
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "INTRODUCAO AOS SISTEMAS DE INFORMACAO",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027359",
@@ -699,14 +699,14 @@
                 "482226"
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ARQUITETURA E ORGANIZACAO DE COMPUTADORES 1",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027367",
@@ -731,14 +731,14 @@
                 "482331"
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "LABORATORIO DE ARQUITETURA E ORGANIZACAO DE COMPUTADORES 1",
-            "creditos": "2",
-            "aulas": "0",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 0,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "061085",
@@ -755,14 +755,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "INGLES INSTRUMENTAL PARA COMPUTACAO 1",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "061093",
@@ -780,14 +780,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "INGLES INSTRUMENTAL PARA COMPUTACAO 2",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "062014",
@@ -809,14 +809,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "COMUNICACAO E EXPRESSAO",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "083020",
@@ -873,14 +873,14 @@
                 "083429)"
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "CÁLCULO NUMÉRICO",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "164003",
@@ -899,14 +899,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "ECONOMIA GERAL",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "164054",
@@ -923,14 +923,14 @@
                 "343242"
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "ECONOMIA DA EMPRESA",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "180050",
@@ -950,14 +950,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "NOCOES GERAIS DE DIREITO",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "370223",
@@ -975,14 +975,14 @@
                 "161586"
             ],
             "taxonomia": {
-                "perfil": "3",
+                "perfil": 3,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "TECNOLOGIA E SOCIEDADE",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "020265",
@@ -1006,14 +1006,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "4",
+                "perfil": 4,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "LINGUAGENS FORMAIS E AUTOMATOS",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "020346",
@@ -1034,14 +1034,14 @@
                 "341118"
             ],
             "taxonomia": {
-                "perfil": "4",
+                "perfil": 4,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "TEORIA DOS GRAFOS",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "022667",
@@ -1062,14 +1062,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "4",
+                "perfil": 4,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ORGANIZACAO E RECUPERACAO DA INFORMACAO",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "025089",
@@ -1087,14 +1087,14 @@
                 "343250"
             ],
             "taxonomia": {
-                "perfil": "4",
+                "perfil": 4,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "PROJETO E ANÁLISE DE ALGORITMOS",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "025216",
@@ -1116,14 +1116,14 @@
                 "341177"
             ],
             "taxonomia": {
-                "perfil": "4",
+                "perfil": 4,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "BANCO DE DADOS",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "025666",
@@ -1144,14 +1144,14 @@
                 "341169"
             ],
             "taxonomia": {
-                "perfil": "4",
+                "perfil": 4,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ENGENHARIA DE SOFTWARE 1",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "027375",
@@ -1169,14 +1169,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "4",
+                "perfil": 4,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES 2",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027383",
@@ -1193,14 +1193,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "4",
+                "perfil": 4,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "LABORATÓRIO DE ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES 2",
-            "creditos": "2",
-            "aulas": "0",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 0,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "021130",
@@ -1221,14 +1221,14 @@
                 "025119"
             ],
             "taxonomia": {
-                "perfil": "5",
+                "perfil": 5,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "CONSTRUÇÃO DE COMPILADORES 1",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "021270",
@@ -1252,14 +1252,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "5",
+                "perfil": 5,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "SISTEMAS OPERACIONAIS 1",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "025097",
@@ -1276,14 +1276,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "5",
+                "perfil": 5,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "PARADIGMAS DE LINGUAGENS DE PROGRAMACAO",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "025224",
@@ -1302,14 +1302,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "5",
+                "perfil": 5,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "LABORATORIO DE BANCO DE DADOS",
-            "creditos": "2",
-            "aulas": "0",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 0,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "025674",
@@ -1328,14 +1328,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "5",
+                "perfil": 5,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ENGENHARIA DE SOFTWARE 2",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "026093",
@@ -1355,14 +1355,14 @@
                 "488224"
             ],
             "taxonomia": {
-                "perfil": "5",
+                "perfil": 5,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "PROJETO ACADÊMICO EM COMPUTAÇÃO",
-            "creditos": "2",
-            "aulas": "1",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 1,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "301540",
@@ -1380,14 +1380,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "5",
+                "perfil": 5,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "ADMINISTRAÇÃO DE EMPRESAS 1",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "021148",
@@ -1405,14 +1405,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "CONSTRUÇÃO DE COMPILADORES 2",
-            "creditos": "4",
-            "aulas": "1",
-            "laboratorios": "3",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 1,
+            "laboratorios": 3,
+            "estagio": 0
         },
         {
             "id": "021237",
@@ -1430,14 +1430,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "REDES DE COMPUTADORES",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "021288",
@@ -1455,14 +1455,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "SISTEMAS OPERACIONAIS 2",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "022705",
@@ -1487,14 +1487,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "INTELIGÊNCIA ARTIFICIAL",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "025232",
@@ -1515,14 +1515,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "PROJETO DE BANCO DE DADOS",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "025526",
@@ -1542,14 +1542,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "COMPUTAÇÃO GRÁFICA E MULTIMÍDIA",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "025593",
@@ -1566,14 +1566,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "METODOLOGIAS DE DESENVOLVIMENTO DE SISTEMAS 1",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "027022",
@@ -1590,14 +1590,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "TOPICOS EM INFORMATICA",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027030",
@@ -1614,14 +1614,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "TOPICOS EM INFORMATICA 2",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027073",
@@ -1638,14 +1638,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "SISTEMAS DE TEMPO REAL",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027081",
@@ -1662,14 +1662,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "PLANEJAMENTO E GERENCIAMENTO DE SISTEMAS DE INFORMACAO",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027090",
@@ -1686,14 +1686,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "EMPREENDEDORES EM INFORMATICA",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027170",
@@ -1710,14 +1710,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "TOPICOS DE INFORMATICA 3",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027189",
@@ -1734,14 +1734,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "TOPICOS EM INFORMATICA 4",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027260",
@@ -1758,14 +1758,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "PROJETO E MANUFATURA ASSISTIDOS POR COMPUTADOR",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027278",
@@ -1783,14 +1783,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "MICROCONTROLADORES E APLICAÇÕES",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027286",
@@ -1808,14 +1808,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "LABORATÓRIO DE MICROCONTROLADORES E APLICAÇÕES",
-            "creditos": "2",
-            "aulas": "0",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 0,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "027430",
@@ -1833,14 +1833,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "TECNOLOGIA E COMUNICAÇÃO DE DADOS",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "027448",
@@ -1859,14 +1859,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "ARQUITETURA DE SISTEMAS COMPUTACIONAIS DE ALTO DESEMPENHO",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "027456",
@@ -1884,14 +1884,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "ANÁLISE DE DESEMPENHO DE SISTEMAS COMPUTACIONAIS",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "027464",
@@ -1911,14 +1911,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "INTRODUÇÃO À BIOINFORMÁTICA",
-            "creditos": "4",
-            "aulas": "0",
-            "laboratorios": "4",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 0,
+            "laboratorios": 4,
+            "estagio": 0
         },
         {
             "id": "027499",
@@ -1935,14 +1935,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "EMPREENDEDORISMO E DESENVOLVIMENTO DE NEGÓCIOS",
-            "creditos": "4",
-            "aulas": "2",
-            "laboratorios": "2",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 2,
+            "laboratorios": 2,
+            "estagio": 0
         },
         {
             "id": "029009",
@@ -1962,14 +1962,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "METODOLOGIA CIENTÍFICA E GERENCIAMENTO DE PROJETOS",
-            "creditos": "4",
-            "aulas": "3",
-            "laboratorios": "1",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 3,
+            "laboratorios": 1,
+            "estagio": 0
         },
         {
             "id": "281190",
@@ -1986,14 +1986,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "6",
+                "perfil": 6,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "TEORIAS DOS JOGOS",
-            "creditos": "2",
-            "aulas": "2",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 2,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "020290",
@@ -2010,14 +2010,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "7",
+                "perfil": 7,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "TÓPICOS AVANÇADOS A",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "020362",
@@ -2034,14 +2034,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "7",
+                "perfil": 7,
                 "conjunto": "OPT HUM/COMP"
             },
             "nome": "TÓPICOS AVANÇADOS B",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "020680",
@@ -2062,14 +2062,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "7",
+                "perfil": 7,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "DESENVOLVIMENTO DE SOFTWARE PARA A WEB",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "023582",
@@ -2096,14 +2096,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "7",
+                "perfil": 7,
                 "conjunto": "OPT.PROFIS."
             },
             "nome": "MATEMÁTICA COMPUTACIONAL",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "025321",
@@ -2122,14 +2122,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "7",
+                "perfil": 7,
                 "conjunto": "OBRIGATORIAS"
             },
             "nome": "SISTEMAS DISTRIBUIDOS",
-            "creditos": "4",
-            "aulas": "4",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 4,
+            "aulas": 4,
+            "laboratorios": 0,
+            "estagio": 0
         },
         {
             "id": "026182",
@@ -2148,14 +2148,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "8",
+                "perfil": 8,
                 "conjunto": "ESTAGIO"
             },
             "nome": "TRABALHO DE GRADUACAO",
-            "creditos": "26",
-            "aulas": "0",
-            "laboratorios": "26",
-            "estagio": "0"
+            "creditos": 26,
+            "aulas": 0,
+            "laboratorios": 26,
+            "estagio": 0
         },
         {
             "id": "026190",
@@ -2175,14 +2175,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "8",
+                "perfil": 8,
                 "conjunto": "ESTAGIO"
             },
             "nome": "ESTÁGIO EM COMPUTAÇÃO",
-            "creditos": "24",
-            "aulas": "0",
-            "laboratorios": "0",
-            "estagio": "24"
+            "creditos": 24,
+            "aulas": 0,
+            "laboratorios": 0,
+            "estagio": 24
         },
         {
             "id": "026239",
@@ -2199,14 +2199,14 @@
                 " "
             ],
             "taxonomia": {
-                "perfil": "8",
+                "perfil": 8,
                 "conjunto": "ESTAGIO"
             },
             "nome": "SEMINÁRIOS EM COMPUTAÇÃO",
-            "creditos": "2",
-            "aulas": "2",
-            "laboratorios": "0",
-            "estagio": "0"
+            "creditos": 2,
+            "aulas": 2,
+            "laboratorios": 0,
+            "estagio": 0
         }
     ]
 }
