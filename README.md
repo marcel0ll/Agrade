@@ -6,7 +6,7 @@ Você pode usá-lo de seu computador ou aparelho móvel, [aqui](http://0tho.gith
 
 # Wiki
 
-O projeto cotém um link para que você poça se esclarecer sobre o programa
+O projeto cotém uma [wiki](https://github.com/0tho/Pogad/wiki) para que você poça se esclarecer sobre o programa
 
 ***
 
