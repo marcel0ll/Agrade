@@ -50,6 +50,9 @@ body, html{
 .footer{
     text-align: center;
 }
+.footer-github{
+    letter-spacing: 3px;
+}
 
 .jumbotron {
     text-align: center;
@@ -88,6 +91,10 @@ body, html{
     margin-top: 60px;
     padding-top: 60px;
 } 
+
+.nomeCurso {
+    text-align: center;
+}
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
