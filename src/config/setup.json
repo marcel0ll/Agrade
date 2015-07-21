@@ -1,7 +1,10 @@
+/*
+    Arquivo com a listagem dos cursos.
+    Cada linha é definida o nome que será exibido e o nome do arquivo 
+        onde está o resto das informações do curso
+
+    @author Otho
+*/
 {
-	"Engenharia da Computação": "engenhariaDaComputacao",
-    "Ciência da Computação": "cienciaDaComputacao",
-	"Matemática" : "matematica",
-    "Matemática - Licenciatura" : "matematicaLicenciatura",
-	"Música - Licenciatura" : "musicaLicenciatura"
+    "Ciência da Computação": "cienciaDaComputacao"
 }
