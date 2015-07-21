@@ -1,9 +1,15 @@
-(function ( ) {
+/*
+    Script para mineração de dados do site PROGRAD da universidade UFSCar
 
-    var context = document;
+    O script minera dados do curso do aluno para ser usados no programa Pogad.
+    O Pogad é um programa de auxílio ao planejamento das disciplinas que você está fazendo ou fará
+
+    @author Otho
+*/
+( function ( ) {
 
     //Protótipo para Disciplina
-    function Disciplina (id) {
+    function Disciplina ( id ) {
         this.id = id;
         this.nome;
 
@@ -20,71 +26,113 @@
         this.taxonomia = {};
     }
 
-    //Função que auxilia na mineração de elementos do DOM. Sintaxe similar ao Jquery
-    function $ (selector, element){
-        return (element || context).querySelectorAll(selector);
+    //Protótipo para Conjunto
+    function Conjunto ( ) {
+        this.nome;
+        this.disciplinas;
+        this.creditos;
     }
 
-    //Temos que mudar o contexto do documento para dentro do frame onde estão as informações do curso
-    context = $('frame')[1].contentWindow.document.body;
+    //Protótipo de Curso
+    function Curso ( ) {
+        this.nome = '';
+        this.conjuntos = [];
+        this.disciplinas = [];
+    }
 
+    //Função que auxilia na mineração de elementos do DOM. Sintaxe similar a da biblioteca Jquery
+    function $ ( seletor, elemento ) {
+        return ( elemento || contexto ).querySelectorAll( seletor );
+    }
+
+    //Declaração de todas as variáveis que serão usadas no script
+    var contexto,
+        curso,
+        tabelas,
+        tabelaDeCurso,
+        tabelaDeDisciplinas,
+        linhasDaTabelaDeDisciplinas,
+        tabelaDeConjuntos,
+        linhasDaTabelaDeConjuntos;
+   
+    //Mudamos o contexto do documento para dentro do frame onde estão as informações do curso
+    contexto = $( 'frame', document )[1].contentWindow.document.body;
 
     //Objeto que conterá todas as informações que forem mineradas
-    var curso = {
-        nome : '',
-        disciplinas : []
-    };
-
+    curso =  new Curso( );
     
-    //Minerar tabelas onde estão o conteúdo
-    var tableCurso  = $('table')[1],
-        tableDisciplinas = $('table')[2],
-        tableExtra  = $('table')[2];
+    //Minerar tabelas onde está o conteúdo
+    tabelas = $( 'body>center>table' ), 
+    tabelaDeCurso  = tabelas[1],
+    tabelaDeDisciplinas = tabelas[2],
+    tabelaDeConjuntos  = tabelas[3];
     
     //Minerar nome do curso
-    curso.nome = $('b', tableCurso)[0].innerHTML;
+    curso.nome = $( 'b', tabelaDeDisciplinas )[0].innerHTML;
     
     
     //Minerar linhas da tabela de cursos
-    // debugger;
-    var rows = tableDisciplinas.children[0].children;
+    linhasDaTabelaDeDisciplinas = tableDisciplinas.children[0].children;
 
     //Minerar disciplinas
     //Pular o header da tabela -> i = 1
     //Cada 2 linhas da tabela é uma disciplina -> i += 2
-    for(i=1; i<rows.length; i+=2){
-        var row1 = rows[i],
-            row2 = rows[i+1],
-            row1Data = $('td', row1),
-            row2Data = $('td', $('td', row2)[0]),
-            id = row1Data[1].innerText;
-            disciplina = new Disciplina(id);
+    for( i = 1; i < linhasDaTabelaDeDisciplinas.length; i += 2 ){
+        var linha1,
+            linha2,
+            colunasLinha1,
+            colunasLinha2,
+            id,
+            disciplina;
 
-        // debugger;
-        disciplina.nome = row1Data[2].innerText;
-        disciplina.creditos = parseInt(row1Data[3].innerText);
-        disciplina.aulas = parseInt(row1Data[4].innerText);
-        disciplina.laboratorios = parseInt(row1Data[5].innerText);
-        disciplina.estagio = parseInt(row1Data[6].innerText);
+        linha1 = linhasDaTabelaDeDisciplinas[i],
+        linha2 = linhasDaTabelaDeDisciplinas[i+1],
+        colunasLinha1 = $( 'td', linha1 ),
+        colunasLinha2 = $( 'td', $( 'td', linha2 )[0] ),
+        id = colunasLinha1[1].innerText;
+        disciplina = new Disciplina( id );
 
-        // debugger;
-        disciplina.requisitos = row2Data[4].innerText.split(' OU ');
-        disciplina.coRequisitos = row2Data[5].innerText.split(' OU ');
-        disciplina.equivalencia = row2Data[6].innerText.split(' OU ');
-        disciplina.dispensadaPor = row2Data[7].innerText.split(' OU ');
+        disciplina.nome = colunasLinha1[2].innerText;
+        disciplina.creditos = parseInt( colunasLinha1[3].innerText );
+        disciplina.aulas = parseInt( colunasLinha1[4].innerText );
+        disciplina.laboratorios = parseInt( colunasLinha1[5].innerText );
+        disciplina.estagio = parseInt( colunasLinha1[6].innerText );
 
-        disciplina.taxonomia.perfil = parseInt(row1Data[0].innerText);
-        disciplina.taxonomia.conjunto = row1Data[7].innerText;
+        disciplina.requisitos = colunasLinha2[4].innerText.split( ' OU ' );
+        disciplina.coRequisitos = colunasLinha2[5].innerText.split( ' OU ' );
+        disciplina.equivalencia = colunasLinha2[6].innerText.split( ' OU ' );
+        disciplina.dispensadaPor = colunasLinha2[7].innerText.split( ' OU ' );
 
-        curso.disciplinas.push(disciplina);
-        
-        // console.log(disciplina.id, disciplina.nome);
+        disciplina.taxonomia.perfil = parseInt( colunasLinha1[0].innerText );
+        disciplina.taxonomia.conjunto = colunasLinha1[7].innerText;
+
+        curso.disciplinas.push( disciplina );
     }
 
-    //TODO: Ler data da ultima tabela que contem os conjuntos e a quantidade de creditos de cada um
+    //Minerar tabela de conjuntos
+    linhasDaTabelaDeConjuntos = $( 'tr', tabelaDeConjuntos );
 
+    //Para cada linha da tabela conjunto minere o nome, o número de disciplinas e o número de créditos
+    //Pular o header da tabela -> i = 1
+    for( i = 1; i < linhasDaTabelaDeConjuntos.length; i++ ) {
+        var linha,
+            colunas,
+            conjunto;
+
+        linha  = linhasDaTabelaDeConjuntos[i];
+        colunas = $( 'td', linha );
+        conjunto = new Conjunto ( );
+
+        conjunto.nome = colunas[0].innerText;
+        conjunto.disciplinas = parseInt( colunas[1].innerText );
+        conjunto.creditos = parseInt( colunas[2].innerText );
+
+        curso.conjuntos.push( conjunto );
+    }
    
-    // console.log(curso)
-    console.clear();
-    console.log(JSON.stringify(curso, null, 4));
-})();
+    //Limpe o console
+    console.clear( );
+
+    //Escreva no console o objeto curso no formato json com identação de 4 espaços
+    console.log( JSON.stringify( curso, null, 4 ) );
+} )( );
