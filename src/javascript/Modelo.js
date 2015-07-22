@@ -90,8 +90,8 @@
                     _this.listaDeCursos.push(curso);
                 }
                 _this.listaDeCursos = _this.listaDeCursos.sort(function(a,b){
-                    var x = a.name.toLowerCase(),
-                        y = b.name.toLowerCase();
+                    var x = a.nome.toLowerCase(),
+                        y = b.nome.toLowerCase();
 
                     if(x < y) return -1;
                     if(x > y) return 1;
