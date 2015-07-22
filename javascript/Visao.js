@@ -90,7 +90,7 @@
 
             this.atualizarCabecalho( curso );
 
-            this.$nomeDoCurso.text( curso.nome );
+            this.$nomeDoCurso.text( curso.nomeCompleto );
 
             this.$maisDetalhes.click( function ( ) {
                 var $this;
