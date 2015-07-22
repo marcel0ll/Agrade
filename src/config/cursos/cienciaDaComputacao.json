@@ -3,8 +3,8 @@
     "conjuntos": [
         {
             "nome": "Atividades Complementares",
-            "disciplinas": 60,
-            "creditos": null
+            "disciplinas": 0,
+            "creditos": 4
         },
         {
             "nome": "OBRIGATORIAS",
