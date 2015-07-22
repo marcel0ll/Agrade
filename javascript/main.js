@@ -16,7 +16,10 @@ $(document).ready(function(){
         $queryInput = $('#query-input'),
         query,
         selectedId,
+        path = window.location.href.split('#')[1],
         disciplinas = [];
+
+    console.log(path);
 
 
     function aplicarQuery ( ) {        
@@ -76,12 +79,12 @@ $(document).ready(function(){
 
             var $disciplinaRow = $(
                                 '<div class="row">'
-                            +   '   <div class="checkbox disciplina col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1" data-id="' + disciplina.id + '">'
+                            +   '   <div class="checkbox disciplina col-md-11 col-xs-11 col-sm-11" data-id="' + disciplina.id + '">'
                             +   '       <label>'
                             +               disciplina.id + ' - ' + disciplina.nome
                             +   '       </label>'
                             +   '   </div>'
-                            +   '   <div class="info col-md-1 col-xs-1 col-sm-10 " data-id="' + disciplina.id + '">'
+                            +   '   <div class="info col-md-1 col-xs-1 col-sm-1 " data-id="' + disciplina.id + '">'
                             +   '       <span class="glyphicon glyphicon-info-sign"></span>'
                             +   '   </div>'
                             +   '</div>');

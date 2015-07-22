@@ -1,5 +1,32 @@
 {
     "nome": "CC 2006/1 - CIÊNCIA DA COMPUTAÇÃO",
+    "conjuntos": [
+        {
+            "nome": "Atividades Complementares",
+            "disciplinas": 0,
+            "creditos": 4
+        },
+        {
+            "nome": "OBRIGATORIAS",
+            "disciplinas": 39,
+            "creditos": 0
+        },
+        {
+            "nome": "ESTAGIO",
+            "disciplinas": 0,
+            "creditos": 26
+        },
+        {
+            "nome": "OPT HUM/COMP",
+            "disciplinas": 0,
+            "creditos": 20
+        },
+        {
+            "nome": "OPT.PROFIS.",
+            "disciplinas": 0,
+            "creditos": 12
+        }
+    ],
     "disciplinas": [
         {
             "id": "020001",
@@ -2133,6 +2160,7 @@
         },
         {
             "id": "026182",
+            "minCreditos":140,
             "requisitos": [
                 "140 créditos"
             ],
