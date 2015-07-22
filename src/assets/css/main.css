@@ -104,12 +104,47 @@ body, html{
 }
 #query {
     position: fixed;
+    max-height: 80px;
     width: 100%;
     padding-bottom: 10px;
     padding-top: 10px;
     background-color: black;
-    top: 0px
+    top: 0px;
+    overflow: hidden;
 }
+
+#query.aberta{
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: abrirBarra;
+    max-height: 100%;
+}
+
+#query.fechada{
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    animation-name: fecharBarra;    
+    max-height: 80px;
+}
+
+@keyframes abrirBarra {
+  from {
+    max-height: 80px;
+  }
+  to {   
+    max-height: 100%;
+  }
+}
+
+@keyframes fecharBarra {
+  from {
+    max-height: 100%;
+  }
+  to {   
+    max-height: 80px;
+  }
+}
+
 
 .disciplina {
     border-top-left-radius: 10px;
@@ -191,16 +226,21 @@ body, html{
 }
 
 .checkbox.feita {
-    background-color: rgb(136, 255, 250);
+    background-color: rgb(13, 231, 206);
 }
 
 .info.selecionado {
-    background-color: grey;
+    background-color: rgb(13, 115, 231);
 }
 
 #topBar-data{
     color:  white;
     padding-top: 5px;
+}
+
+#topBar-dataConjuntos{
+    color:  white;
+    padding-top: 20px;
 }
 
 .conteudo{
@@ -216,4 +256,6 @@ body, html{
 #more__plus{
     line-height: 30px;
     color: white;
+
+    cursor: pointer;
 }
