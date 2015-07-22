@@ -8,7 +8,7 @@
         },
         {
             "nome": "OBRIGATORIAS",
-            "disciplinas": 39,
+            "disciplinas": 41,
             "creditos": 0
         },
         {
@@ -2261,6 +2261,26 @@
             "creditos": 2,
             "aulas": 2,
             "laboratorios": 0,
+            "estagio": 0
+        },
+        {
+            "id": "X00000",
+            "requisitos": [
+                " "
+            ],
+            "coRequisitos": [
+            ],
+            "equivalencia": [
+            ],
+            "dispensadaPor": [
+            ],
+            "taxonomia": {
+                "conjunto": "Atividades Complementares"
+            },
+            "nome": "Atividades Complementares",
+            "creditos": 4,
+            "aulas": 0,
+            "laboratorios": 4,
             "estagio": 0
         }
     ]
