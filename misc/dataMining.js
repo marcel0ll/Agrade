@@ -68,7 +68,7 @@
     tabelaDeConjuntos  = tabelas[3];
     
     //Minerar nome do curso
-    curso.nome = $( 'b', tabelaDeDisciplinas )[0].innerHTML;
+    curso.nome = $( 'b', tabelaDeCurso )[0].innerHTML;
     
     
     //Minerar linhas da tabela de cursos
