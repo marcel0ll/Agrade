@@ -78,6 +78,10 @@
     Visao.prototype.iniciarListagemDoCurso = function ( curso ) {
         var _this = this;
         console.log( curso );
+
+        //Alterar url da pagina para condizer com curs
+        window.location.hash = curso.id;
+
         if( this.template.itemCurso ){
             this.$camadaCarregando.hide( );
             this.$camadaSeletor.hide( );
