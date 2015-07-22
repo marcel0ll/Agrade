@@ -72,7 +72,7 @@
     
     
     //Minerar linhas da tabela de cursos
-    linhasDaTabelaDeDisciplinas = tableDisciplinas.children[0].children;
+    linhasDaTabelaDeDisciplinas = tabelaDeDisciplinas.children[0].children;
 
     //Minerar disciplinas
     //Pular o header da tabela -> i = 1
