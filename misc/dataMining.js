@@ -36,6 +36,7 @@
     //Protótipo de Curso
     function Curso ( ) {
         this.nome = '';
+        this.nomeCompleto = '';
         this.conjuntos = [];
         this.disciplinas = [];
     }
@@ -68,7 +69,7 @@
     tabelaDeConjuntos  = tabelas[3];
     
     //Minerar nome do curso
-    curso.nome = $( 'b', tabelaDeCurso )[0].innerHTML;
+    curso.nomeCompleto = $( 'b', tabelaDeCurso )[0].innerHTML;
     
     
     //Minerar linhas da tabela de cursos
