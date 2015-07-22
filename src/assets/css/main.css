@@ -3,10 +3,6 @@
 @import url('./libs/selectize.css');
 @import url('./fonts.css');
 
-::-webkit-scrollbar { 
-    display: none; 
-}
-
 a{
     text-decoration: none;
 }
@@ -17,12 +13,12 @@ a:hover,
 a:active {
     color: #000000;
 }
-div {
+/*div {
     -moz-user-select: none; 
       -khtml-user-select: none; 
      -webkit-user-select: none; 
      -o-user-select: none;  
-}
+}*/
 
 .browsehappy {
     margin: 0.2em 0;
@@ -49,6 +45,9 @@ body, html{
 
 .footer{
     text-align: center;
+    border-top: 1px solid black;
+    padding-top: 15px;
+    margin-top: 20px;
 }
 .footer-github{
     letter-spacing: 3px;
@@ -154,31 +153,48 @@ body, html{
     margin-left: 0px;  
 }
 
+.checkbox, .info {
+    cursor: pointer;
+}
+
 #query-formGroup{
     margin-bottom: 0px;
 }
 
-.disciplina.requisito {
+.separador>h4, .separador>h3, .separador>p {
+    position: relative;
+    cursor: pointer;
+}
+.separador>h3{
+    left: 20px;
+} 
+.separador>h4 {
+    left: 40px;
+}
+.separador>p {
+    left: 60px;
+}
+.separador span{
+    margin-right: 10px;
+}
+
+.checkbox.requisito {
      background-color: rgb(193, 111, 83) !important;
 }
 
-.disciplina.libera {
+.checkbox.libera {
      background-color: green !important;
 }
 
-.disciplina.trancada {
+.checkbox.trancada {
     background-color: darkgray;
 }
 
-.disciplina.feita {
+.checkbox.feita {
     background-color: rgb(136, 255, 250);
 }
 
-.disciplina.selected {
-    /*background-color: grey;*/
-}
-
-.info.selected {
+.info.selecionado {
     background-color: grey;
 }
 
@@ -191,6 +207,7 @@ body, html{
     position: absolute;
     right: 15px;
 }
+
 
 #more__wrapper{
 

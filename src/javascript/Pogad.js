@@ -1,12 +1,12 @@
 (function ( ) {
 
     function App ( ) {
-        this.version = '0.0.2';
+        this.versao = '0.0.3';
         this.template = new Pogad.Template ( );
-        this.storage = new Pogad.Storage ( );
-        this.model = new Pogad.Model ( this.storage );
-        this.view = new Pogad.View ( this.template, this.version );
-        this.controller = new Pogad.Controller ( this.model, this.view);
+        this.persistencia = new Pogad.Persistencia ( );
+        this.modelo = new Pogad.Modelo ( this.persistencia );
+        this.visao = new Pogad.Visao ( this.template, this.versao );
+        this.controlador = new Pogad.Controlador ( this.modelo, this.visao);
     }
 
     window.Pogad = window.Pogad || { };

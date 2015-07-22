@@ -1,34 +1,37 @@
-(function ( ) {
+( function ( ) {
 
     function Template ( ) {
-        this.separators = ['<h3 class="separador col-md-12 col-sm-12 col-xs-12">', '<h4 class="separador col-md-12 col-sm-12 col-xs-12">', '<p class="separador col-md-12 col-sm-12 col-xs-12">'];
-        this._majorItem;
+        // this.separadores = ['<h3 class="col-md-12 col-sm-12 col-xs-12">', '<h4 class="col-md-12 col-sm-12 col-xs-12">', '<p class="col-md-12 col-sm-12 col-xs-12">'];
+        this.separadores = ['<h3 class="row">', '<h4 class="row">', '<p class="row">'];
+        // this.separadorConteudo = '<div class="separador-conteudo col-md-12 col-sm-12 col-xs-12">';
+        this.separadorConteudo = '<div class="separador-conteudo row">';
+        this._itemCurso;
 
-        this.majorItemLoadEvent = new Pogad.Event ( this );
+        this.caregarItemCursoEvent = new Pogad.Event ( this );
 
-        this.requestHtmlFiles();
+        this.requisitarArquivosHtml( );
     }
 
-    Template.prototype.requestHtmlFiles = function ( ) {
+    Template.prototype.requisitarArquivosHtml = function ( ) {
         var _this = this;
         $.ajax({
-            url : './assets/html/majorItem.html',
+            url : './assets/html/itemCurso.html',
             datatype: 'html'
         })
         .success(function ( data ) {
-            _this._majorItem = data;
-            _this.majorItemLoadEvent.notify( true );
+            _this._itemCurso = data;
+            _this.caregarItemCursoEvent.notify( true );
         })
         .error(function ( ) {
-            _this.majorItemLoadEvent.notify( false );
-            throw new Error('Error: Falha ao carregar modelos de html, favor reporte esse erro');
+            _this.caregarItemCursoEvent.notify( false );
+            throw new Error( 'Error: Falha ao carregar modelos de html, favor reporte esse erro' );
         });
     }
 
-    Object.defineProperty(Template.prototype, 'majorItem', {
+    Object.defineProperty(Template.prototype, 'itemCurso', {
         get: function ( ) { 
-            if(this._majorItem){
-                return this._majorItem;
+            if( this._itemCurso ){
+                return this._itemCurso;
             }else{
                 return false;
             }
@@ -37,4 +40,4 @@
 
     window.Pogad = window.Pogad || { };
     window.Pogad.Template = Template;
-})( );
+} )( );
