@@ -2275,6 +2275,7 @@
             "dispensadaPor": [
             ],
             "taxonomia": {
+                "perfil": "Sem Perfil",
                 "conjunto": "Atividades Complementares"
             },
             "nome": "Atividades Complementares",
