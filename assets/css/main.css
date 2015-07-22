@@ -98,13 +98,13 @@ body, html{
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     #lista {
-        margin-top: 40px;
-        padding-top: 40px;
+        margin-top: 60px;
+        padding-top: 60px;
     }   
 }
 #query {
     position: fixed;
-    max-height: 80px;
+    max-height: 110px;
     width: 100%;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -124,12 +124,12 @@ body, html{
     animation-duration: 0.25s;
     animation-iteration-count: 1;
     animation-name: fecharBarra;    
-    max-height: 80px;
+    max-height: 110px;
 }
 
 @keyframes abrirBarra {
   from {
-    max-height: 80px;
+    max-height: 110px;
   }
   to {   
     max-height: 100%;
@@ -141,7 +141,7 @@ body, html{
     max-height: 100%;
   }
   to {   
-    max-height: 80px;
+    max-height: 110px;
   }
 }
 
@@ -240,7 +240,8 @@ body, html{
 
 #topBar-dataConjuntos{
     color:  white;
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .conteudo{

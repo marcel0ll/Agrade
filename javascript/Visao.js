@@ -128,11 +128,8 @@
                 });
 
                 _this.minimizar = !_this.minimizar;
-                if(_this.minimizar){
-                    _this.$minimizar.text('Minimizar grupos');
-                }else{
-                    _this.$minimizar.text('Maximizar grupos');
-                }
+                $('span', _this.$minimizar).toggleClass('glyphicon-minus');
+                $('span', _this.$minimizar).toggleClass('glyphicon-plus');
             });
 
             this.$desfazerTodos.click( function ( ) {
@@ -324,10 +321,10 @@
         var $conjunto = $('<div class="col-md-12 col-sm-12 col-xs-12">')
         var $row = $('<div class="row">')
 
-        $row.append($('<div class="col-md-6 col-sm-6 col-xs-6"> <h4> Nome do Conjunto </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-2"> <h4> Creditos </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-2"> <h4> Disciplinas </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-2"> <h4> Porcentagem </h4> </div>'));    
+        $row.append($('<div class="col-md-6 col-sm-6 col-xs-3"> <h4> Conjunto </h4> </div>'));
+        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Creditos </h4> </div>'));
+        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Disciplinas </h4> </div>'));
+        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Porcentagem </h4> </div>'));    
 
         $conjunto.append($row);
         this.$dadosDeConjuntos.append($conjunto);
@@ -336,10 +333,10 @@
             var $conjunto = $('<div class="col-md-12 col-sm-12 col-xs-12">')
             var $row = $('<div class="row">')
 
-            $row.append($('<div class="col-md-6 col-sm-6 col-xs-6">'+ conjunto.nome +'</div>'));
-            $row.append($('<div class="col-md-2 col-sm-2 col-xs-2"> '+ conjunto.creditosFeitos +' / ' + conjunto.creditos +' </div>'));
-            $row.append($('<div class="col-md-2 col-sm-2 col-xs-2"> '+ conjunto.disciplinasFeitas +' / ' + conjunto.disciplinas +' </div>'));
-            $row.append($('<div class="col-md-2 col-sm-2 col-xs-2"> '+ ((conjunto.creditosFeitos*100)/conjunto.creditos).toFixed( 2 ) +'% </div>'));
+            $row.append($('<div class="col-md-6 col-sm-6 col-xs-3">'+ conjunto.nome +'</div>'));
+            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.creditosFeitos +' / ' + conjunto.creditos +' </div>'));
+            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.disciplinasFeitas +' / ' + conjunto.disciplinas +' </div>'));
+            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ ((conjunto.creditosFeitos*100)/conjunto.creditos).toFixed( 2 ) +'% </div>'));
             
             $conjunto.append($row);
             this.$dadosDeConjuntos.append($conjunto);
