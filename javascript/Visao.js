@@ -14,11 +14,17 @@
         this.$nomeDoCurso = $( '#lista-nomeCurso' );
 
         this.$camadaBarraDoTopo = $( '#query' );
+        this.$maisDetalhes = $( '#more__plus' );
+        this.$minimizar = $( '#topBar-minimizar' );
+        this.$desfazerTodos = $( '#topBar-desfazer' );
         this.$porcentagemDoCurso = $( '#topBar-data__porcentagemDoCurso-conteudo' );
         this.$creditosFeitos = $( '#topBar-data__creditosFeitos' );
         this.$creditosParaFazer = $( '#topBar-data__creditosTotais' );
         this.$barraDoTopoNomeDoCurso = $( '#topBar-data__nomeCurso' );
         this.$barraDePesquisa = $('#query-input');
+
+        this.minimizar = true;
+        this.desejaDesfazer = false;
         
         this.iniciarEvent = new Pogad.Event( this );
         this.carregarCursoEvent = new Pogad.Event( this );
@@ -27,6 +33,9 @@
         this.infoCliqueEvent = new Pogad.Event( this );
         
         this.separadorCliqueEvent = new Pogad.Event( this );
+
+        this.desfazerTodosEvent = new Pogad.Event( this );
+        this.mudarPesquisaEvent = new Pogad.Event( this );
 
         $( '.footer-version' ).text( versao );
 
@@ -74,12 +83,85 @@
             this.$camadaLista.show( );
             this.$camadaBarraDoTopo.show();
 
-            this.$porcentagemDoCurso.text( ( ( curso.totalDeCreditosFeitos * 100 ) / curso.totalDeCreditos ).toFixed( 2 ) + '%' );
-            this.$creditosFeitos.text( curso.totalDeCreditosFeitos );
-            this.$creditosParaFazer.text( curso.totalDeCreditos );
-            this.$barraDoTopoNomeDoCurso.text( curso.nome );
+            this.atualizarCabecalho( curso );
 
             this.$nomeDoCurso.text( curso.nome );
+
+            this.$maisDetalhes.click( function ( ) {
+                var $this;
+
+                $this = $(this);
+
+                $this.toggleClass('glyphicon-minus');
+                $this.toggleClass('glyphicon-plus');
+
+                if(!(_this.$camadaBarraDoTopo.hasClass('aberta'))){
+                    _this.$camadaBarraDoTopo.addClass( 'aberta' );
+                    _this.$camadaBarraDoTopo.removeClass( 'fechada' );
+                }else{
+                    _this.$camadaBarraDoTopo.addClass( 'fechada' );
+                    _this.$camadaBarraDoTopo.removeClass( 'aberta' );
+                }
+            });
+
+            this.$minimizar.click( function ( ) {
+
+                $('.separador>.titulo>span', this.$listaDeDisciplinas).each( function ( element ) {
+                    var $this;
+
+                    $this = $(this).parent().parent();
+
+                    if(_this.minimizar){
+                        $('.titulo>span', $this).removeClass('glyphicon-minus');
+                        $('.titulo>span', $this).addClass('glyphicon-plus');
+                        $('.separador-conteudo', $this).hide();
+                    }else{
+                        $('.titulo>span', $this).addClass('glyphicon-minus');
+                        $('.titulo>span', $this).removeClass('glyphicon-plus');
+                        $('.separador-conteudo', $this).show();
+                    }
+                });
+
+                _this.minimizar = !_this.minimizar;
+                if(_this.minimizar){
+                    _this.$minimizar.text('Minimizar grupos');
+                }else{
+                    _this.$minimizar.text('Maximizar grupos');
+                }
+            });
+
+            this.$desfazerTodos.click( function ( ) {
+
+                if( !_this.desejaDesfazer ){
+                    _this.desejaDesfazer = true;
+                    $(this).toggleClass('btn-warning');
+                    $(this).toggleClass('btn-danger');
+
+                    $(this).text('Confirmar');
+
+                    _$this = $(this);
+                    setTimeout( function(){ 
+                       _this.desejaDesfazer = false;
+                        _$this.addClass('btn-warning');
+                        _$this.removeClass('btn-danger');
+
+                        _$this.text('Desfazer todos'); 
+                    }
+                    , 1500);
+                }else {                    
+                    _this.desejaDesfazer = false;
+                    $(this).toggleClass('btn-warning');
+                    $(this).toggleClass('btn-danger');
+
+                    $(this).text('Desfazer todos');
+
+                    _this.desfazerTodosEvent.notify();
+                }
+            });
+
+            this.$barraDePesquisa.keyup( function ( ) {
+                _this.mudarPesquisaEvent.notify( $(this).val().toLowerCase() );
+            });
         }else{
             this.$camadaCarregando.show( );            
             this.template.caregarItemCursoEvent.onEventCall( function ( ) {
@@ -115,9 +197,11 @@
         return $conteudo;
     }
 
-    Visao.prototype.fazerLista = function ( disciplinasObj, info ) {
-        console.log( disciplinasObj );
+    Visao.prototype.fazerLista = function ( disciplinasObj, infoId ) {
+        // console.log( disciplinasObj );
         var _this = this;
+
+        this.$listaDeDisciplinas.empty();
 
         function lookDown ( obj, id, nivel, pai ) { 
             if(id)
@@ -133,18 +217,17 @@
             }
         }
 
-        if(!info){
-            lookDown(disciplinasObj, null, -1, this.$listaDeDisciplinas);            
-        }else{
-            disciplinasObj.forEach( function ( disciplina ) {
-                _this.adicionarDisciplina( disciplina, this.$listaDeDisciplinas );
-            });
-        }
+        lookDown(disciplinasObj, null, -1, this.$listaDeDisciplinas); 
+
+        if(typeof infoId !== 'undefined')
+            $($('.info[data-id='+ infoId + ']')[0]).addClass( 'selecionado' );
 
         //Adicione evento no checkbox de cada disciplina
         $('.checkbox', this.$listaDeDisciplinas).click(function ( ) {
             var $this,
                 id;
+
+            event.stopPropagation();
 
             $this = $( this );
             id = $this.attr('data-id');
@@ -159,12 +242,26 @@
             var $this,
                 id;
 
+            event.stopPropagation();
+
             $this = $( this );
             id = $this.attr('data-id');
 
             console.log( id );
 
             _this.infoCliqueEvent.notify( id );
+        });
+
+        $('.separador>.titulo>span', this.$listaDeDisciplinas).click(function ( event ) {
+            var $this;
+
+            event.stopPropagation();
+
+            $this = $(this).parent().parent();
+
+            $($('.titulo>span', $this)[0]).toggleClass('glyphicon-minus');
+            $($('.titulo>span', $this)[0]).toggleClass('glyphicon-plus');
+            $($('.separador-conteudo', $this)[0]).toggle();
         });
     }
 
@@ -211,14 +308,14 @@
         });
     };
 
-    // Visao.prototype.updatePercentage = function ( ) { }
-    // Visao.prototype.updateCredits = function ( ) { }
+    Visao.prototype.atualizarCabecalho = function ( curso ) {
+        this.$porcentagemDoCurso.text( ( ( curso.totalDeCreditosFeitos * 100 ) / curso.totalDeCreditos ).toFixed( 2 ) + '%' );
+        this.$creditosFeitos.text( curso.totalDeCreditosFeitos );
+        this.$creditosParaFazer.text( curso.totalDeCreditos );
+        this.$barraDoTopoNomeDoCurso.text( curso.nome );
 
-    // Visao.prototype.itemLock = function ( id ) {};
-    // Visao.prototype.itemUnlock = function ( id ) {};
 
-    // Visao.prototype.itemDo = function ( id ) {};
-    // Visao.prototype.itemUndo = function ( id ) {};
+    };
 
     window.Pogad = window.Pogad || { };
     window.Pogad.Visao = Visao;
