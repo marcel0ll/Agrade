@@ -2,12 +2,14 @@
 
     var PESQUISA_INICIAL = 'perfil conjunto';
 
-    function Controlador ( modelo, visao ) {        
+    function Controlador ( modelo, visao ) {
         this.modelo = modelo;
-        this.visao = visao;        
+        this.visao = visao;
 
         this.visao.iniciarEvent.onEventCall(this.aoIniciar, this);
         this.visao.carregarCursoEvent.onEventCall(this.aoSelecionarCurso, this);
+        this.visao.carregarUniversidadeEvent.onEventCall(this.aoSelecionarUniversidade, this);
+
         this.visao.checkboxCliqueEvent.onEventCall(this.aoClicarEmDisciplina, this);
         this.visao.infoCliqueEvent.onEventCall(this.aoClicarEmInfo, this);
         this.visao.desfazerTodosEvent.onEventCall(this.aoDesfazerTodosConfirmado, this);
@@ -15,18 +17,28 @@
 
         this.modelo.carregarCursoEvent.onEventCall(this.aoCarregarCurso, this);
         this.modelo.carregarListaDeCursosEvent.onEventCall(this.aoCarregarListaDeCursos, this);
+        this.modelo.carregarListaDeUniversidadesEvent.onEventCall(this.aoCarregarListaDeUniversidades, this);
+
         this.modelo.pesquisaProcessadaEvent.onEventCall(this.aoProcessarPesquisa, this);
         this.modelo.itemsModificadosEvent.onEventCall(this.aoModificarDisciplina, this);
         this.modelo.cabecalhoModificadoEvent.onEventCall(this.aoModificarCabecalho, this);
-    }   
+    }
 
     Controlador.prototype.aoIniciar = function ( caminho ) {
         console.log("Controlador: " + caminho);
 
         if( caminho ){
-            this.aoSelecionarCurso( caminho );            
+            this.aoSelecionarCurso( caminho );
         } else {
-            this.modelo.carregarListaDeCursos( );
+            this.modelo.carregarListaDeUniversidades( );
+        }
+    };
+
+    Controlador.prototype.aoCarregarListaDeUniversidades = function ( sucesso, listaDeUniversidades ) {
+        if( sucesso ){
+            this.visao.iniciarSelecaoDeUniversidade( listaDeUniversidades );
+        }else{
+            throw new Error( 'Erro: Arquivo de universidades não encontrado ou inválido.\nPor favor reporte esse em https://github.com/0tho/Pogad/issues' );
         }
     };
 
@@ -34,7 +46,7 @@
         if( sucesso ){
             this.visao.iniciarSelecaoDeCurso( listaDeCursos );
         }else{
-            throw new Error( 'Erro: Arquivo de setup não encontrado ou inválido.\nPor favor reporte esse em https://github.com/0tho/Pogad/issues' );
+            throw new Error( 'Erro: Arquivo de cursos não encontrado ou inválido.\nPor favor reporte esse em https://github.com/0tho/Pogad/issues' );
         }
     };
 
@@ -48,8 +60,12 @@
         }
     }
 
+    Controlador.prototype.aoSelecionarUniversidade = function ( caminho ) {
+        this.modelo.carregarUniversidade( caminho );
+    };
+
     Controlador.prototype.aoSelecionarCurso = function ( caminho ) {
-        this.modelo.carregarCurso( caminho );        
+        this.modelo.carregarCurso( caminho );
     };
 
     Controlador.prototype.aoClicarEmDisciplina = function ( id ) {
@@ -66,7 +82,7 @@
         this.visao.atualizarDisciplinas( disciplinas );
     };
     Controlador.prototype.aoModificarCabecalho = function ( curso ) {
-        this.visao.atualizarCabecalho( curso );
+        this.visao.preencherCabecalho( curso );
     };
     Controlador.prototype.aoDesfazerTodosConfirmado = function ( ) {
         this.modelo.desfazerTodos( );
