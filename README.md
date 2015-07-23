@@ -13,8 +13,11 @@ O projeto cotém uma [wiki](https://github.com/0tho/Pogad/wiki) para que você p
 ### Licença
 
 Pode usar
+
 Pode modificar
+
 Pode re-publicar, contanto que faça referência à esse projeto
 
 NÃO PODE sob nenhuma circunstância cobrar de qualquer forma para usar o programa ou ver seu código 
+
 NÃO PODE liberar esse programa sob outra licença
