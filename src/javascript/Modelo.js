@@ -15,7 +15,7 @@
 
         this.pesquisaProcessadaEvent = new Pogad.Event( this );
         this.itemsModificadosEvent = new Pogad.Event( this );
-        
+
         this.cabecalhoModificadoEvent = new Pogad.Event( this );
     };
 
@@ -26,16 +26,16 @@
         //Caso estejam mandando carregar o major já carregado, só retorne o major sem fazer outra requisição
         if(this.curso && this.curso.id === caminho){
             _this.carregarCursoEvent.notify( true, this.curso );
-        }else{            
+        }else{
             $.ajax({
                     url:'./config/cursos/' + caminho + '.json',
                     datatype: 'json'
                 })
             .success(function ( json ) {
                 var curso = typeof json === 'string' ? JSON.parse(json) : json;
-                
+
                 curso.id = caminho;
-                _this.prepararDadosDeCurso ( curso );                
+                _this.prepararDadosDeCurso ( curso );
 
                 _this.curso = curso;
 
@@ -49,7 +49,7 @@
                     });
                 }
 
-                
+
                 _this.curso.disciplinas.forEach(function( disciplina ) {
                     disciplina.liberada = _this._deveLiberar( disciplina );
                 });
@@ -84,7 +84,7 @@
                 _this.listaDeCursos = [];
                 for(x in listaDeCursos){
                     var curso = {
-                        nome : x, 
+                        nome : x,
                         url : listaDeCursos[x]
                     }
 
@@ -140,7 +140,7 @@
                 tokens.forEach( function ( token ) {
                     var leitor,
                         seletor,
-                        valor;            
+                        valor;
 
                     leitor = token.split( '=' );
 
@@ -152,7 +152,7 @@
                     if(seletor !== 'taxonomia'){
                         seletores.push( seletor );
                         if(valor == '') valor = undefined;
-                        valores.push( valor );                
+                        valores.push( valor );
                     }
                 });
 
@@ -162,22 +162,22 @@
 
                 //Garanta que não há dois seletores iguais
                 for( i = 0; i < seletores.length; i++ ){
-                    if(     typeof this.curso.disciplinas[0][seletores[i]] === 'undefined' 
+                    if(     typeof this.curso.disciplinas[0][seletores[i]] === 'undefined'
                         &&  typeof this.curso.disciplinas[0].taxonomia[seletores[i]] === 'undefined' ){
-                        seletores.splice(i, 1);  
-                        valores.splice(i, 1);                  
+                        seletores.splice(i, 1);
+                        valores.splice(i, 1);
                         i--;
-                        continue;  
+                        continue;
                     }
 
-                    for( j = i+1; j < seletores.length -1; j++ ){                   
-                        if(seletores[i] === seletores[j]){                        
-                            seletores.splice(j, 1);  
-                            valores.splice(j, 1);                  
-                            j--;   
-                            continue;                 
+                    for( j = i+1; j < seletores.length -1; j++ ){
+                        if(seletores[i] === seletores[j]){
+                            seletores.splice(j, 1);
+                            valores.splice(j, 1);
+                            j--;
+                            continue;
                         }
-                    }                
+                    }
                 }
 
                 taxonomias = [];
@@ -190,7 +190,7 @@
                     }
                 }
 
-                //Ordena as disciplinas pelos seletores que são propriedades dela. Ignora taxonomias           
+                //Ordena as disciplinas pelos seletores que são propriedades dela. Ignora taxonomias
                 this.curso.disciplinas = this.curso.disciplinas.sort( function ( a, b ) {
 
                     for(i=0; i<seletores.length;i++){
@@ -206,11 +206,11 @@
                             if(a[seletor] > b[seletor]) return 1;
                         }
 
-                    }                           
+                    }
 
                     return 0;
                 });
-               
+
                 disciplinas = [];
 
                 this.curso.disciplinas.forEach( function (disciplina) {
@@ -246,7 +246,7 @@
                 else
                     disciplinasObj = [];
 
-                
+
 
                 disciplinas.forEach( function ( disciplina ) {
                     var obj = disciplinasObj;
@@ -255,7 +255,7 @@
                         for( i = 0; i < taxonomias.length; i++){
                             var seletor = taxonomias[i];
                             if(typeof disciplina.taxonomia[seletor] !== 'undefined' ){
-                                var chave = seletor + ' ' + disciplina.taxonomia[seletor];                    
+                                var chave = seletor + ' ' + disciplina.taxonomia[seletor];
 
                                 if(typeof obj[chave] === 'undefined' ){
                                     if(i === taxonomias.length - 1){
@@ -269,7 +269,7 @@
                                         obj = obj[chave];
                                 }
 
-                                if(i === taxonomias.length - 1) {                        
+                                if(i === taxonomias.length - 1) {
                                     obj[chave].push( disciplina );
                                 }
                             }
@@ -280,7 +280,7 @@
                 });
 
                 this._disciplinasObj = disciplinasObj;
-            
+
         }
 
         this.pesquisaProcessadaEvent.notify( this._disciplinasObj );
@@ -294,7 +294,7 @@
         listaDeConjuntosComCreditosNaoCalculados = [];
 
         //Número total de disciplinas
-        curso.totalDeDisciplinas = 0;        
+        curso.totalDeDisciplinas = 0;
         //Número total de créditos do curso
         curso.totalDeCreditos = 0;
         //Número total de disciplinas feitas
@@ -304,7 +304,7 @@
 
         curso.conjuntos.forEach( function ( conjunto ) {
             conjunto.disciplinasFeitas = 0;
-            conjunto.creditosFeitos = 0;    
+            conjunto.creditosFeitos = 0;
 
             curso.totalDeDisciplinas += conjunto.disciplinas;
             curso.totalDeCreditos += conjunto.creditos;
@@ -316,7 +316,7 @@
         curso.disciplinas.forEach(function( disciplina ) {
             var creditosPrecisamSerCalculados;
 
-            
+
             creditosPrecisamSerCalculados = false;
 
             disciplina.feita = false;
@@ -325,26 +325,26 @@
             listaDeConjuntosComCreditosNaoCalculados.forEach( function ( conjunto ) {
                 if(conjunto.nome === disciplina.taxonomia.conjunto ){
                 console.log(conjunto.nome)
-                    creditosPrecisamSerCalculados = true;    
-                    conjunto.creditos += disciplina.creditos;                
+                    creditosPrecisamSerCalculados = true;
+                    conjunto.creditos += disciplina.creditos;
                 }
             } );
 
             if(creditosPrecisamSerCalculados){
                 curso.totalDeCreditos += disciplina.creditos;
             }
-        });        
+        });
     }
 
     Modelo.prototype.salvarLocalmente = function ( ) {
         var dicsciplinasFeitas = [];
 
         this.curso.disciplinas.forEach(function( disciplina ) {
-            
+
             if(disciplina.feita){
                dicsciplinasFeitas.push(disciplina.id);
             }
-        }); 
+        });
 
         this.persistencia.salvarLocalmente( dicsciplinasFeitas, this.curso.id );
     };
@@ -358,11 +358,11 @@
 
         this.curso.conjuntos.forEach( function ( conjunto ) {
             conjunto.disciplinasFeitas = 0;
-            conjunto.creditosFeitos = 0; 
+            conjunto.creditosFeitos = 0;
         } );
 
         this.curso.disciplinas.forEach(function( disciplina ) {
-            
+
             if(disciplina.liberada && disciplina.feita){
                 var conjunto = $.grep(_this.curso.conjuntos, function(e){ return e.nome == disciplina.taxonomia.conjunto; })[0];
 
@@ -373,11 +373,11 @@
                     }
                 }
             }
-        }); 
+        });
 
         this.curso.conjuntos.forEach( function ( conjunto ) {
             _this.curso.totalDeDisciplinasFeitas += conjunto.disciplinasFeitas;
-            _this.curso.totalDeCreditosFeitos += Math.min(conjunto.creditosFeitos, conjunto.creditos);   
+            _this.curso.totalDeCreditosFeitos += Math.min(conjunto.creditosFeitos, conjunto.creditos);
         } );
 
         if(typeof notify === 'undefined' || !notify)
@@ -391,7 +391,7 @@
             disciplina.feita = false;
 
             libera = $.grep(_this.curso.disciplinas, function(e){ return $.inArray(disciplina.id, e.requisitos) !== -1});
-            libera.forEach(function(disciplina){                
+            libera.forEach(function(disciplina){
                 disciplina.liberada = false;
             });
         });
@@ -419,14 +419,14 @@
                     libera.forEach(function(disciplina){
                         disciplinasModificadas.push( disciplina );
                         disciplina.liberada = _this._deveLiberar( disciplina );
-                    });                    
+                    });
                 }else{
                     libera = $.grep(this.curso.disciplinas, function(e){ return $.inArray(id, e.requisitos) !== -1});
                     libera.forEach(function(disciplina){
                         disciplinasModificadas.push( disciplina );
                         disciplina.liberada = false;
                     });
-                }   
+                }
             }
         }
         if(disciplinasModificadas.length > 0)
@@ -445,7 +445,7 @@
         if(this.infoSelected == id){
             this.infoSelected = undefined;
         }else{
-            this.infoSelected = id;            
+            this.infoSelected = id;
         }
 
         if(typeof this.infoSelected !== 'undefined'){
@@ -482,14 +482,14 @@
 
     Modelo.prototype._deveLiberar = function ( disciplina ) {
         var requisitos = disciplina.requisitos,
-            _this = this;  
+            _this = this;
 
-                  
+
 
         for(var i = 0; i < requisitos.length; i++ ) {
             var id = requisitos[i];
             var disci = $.grep(_this.curso.disciplinas, function(e){ return e.id == id; })[0];
-            
+
             if( typeof disci !== 'undefined' ){
                 if( !disci.feita )
                     return false;
