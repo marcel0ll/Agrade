@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <div class="footer">
+        <footer class="footer">
             <p class="footer-github">
                 <a href="https://github.com/0tho/Pogad" title="Veja no Github"><span class="mega-octicon octicon-mark-github"></span></a>
                 <a href="https://github.com/0tho/Pogad/issues" title="Reporte um Bug!"><span class="mega-octicon octicon-bug"></span></a>
@@ -53,16 +53,14 @@
                 Pogad 
                 <span class="footer-version"></span>                 
             </p>
-        </div>
+        </footer>
 
         <div id="query" class="">
             <div class="container-fluid"> 
                 <div class="row">                    
                     <div class="col-md-11 col-sm-11 col-xs-10 ">                        
                         <div id="query-formGroup" class="form-group has-feedback">
-                        <!-- <label class="control-label" for="inputSuccess2">Name</label> -->
-                        <!-- <input type="text" class="form-control" id="inputSuccess2"/> -->
-                            <input id="query-input" class="form-control" type="text" placeholder="Exs.: 'perfil', 'id=250395', 'perfil=1 conjunto', 'nome=cálculo', 'feito=true'  ">
+                            <input id="query-input" class="form-control" type="text" placeholder="Exs.: 'perfil', 'id=250395', 'perfil=1 conjunto', 'nome=cálculo', 'feita=true'  ">
                             <span class="glyphicon glyphicon-search form-control-feedback"></span>
                         </div> 
                     </div>
@@ -95,12 +93,15 @@
                 </div>
                 
                 <div id="topBar-opcoes" class="row">
-                    <div id="topBar-minimizar" class="btn btn-default col-md-3 col-md-offset-2 col-xs-3 col-xs-offset-2 col-sm-3 col-sm-offset-2">
+                    <div id="topBar-minimizar" class="btn btn-default col-md-3 col-sm-3 col-xs-3">
                         <span class="glyphicon glyphicon-minus"></span> Grupos
                     </div>    
                     <div id="topBar-desfazer" class="btn btn-warning col-md-3 col-md-offset-1 col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1">
                         Desfazer todos
-                    </div>    
+                    </div> 
+                    <div id="topBar-sair" class="btn btn-danger col-md-2 col-sm-2 col-xs-2 col-xs-offset-3 col-md-offset-3 col-sm-offset-3" disabled="disabled">
+                        <span class="glyphicon glyphicon-remove"></span> Sair
+                    </div>   
                 </div>
             </div>
         </div>
@@ -112,7 +113,6 @@
     <script type="text/javascript" src="./javascript/libs/selectize.js"></script> 
 
     <!-- app -->
-    <!-- <script type="text/javascript" src="./javascript/main.js"></script> -->
     <script type="text/javascript" src="./javascript/Event.js"></script> 
 
     <script type="text/javascript" src="./javascript/Persistencia.js"></script> 
