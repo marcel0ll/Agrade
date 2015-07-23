@@ -2,13 +2,19 @@
 
     // Protótipo para objeto do Modelo do programa
     function Modelo ( persistencia ) {
+        this.listaDeUniversidades;
         this.listaDeCursos;
+
+        this.universidade = {};
         this.curso;
         this.persistencia = persistencia;
         this.ultimaPesquisa;
         this._disciplinasObj;
         this.infoSelected;
         this.ultimoInfo;
+
+        this.carregarUniversidadeEvent = new Pogad.Event(this);
+        this.carregarListaDeUniversidadesEvent = new Pogad.Event(this);
 
         this.carregarCursoEvent = new Pogad.Event(this);
         this.carregarListaDeCursosEvent = new Pogad.Event(this);
@@ -28,7 +34,7 @@
             _this.carregarCursoEvent.notify( true, this.curso );
         }else{
             $.ajax({
-                    url:'./config/cursos/' + caminho + '.json',
+                    url:'./config/universidades/' + this.universidade.id +'/cursos/' + caminho + '.json',
                     datatype: 'json'
                 })
             .success(function ( json ) {
@@ -66,20 +72,64 @@
         }
     };
 
-    //Função que carrega lista de cursos do arquivo 'setup.json'
-    Modelo.prototype.carregarListaDeCursos = function ( ) {
+    // Função que carrega arquivo json com listagem de universidades
+    Modelo.prototype.carregarListaDeUniversidades = function ( ) {
         var _this = this;
 
         //Caso estejam mandando carregar a lista já carregada, só retorne a lista sem fazer outra requisição
-        if(this.listaDeCursos){
+        if(this.listaDeUniversidades){
+            _this.carregarListaDeUniversidadesEvent.notify( true, _this.listaDeUniversidades );
+        }else{
+            $.ajax({
+                    url:'./config/universidades.json',
+                    datatype: 'json'
+                })
+            .success(function ( json ) {
+                var listaDeUniversidades = typeof json === 'string' ? JSON.parse(json) : json;
+
+                _this.listaDeUniversidades = [];
+                for(x in listaDeUniversidades){
+                    var curso = {
+                        nome : x,
+                        url : listaDeUniversidades[x]
+                    }
+
+                    _this.listaDeUniversidades.push(curso);
+                }
+                _this.listaDeUniversidades = _this.listaDeUniversidades.sort(function(a,b){
+                    var x = a.nome.toLowerCase(),
+                        y = b.nome.toLowerCase();
+
+                    if(x < y) return -1;
+                    if(x > y) return 1;
+
+                    return 0;
+                });
+
+                _this.carregarListaDeUniversidadesEvent.notify( true, _this.listaDeUniversidades );
+            })
+            .error(function ( ) {
+                _this.carregarListaDeUniversidadesEvent.notify( false );
+            });
+        }
+    };
+
+    //Função que carrega lista de cursos da universidade selecionada
+    Modelo.prototype.carregarUniversidade = function ( caminho ) {
+        var _this = this;
+
+        //Caso estejam mandando carregar a lista já carregada, só retorne a lista sem fazer outra requisição
+        if(this.universidade && this.universidade.id === caminho){
             _this.carregarListaDeCursosEvent.notify( true, _this.listaDeCursos );
         }else{
             $.ajax({
-                    url:'./config/setup.json',
+                    url:'./config/universidades/' + caminho + '/cursos.json',
                     datatype: 'json'
                 })
             .success(function ( json ) {
                 var listaDeCursos = typeof json === 'string' ? JSON.parse(json) : json;
+
+                _this.universidade.id = caminho;
 
                 _this.listaDeCursos = [];
                 for(x in listaDeCursos){
@@ -106,7 +156,7 @@
                 _this.carregarListaDeCursosEvent.notify( false );
             });
         }
-    }
+    };
 
     //Função que processa as pesquisas da barra de pesquisa
     Modelo.prototype.processarPesquisa = function ( pesquisa ) {
@@ -284,7 +334,7 @@
         }
 
         this.pesquisaProcessadaEvent.notify( this._disciplinasObj );
-    }
+    };
 
     //Função que adiciona varriáveis ao objeto curso
     Modelo.prototype.prepararDadosDeCurso = function ( curso ) {
@@ -334,7 +384,7 @@
                 curso.totalDeCreditos += disciplina.creditos;
             }
         });
-    }
+    };
 
     Modelo.prototype.salvarLocalmente = function ( ) {
         var dicsciplinasFeitas = [];
@@ -440,7 +490,6 @@
     };
 
     Modelo.prototype.interagirComInfo = function ( id ) {
-
         this.ultimoInfo = this.infoSelected;
         if(this.infoSelected == id){
             this.infoSelected = undefined;
@@ -477,7 +526,6 @@
         }else{
             this.processarPesquisa( this.ultimaPesquisa );
         }
-
     };
 
     Modelo.prototype._deveLiberar = function ( disciplina ) {

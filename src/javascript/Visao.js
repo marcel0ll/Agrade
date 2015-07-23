@@ -1,15 +1,17 @@
 (function ( ) {
 
-    function Visao ( template, versao ) {        
+    function Visao ( template, versao ) {
         this.template = template;
 
+        //Elementos do dom
         this.$camadaCarregando = $( '#carregando' );
 
         this.$camadaSeletor = $( '#seletor' );
-        this.$cursosDropdown =  $( '#cursoSelector' );
+        this.$cursosDropdown =  $( '#cursoSeletor' );
+        this.$universidadesDropdown =  $( '#universidadeSeletor' );
         this.$carregarCurso = $( '#carregar' );
 
-        this.$camadaLista = $( '#lista' );        
+        this.$camadaLista = $( '#lista' );
         this.$listaDeDisciplinas = $( '#lista-disciplinas' );
         this.$nomeDoCurso = $( '#lista-nomeCurso' );
 
@@ -24,57 +26,109 @@
         this.$barraDoTopoNomeDoCurso = $( '#topBar-data__nomeCurso' );
         this.$barraDePesquisa = $('#query-input');
 
+        this.$versao = $( '.footer-version' );
+
+        //Variáveis dos controles na barra do topo
         this.minimizar = true;
         this.desejaDesfazer = false;
-        
+
+        //Eventos
         this.iniciarEvent = new Pogad.Event( this );
         this.carregarCursoEvent = new Pogad.Event( this );
+        this.carregarUniversidadeEvent = new Pogad.Event( this );
+
 
         this.checkboxCliqueEvent = new Pogad.Event( this );
         this.infoCliqueEvent = new Pogad.Event( this );
-        
+
         this.separadorCliqueEvent = new Pogad.Event( this );
 
         this.desfazerTodosEvent = new Pogad.Event( this );
         this.mudarPesquisaEvent = new Pogad.Event( this );
 
-        $( '.footer-version' ).text( versao );
+        //Coloque a versão em tela
+        this.$versao.text( versao );
 
+        //Quando o html terminar de caregar inicie o programa
         $(document).ready( this.iniciar.bind(this) );
     }
 
+    //Ao carregar
     Visao.prototype.iniciar = function ( ) {
-        var caminhoInteiro,
-            caminho;
-
+        var
         //Pegue a URL inteira do browser
-        caminhoInteiro = window.location.href;
-
-        //Separe ela pelo '#'' e pegue a segunda parte        
+        caminhoInteiro = window.location.href,
+        //Separe ela pelo '#'' e pegue a segunda parte
         caminho = caminhoInteiro.split('#')[1];
 
-        //Notifique que o aplicativo foi iniciado com esse caminho        
+        //Notifique que o aplicativo foi iniciado com esse caminho
         this.iniciarEvent.notify( caminho );
     };
 
-    Visao.prototype.iniciarSelecaoDeCurso = function ( listaDeCursos ) {
-        console.log("iniciarSelecaoDeCurso");
+    //Tela inicial
+    Visao.prototype.iniciarSelecaoDeUniversidade = function ( listaDeUniversidades ) {
+        console.log("Iniciar seleção de universidade");
 
+        //Crie o seletor de universidade
+        this.$universidadesDropdown.selectize({
+                    maxItems: 1,
+                    valueField: 'url',
+                    labelField: 'nome',
+                    searchField: 'nome',
+                    options: listaDeUniversidades,
+                    items: [],
+                    create: false
+                });
+
+        //Crie seletor de cursos
         this.$cursosDropdown.selectize({
                     maxItems: 1,
                     valueField: 'url',
                     labelField: 'nome',
                     searchField: 'nome',
-                    options: listaDeCursos,
-                    items: [listaDeCursos[0].url],
                     create: false
-                });  
+                });
 
-        this.$camadaCarregando.hide();  
+        //Desabilite seletor de cursos
+        this.$cursosDropdown[0].selectize.disable();
 
-        this.$carregarCurso.click( this.carregarCurso.bind(this) );  
+        //Esconda a camada de carregamento
+        this.$camadaCarregando.hide();
+
+        //Quando for alterado o curso
+        this.$universidadesDropdown[0].selectize.on("change", this.carregarUniversidade.bind(this) );
     };
 
+    Visao.prototype.carregarUniversidade = function ( ) {
+        var caminho = this.$universidadesDropdown[0].selectize.getValue( );
+
+        //Desabilite seletor de curso enquanto estiver carregando nova lista de universidade
+        this.$cursosDropdown[0].selectize.disable();
+
+        this.carregarUniversidadeEvent.notify( caminho );
+    };
+
+    Visao.prototype.iniciarSelecaoDeCurso = function ( listaDeCursos ) {
+        console.log("iniciarSelecaoDeCurso");
+
+        //Inicie o seletor de curso
+        this.$cursosDropdown[0].selectize.enable();
+        this.$cursosDropdown[0].selectize.clearOptions();
+        this.$cursosDropdown[0].selectize.addOption( listaDeCursos );
+
+        //Esconda a camada de carregamento
+        this.$camadaCarregando.hide();
+
+        this.$carregarCurso.click( this.carregarCurso.bind(this) );
+    };
+
+    Visao.prototype.carregarCurso = function ( ) {
+        var caminho = this.$cursosDropdown[0].selectize.getValue( );
+
+        this.carregarCursoEvent.notify( caminho );
+    };
+
+    //Tela exibição de disciplinas
     Visao.prototype.iniciarListagemDoCurso = function ( curso ) {
         var _this = this;
         console.log( curso );
@@ -88,7 +142,7 @@
             this.$camadaLista.show( );
             this.$camadaBarraDoTopo.show();
 
-            this.atualizarCabecalho( curso );
+            this.preencherCabecalho( curso );
 
             this.$nomeDoCurso.text( curso.nomeCompleto );
 
@@ -142,15 +196,15 @@
                     $(this).text('Confirmar');
 
                     _$this = $(this);
-                    setTimeout( function(){ 
+                    setTimeout( function(){
                        _this.desejaDesfazer = false;
                         _$this.addClass('btn-warning');
                         _$this.removeClass('btn-danger');
 
-                        _$this.text('Desfazer todos'); 
+                        _$this.text('Desfazer todos');
                     }
                     , 1500);
-                }else {                    
+                }else {
                     _this.desejaDesfazer = false;
                     $(this).toggleClass('btn-warning');
                     $(this).toggleClass('btn-danger');
@@ -165,19 +219,48 @@
                 _this.mudarPesquisaEvent.notify( $(this).val().toLowerCase() );
             });
         }else{
-            this.$camadaCarregando.show( );            
+            this.$camadaCarregando.show( );
             this.template.caregarItemCursoEvent.onEventCall( function ( ) {
                 _this.iniciarListagemDoCurso( );
             } );
         }
-    }
+    };
 
-    Visao.prototype.carregarCurso = function ( ) {
-        var caminho = this.$cursosDropdown[0].selectize.getValue( );
+    //Cabeçalho
+    Visao.prototype.preencherCabecalho = function ( curso ) {
+        this.$porcentagemDoCurso.text( ( ( curso.totalDeCreditosFeitos * 100 ) / curso.totalDeCreditos ).toFixed( 2 ) + '%' );
+        this.$creditosFeitos.text( curso.totalDeCreditosFeitos );
+        this.$creditosParaFazer.text( curso.totalDeCreditos );
+        this.$barraDoTopoNomeDoCurso.text( curso.nome );
 
-        this.carregarCursoEvent.notify( caminho );
-    }
+        this.$dadosDeConjuntos.empty();
 
+        var $conjunto = $('<div class="col-md-12 col-sm-12 col-xs-12">')
+        var $row = $('<div class="row">')
+
+        $row.append($('<div class="col-md-6 col-sm-6 col-xs-3"> <h4> Conjunto </h4> </div>'));
+        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Creditos </h4> </div>'));
+        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Disciplinas </h4> </div>'));
+        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Porcentagem </h4> </div>'));
+
+        $conjunto.append($row);
+        this.$dadosDeConjuntos.append($conjunto);
+        for( i = 0; i < curso.conjuntos.length; i++){
+            var conjunto = curso.conjuntos[i];
+            var $conjunto = $('<div class="col-md-12 col-sm-12 col-xs-12">')
+            var $row = $('<div class="row">')
+
+            $row.append($('<div class="col-md-6 col-sm-6 col-xs-3">'+ conjunto.nome +'</div>'));
+            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.creditosFeitos +' / ' + conjunto.creditos +' </div>'));
+            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.disciplinasFeitas +' / ' + conjunto.disciplinas +' </div>'));
+            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ ((conjunto.creditosFeitos*100)/conjunto.creditos).toFixed( 2 ) +'% </div>'));
+
+            $conjunto.append($row);
+            this.$dadosDeConjuntos.append($conjunto);
+        }
+    };
+
+    //Lista
     Visao.prototype.criarGrupo = function ( id, nivel, $pai ) {
         var separadorId = Math.min( nivel, this.template.separadores.length - 1);
 
@@ -197,7 +280,7 @@
         ($pai).append($separador);
 
         return $conteudo;
-    }
+    };
 
     Visao.prototype.fazerLista = function ( disciplinasObj, infoId ) {
         // console.log( disciplinasObj );
@@ -205,21 +288,21 @@
 
         this.$listaDeDisciplinas.empty();
 
-        function lookDown ( obj, id, nivel, pai ) { 
+        function lookDown ( obj, id, nivel, pai ) {
             if(id)
-                pai = _this.criarGrupo ( id, nivel, pai )           
-            if( !( obj instanceof Array ) ){                
-                for( x in obj ) {                    
-                    lookDown( obj[x], x, nivel+1, pai);
+                pai = this.criarGrupo ( id, nivel, pai )
+            if( !( obj instanceof Array ) ){
+                for( x in obj ) {
+                    lookDown.bind(this)( obj[x], x, nivel+1, pai);
                 }
             }else{
                 obj.forEach( function ( disciplina ) {
-                    _this.adicionarDisciplina( disciplina, pai );
-                });
+                    this.adicionarDisciplina( disciplina, pai );
+                }, this);
             }
         }
 
-        lookDown(disciplinasObj, null, -1, this.$listaDeDisciplinas); 
+        lookDown.bind(this)(disciplinasObj, null, -1, this.$listaDeDisciplinas);
 
         if(typeof infoId !== 'undefined')
             $($('.info[data-id='+ infoId + ']')[0]).addClass( 'selecionado' );
@@ -265,7 +348,11 @@
             $($('.titulo>span', $this)[0]).toggleClass('glyphicon-plus');
             $($('.separador-conteudo', $this)[0]).toggle();
         });
-    }
+    };
+
+    Visao.prototype.selecionarInfo = function ( infoId ) {
+
+    };
 
     Visao.prototype.adicionarDisciplina = function ( disciplina, $pai ) {
         var $disciplina,
@@ -289,11 +376,9 @@
 
     Visao.prototype.definirPesquisa = function ( pesquisa ) {
         this.$barraDePesquisa.val( pesquisa );
-    }
+    };
 
     Visao.prototype.atualizarDisciplinas = function ( disciplinas ) {
-        console.log("longo caminho", disciplinas);
-
         disciplinas.forEach( function ( disciplina ) {
             $disciplina = $($('.checkbox[data-id='+ disciplina.id + ']')[0]);
 
@@ -302,7 +387,7 @@
                 if(disciplina.feita){
                     $disciplina.addClass( 'feita' );
                 }else{
-                    $disciplina.removeClass( 'feita' );                
+                    $disciplina.removeClass( 'feita' );
                 }
             }else{
                 $disciplina.addClass( 'trancada' );
@@ -310,40 +395,7 @@
         });
     };
 
-    Visao.prototype.atualizarCabecalho = function ( curso ) {
-        this.$porcentagemDoCurso.text( ( ( curso.totalDeCreditosFeitos * 100 ) / curso.totalDeCreditos ).toFixed( 2 ) + '%' );
-        this.$creditosFeitos.text( curso.totalDeCreditosFeitos );
-        this.$creditosParaFazer.text( curso.totalDeCreditos );
-        this.$barraDoTopoNomeDoCurso.text( curso.nome );
 
-        this.$dadosDeConjuntos.empty();
-
-        var $conjunto = $('<div class="col-md-12 col-sm-12 col-xs-12">')
-        var $row = $('<div class="row">')
-
-        $row.append($('<div class="col-md-6 col-sm-6 col-xs-3"> <h4> Conjunto </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Creditos </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Disciplinas </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Porcentagem </h4> </div>'));    
-
-        $conjunto.append($row);
-        this.$dadosDeConjuntos.append($conjunto);
-        for( i = 0; i < curso.conjuntos.length; i++){
-            var conjunto = curso.conjuntos[i];
-            var $conjunto = $('<div class="col-md-12 col-sm-12 col-xs-12">')
-            var $row = $('<div class="row">')
-
-            $row.append($('<div class="col-md-6 col-sm-6 col-xs-3">'+ conjunto.nome +'</div>'));
-            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.creditosFeitos +' / ' + conjunto.creditos +' </div>'));
-            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.disciplinasFeitas +' / ' + conjunto.disciplinas +' </div>'));
-            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ ((conjunto.creditosFeitos*100)/conjunto.creditos).toFixed( 2 ) +'% </div>'));
-            
-            $conjunto.append($row);
-            this.$dadosDeConjuntos.append($conjunto);
-        }
-
-
-    };
 
     window.Pogad = window.Pogad || { };
     window.Pogad.Visao = Visao;

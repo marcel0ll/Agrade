@@ -1,7 +1,7 @@
 (function ( ) {
 
     function App ( ) {
-        this.versao = '0.0.12-beta';
+        this.versao = '0.1.0-beta';
         this.template = new Pogad.Template ( );
         this.persistencia = new Pogad.Persistencia ( );
         this.modelo = new Pogad.Modelo ( this.persistencia );
