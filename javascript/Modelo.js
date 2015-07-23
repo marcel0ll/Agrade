@@ -457,7 +457,7 @@
             disciplinas = {
                 requisitos: [],
                 disciplina: [disciplina],
-                libera: []
+                desbloqueia: []
             };
 
             for(var i = 0; i < disciplina.requisitos.length; i++) {
@@ -468,7 +468,7 @@
                     disciplinas.requisitos.push(requisito);
             }
 
-            disciplinas.libera = $.grep(this.curso.disciplinas, function(e){ return $.inArray(id, e.requisitos) !== -1});
+            disciplinas.desbloqueia = $.grep(this.curso.disciplinas, function(e){ return $.inArray(id, e.requisitos) !== -1});
 
 
             this._disciplinasObj = disciplinas;
