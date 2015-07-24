@@ -176,6 +176,7 @@
 
         this.modelo.descarregarCurso();
         this.visao.mudarTelaParaSelecao();
+        this.visao.definirUrl('');
     };
 
     /**
@@ -225,6 +226,7 @@
             this.modelo.pesquisar( PESQUISA_INICIAL );
         } else {
             console.error('Controlador: Falha ao carregar arquivo de curso ou arquivo inválido');
+            this.visao.definirUrl('');
         }
     };
 
