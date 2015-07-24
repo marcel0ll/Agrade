@@ -1,5 +1,5 @@
 /**
-    @file Esse arquivo define a classe 'Controlador'
+    @file Arquivo define a classe para Controlador do programa 'Agrade'
 
     @author Otho
 */
@@ -241,7 +241,7 @@
     };
 
     /**
-        Quando houver somente um conjunto de disciplinas é alterada, repassamos
+        Quando houver somente um conjunto de disciplinas alterada, repassamos
     isso para a visão somente atualizá-las. Sem ter que refazer a lista.
 
         @param {Array.<Disciplina>}
@@ -253,7 +253,7 @@
     };
 
     /**
-        Quando existe alguma alteração do cabeçalho, mandamos a visão
+        Quando houver alguma alteração do cabeçalho, mandamos a visão
     atualiza-lo
 
         @param {Object}
@@ -263,4 +263,8 @@
 
         this.visao.preencherCabecalho( cabecalho );
     };
+
+    //Deixar exposto o construtor da classe 'Controlador'
+    window.Agrade = window.Agrade || {};
+    window.Agrade.Controlador = Controlador;
 })();
