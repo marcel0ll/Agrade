@@ -8,7 +8,7 @@
 
         <link rel="shortcut icon" href="./assets/images/icos/favicon.ico">
         <link rel="apple-touch-icon" href="./assets/images/icos/apple-touch-icon.png">
-        
+
         <link rel="stylesheet" href="assets/css/main.css">
 
     </head>
@@ -21,19 +21,21 @@
             <div class="carregando"> Carregando... </div>
         </div>
 
-        <div id="seletor" class="container-fluid"> 
+        <div id="seletor" class="container-fluid">
             </br>
             </br>
             <div class="jumbotron">
                 <h1 id="titulo">Pogad</h1>
                 <p>Seu auxiliar de curso</p>
-                <h3>Escolha seu curso: </h3>             
+                <h3>Escolha seu curso: </h3>
 
                 <div id="cursoSelector"></div>
                 </br>
                 <button id='carregar' type="button" class="btn btn-success">Carregar</button>
+                </br>
+                <a class="semCurso" target="blank" href="https://github.com/0tho/Pogad/wiki/Como-adicionar-meu-curso-%C3%A0-listagem%3F">Meu curso não está aqui!</a>
             </div>
-        </div> 
+        </div>
 
         <div id="lista" class="container-fluid">
             <h2 id="lista-nomeCurso" class="nomeCurso row"></h2>
@@ -50,77 +52,77 @@
             </p>
             <p>
                 <span class="glyphicon glyphicon-heart"></span>
-                Pogad 
-                <span class="footer-version"></span>                 
+                Pogad
+                <span class="footer-version"></span>
             </p>
         </footer>
 
         <div id="query" class="">
-            <div class="container-fluid"> 
-                <div class="row">                    
-                    <div class="col-md-11 col-sm-11 col-xs-10 ">                        
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-11 col-sm-11 col-xs-10 ">
                         <div id="query-formGroup" class="form-group has-feedback">
                             <input id="query-input" class="form-control" type="text" placeholder="Exs.: 'perfil', 'id=250395', 'perfil=1 conjunto', 'nome=cálculo', 'feita=true'  ">
                             <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                        </div> 
+                        </div>
                     </div>
-                    <div id="more" class="col-md-1 col-sm-1 col-xs-1">   
+                    <div id="more" class="col-md-1 col-sm-1 col-xs-1">
                         <div id="more__wrapper">
                             <span id="more__plus" class="glyphicon glyphicon-plus"></span>
-                        </div>                     
+                        </div>
                     </div>
                 </div>
                 <div id="topBar-data" class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12">
-                        <span class="texto"> % do Curso:</span> 
-                        <span id="topBar-data__porcentagemDoCurso-conteudo" class="conteudo"> /span> 
+                        <span class="texto"> % do Curso:</span>
+                        <span id="topBar-data__porcentagemDoCurso-conteudo" class="conteudo"> /span>
                     </div>
-                    <div id="topBar-data__numeroDeCreditos" class="col-md-3 col-sm-6 col-xs-12"> 
+                    <div id="topBar-data__numeroDeCreditos" class="col-md-3 col-sm-6 col-xs-12">
                         <span class="texto"> Creditos: </span>
-                        <span class="conteudo">                            
+                        <span class="conteudo">
                             <span id="topBar-data__creditosFeitos"></span>/
                             <span id="topBar-data__creditosTotais"></span>
                         </span>
                     </div>
-                    <div  class="col-md-6 col-sm-9 col-xs-12"> 
+                    <div  class="col-md-6 col-sm-9 col-xs-12">
                         <span class="texto"> Curso: </span>
                         <span id="topBar-data__nomeCurso" class="conteudo"></span>
-                    </div>                    
+                    </div>
                 </div>
-                
+
                 <div id="topBar-dataConjuntos" class="row">
-                                 
+
                 </div>
-                
+
                 <div id="topBar-opcoes" class="row">
                     <div id="topBar-minimizar" class="btn btn-default col-md-3 col-sm-3 col-xs-3">
                         <span class="glyphicon glyphicon-minus"></span> Grupos
-                    </div>    
+                    </div>
                     <div id="topBar-desfazer" class="btn btn-warning col-md-3 col-md-offset-1 col-xs-3 col-xs-offset-1 col-sm-3 col-sm-offset-1">
                         Desfazer todos
-                    </div> 
+                    </div>
                     <a id="topBar-sair" class="btn btn-danger col-md-2 col-sm-2 col-xs-2 col-xs-offset-3 col-md-offset-3 col-sm-offset-3" href=".">
                         <span class="glyphicon glyphicon-remove"></span> Sair
-                    </a>   
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- libs -->
-    <script type="text/javascript" src="./javascript/libs/jquery-2.1.4.min.js"></script>   
+    <script type="text/javascript" src="./javascript/libs/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="./javascript/libs/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./javascript/libs/selectize.js"></script> 
+    <script type="text/javascript" src="./javascript/libs/selectize.js"></script>
 
     <!-- app -->
-    <script type="text/javascript" src="./javascript/Event.js"></script> 
+    <script type="text/javascript" src="./javascript/Event.js"></script>
 
-    <script type="text/javascript" src="./javascript/Persistencia.js"></script> 
-    <script type="text/javascript" src="./javascript/Modelo.js"></script> 
-    <script type="text/javascript" src="./javascript/Template.js"></script> 
-    <script type="text/javascript" src="./javascript/Visao.js"></script> 
-    <script type="text/javascript" src="./javascript/Controlador.js"></script> 
-    <script type="text/javascript" src="./javascript/Pogad.js"></script> 
+    <script type="text/javascript" src="./javascript/Persistencia.js"></script>
+    <script type="text/javascript" src="./javascript/Modelo.js"></script>
+    <script type="text/javascript" src="./javascript/Template.js"></script>
+    <script type="text/javascript" src="./javascript/Visao.js"></script>
+    <script type="text/javascript" src="./javascript/Controlador.js"></script>
+    <script type="text/javascript" src="./javascript/Pogad.js"></script>
 
     </body>
 </html>

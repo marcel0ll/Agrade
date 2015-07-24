@@ -7,13 +7,13 @@
 
     function Event ( sender ) {
         this._sender = sender;
-        this._handlers = [];        
+        this._handlers = [];
     }
 
     Event.prototype.onEventCall = function ( callback, context ) {
         context = context || this;
         // console.log("Event:", this, "onEventCall: ", callback, "context:", context);
-        
+
         this._handlers.push(new Handler(callback, context));
     }
 
