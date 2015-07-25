@@ -1,6 +1,6 @@
 (function ( ) {
 
-    function Visao ( template, versao ) {        
+    function Visao ( template, versao ) {
         this.template = template;
 
         this.$camadaCarregando = $( '#carregando' );
@@ -9,7 +9,7 @@
         this.$cursosDropdown =  $( '#cursoSelector' );
         this.$carregarCurso = $( '#carregar' );
 
-        this.$camadaLista = $( '#lista' );        
+        this.$camadaLista = $( '#lista' );
         this.$listaDeDisciplinas = $( '#lista-disciplinas' );
         this.$nomeDoCurso = $( '#lista-nomeCurso' );
 
@@ -26,13 +26,13 @@
 
         this.minimizar = true;
         this.desejaDesfazer = false;
-        
+
         this.iniciarEvent = new Pogad.Event( this );
         this.carregarCursoEvent = new Pogad.Event( this );
 
         this.checkboxCliqueEvent = new Pogad.Event( this );
         this.infoCliqueEvent = new Pogad.Event( this );
-        
+
         this.separadorCliqueEvent = new Pogad.Event( this );
 
         this.desfazerTodosEvent = new Pogad.Event( this );
@@ -50,10 +50,10 @@
         //Pegue a URL inteira do browser
         caminhoInteiro = window.location.href;
 
-        //Separe ela pelo '#'' e pegue a segunda parte        
+        //Separe ela pelo '#'' e pegue a segunda parte
         caminho = caminhoInteiro.split('#')[1];
 
-        //Notifique que o aplicativo foi iniciado com esse caminho        
+        //Notifique que o aplicativo foi iniciado com esse caminho
         this.iniciarEvent.notify( caminho );
     };
 
@@ -68,11 +68,11 @@
                     options: listaDeCursos,
                     items: [listaDeCursos[0].url],
                     create: false
-                });  
+                });
 
-        this.$camadaCarregando.hide();  
+        this.$camadaCarregando.hide();
 
-        this.$carregarCurso.click( this.carregarCurso.bind(this) );  
+        this.$carregarCurso.click( this.carregarCurso.bind(this) );
     };
 
     Visao.prototype.iniciarListagemDoCurso = function ( curso ) {
@@ -142,15 +142,15 @@
                     $(this).text('Confirmar');
 
                     _$this = $(this);
-                    setTimeout( function(){ 
+                    setTimeout( function(){
                        _this.desejaDesfazer = false;
                         _$this.addClass('btn-warning');
                         _$this.removeClass('btn-danger');
 
-                        _$this.text('Desfazer todos'); 
+                        _$this.text('Desfazer todos');
                     }
                     , 1500);
-                }else {                    
+                }else {
                     _this.desejaDesfazer = false;
                     $(this).toggleClass('btn-warning');
                     $(this).toggleClass('btn-danger');
@@ -165,7 +165,7 @@
                 _this.mudarPesquisaEvent.notify( $(this).val().toLowerCase() );
             });
         }else{
-            this.$camadaCarregando.show( );            
+            this.$camadaCarregando.show( );
             this.template.caregarItemCursoEvent.onEventCall( function ( ) {
                 _this.iniciarListagemDoCurso( );
             } );
@@ -205,11 +205,11 @@
 
         this.$listaDeDisciplinas.empty();
 
-        function lookDown ( obj, id, nivel, pai ) { 
+        function lookDown ( obj, id, nivel, pai ) {
             if(id)
-                pai = _this.criarGrupo ( id, nivel, pai )           
-            if( !( obj instanceof Array ) ){                
-                for( x in obj ) {                    
+                pai = _this.criarGrupo ( id, nivel, pai )
+            if( !( obj instanceof Array ) ){
+                for( x in obj ) {
                     lookDown( obj[x], x, nivel+1, pai);
                 }
             }else{
@@ -219,7 +219,7 @@
             }
         }
 
-        lookDown(disciplinasObj, null, -1, this.$listaDeDisciplinas); 
+        lookDown(disciplinasObj, null, -1, this.$listaDeDisciplinas);
 
         if(typeof infoId !== 'undefined')
             $($('.info[data-id='+ infoId + ']')[0]).addClass( 'selecionado' );
@@ -229,7 +229,6 @@
             var $this,
                 id;
 
-            event.stopPropagation();
 
             $this = $( this );
             id = $this.attr('data-id');
@@ -237,6 +236,7 @@
             console.log( id );
 
             _this.checkboxCliqueEvent.notify( id );
+            event.stopPropagation();
         });
 
         //Adicione evento no info de cada disciplina
@@ -244,7 +244,6 @@
             var $this,
                 id;
 
-            event.stopPropagation();
 
             $this = $( this );
             id = $this.attr('data-id');
@@ -252,18 +251,19 @@
             console.log( id );
 
             _this.infoCliqueEvent.notify( id );
+            event.stopPropagation();
         });
 
         $('.separador>.titulo>span', this.$listaDeDisciplinas).click(function ( event ) {
             var $this;
 
-            event.stopPropagation();
 
             $this = $(this).parent().parent();
 
             $($('.titulo>span', $this)[0]).toggleClass('glyphicon-minus');
             $($('.titulo>span', $this)[0]).toggleClass('glyphicon-plus');
             $($('.separador-conteudo', $this)[0]).toggle();
+            event.stopPropagation();
         });
     }
 
@@ -302,10 +302,11 @@
                 if(disciplina.feita){
                     $disciplina.addClass( 'feita' );
                 }else{
-                    $disciplina.removeClass( 'feita' );                
+                    $disciplina.removeClass( 'feita' );
                 }
             }else{
                 $disciplina.addClass( 'trancada' );
+                $disciplina.removeClass( 'feita' );
             }
         });
     };
@@ -324,7 +325,7 @@
         $row.append($('<div class="col-md-6 col-sm-6 col-xs-3"> <h4> Conjunto </h4> </div>'));
         $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Creditos </h4> </div>'));
         $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Disciplinas </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Porcentagem </h4> </div>'));    
+        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Porcentagem </h4> </div>'));
 
         $conjunto.append($row);
         this.$dadosDeConjuntos.append($conjunto);
@@ -337,7 +338,7 @@
             $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.creditosFeitos +' / ' + conjunto.creditos +' </div>'));
             $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.disciplinasFeitas +' / ' + conjunto.disciplinas +' </div>'));
             $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ ((conjunto.creditosFeitos*100)/conjunto.creditos).toFixed( 2 ) +'% </div>'));
-            
+
             $conjunto.append($row);
             this.$dadosDeConjuntos.append($conjunto);
         }
