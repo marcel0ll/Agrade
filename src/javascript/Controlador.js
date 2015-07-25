@@ -14,8 +14,8 @@
 
     /**
         Classe do controlador do programa Agrade.
-            As instancias dessa classe servirão de ponte entre o
-        modelo e a visão do programa.
+            As instancias dessa classe servirão de ponte entre o modelo e a
+        visão do programa.
 
         @param {Agrade.Modelo} modelo
         @param {Agrade.Visao} visao
@@ -84,7 +84,7 @@
     Controlador.prototype.aoSelecionarCurso = function ( caminho ) {
         console.info( 'Controlador: Curso Selecionado: ' + caminho );
 
-        this.visao.telaDeCarregar();
+        this.visao.mudarTelaParaCarregar();
         this.modelo.carregarCurso( caminho );
     };
 
