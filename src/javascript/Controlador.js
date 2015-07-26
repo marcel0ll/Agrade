@@ -31,6 +31,7 @@
         this.ultimoCaminhoDeUniversidade = '';
 
         this.ultimaPesquisa = PESQUISA_INICIAL;
+        this.minimizar = true;
         this.ultimoInfoSelecionada = '';
 
         // Damos bind nas funções para que a varíavel this dentro da função
@@ -39,11 +40,12 @@
         this.visao.ao( 'iniciar', this.aoIniciar.bind(this) );
         this.visao.ao( 'selecionarCurso', this.aoSelecionarCurso.bind(this) );
         this.visao.ao( 'selecionarUniversidade', this.aoSelecionarUniversidade.bind(this) );
+        this.visao.ao( 'alterarPesquisa', this.aoMudarPesquisa.bind(this) );
         this.visao.ao( 'cliqueEmDisciplina', this.aoCliqueEmDisciplina.bind(this) );
         this.visao.ao( 'cliqueEmInformacao', this.aoCliqueEmInformacao.bind(this) );
-        this.visao.ao( 'confirmaDesfazerTodos', this.aoConfirmaDesfazerTodos.bind(this) );
-        this.visao.ao( 'mudarPesquisa', this.aoMudarPesquisa.bind(this) );
-        this.visao.ao( 'sairDeCurso', this.aoSairDeCurso.bind(this) );
+        this.visao.ao( 'cliqueEmDesfazerTodos', this.aoConfirmaDesfazerTodos.bind(this) );
+        this.visao.ao( 'cliqueEmSanfonaMestre', this.aoCliqueEmSanfonaMestre.bind(this) );
+        this.visao.ao( 'cliqueEmSairDeCurso', this.aoSairDeCurso.bind(this) );
 
         // Escute os eventos do Modelo do programa
         this.modelo.ao( 'carregarListaDeUniversidades', this.aoCarregarListaDeUniversidades.bind(this) );
@@ -142,6 +144,18 @@
         console.info( 'Controlador: "desfazerTodos" Selecionado' );
 
         this.modelo.desfazerTodos();
+    };
+
+    /**
+        Ao clicar na sanfona mestre mandar minimizar todos os grupos ou expandir
+    todos os grupos, dependendo do estado atual.
+    */
+    Controlador.prototype.aoCliqueEmSanfonaMestre = function ( ) {
+        if( minimizar ) {
+            this.visao.minimizarTodos();
+        } else {
+            this.visao.expandirTodos();
+        }
     };
 
     /**

@@ -17,6 +17,10 @@
         }
     };
 
+    Util.prototype.replaceAll = function ( original, from, to ) {
+        return original.replace( new RegExp( from, 'g' ), to );
+    }
+
     window.Agrade = window.Agrade || {};
     window.Agrade.Util = new Util();
 })();
