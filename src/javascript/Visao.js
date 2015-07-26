@@ -1,82 +1,73 @@
+/**
+    @file Esse arquivo define a classe para a Visao do programa 'Agrade'
+
+    @author Otho
+*/
 (function ( ) {
 
-    function Visao ( template, versao ) {
+    /**
+        Classe da Visao do programa Agrade
+
+        @class
+        @author Otho
+    */
+    function Visao ( template ) {
+        //Use o construtor do Controlador de eventos para que a visao tenha os
+        //atributos necessários para usar suas funções
+        Agrade.ControladorDeEvento.apply( this );
+
         this.template = template;
 
-        //Elementos do dom
-        this.$camadaCarregando = $( '#carregando' );
+        $(document).ready(this.iniciar.bind( this ));
+    }
 
-        this.$camadaSeletor = $( '#seletor' );
-        this.$cursosDropdown =  $( '#cursoSeletor' );
-        this.$universidadesDropdown =  $( '#universidadeSeletor' );
-        this.$carregarCurso = $( '#carregar' );
+    //Adicionar as funções do prototipo de controlador de eventos no prototipo
+    //da Visao
+    Agrade.Util.mixInto( Visao.prototype, Agrade.ControladorDeEvento.prototype );
 
-        this.$camadaLista = $( '#lista' );
-        this.$listaDeDisciplinas = $( '#lista-disciplinas' );
-        this.$nomeDoCurso = $( '#lista-nomeCurso' );
+    /**
+        Assim que o html tiver carregado, pegamos o endereço hash da url e
+    avisamos que a Visao foi iniciada
+    */
+    Visao.prototype.iniciar = function () {
+        var
+        //Pegue a url após '#' do browser
+        caminho = window.location.hash;
 
-        this.$camadaBarraDoTopo = $( '#query' );
-        this.$maisDetalhes = $( '#more__plus' );
-        this.$minimizar = $( '#topBar-minimizar' );
-        this.$desfazerTodos = $( '#topBar-desfazer' );
-        this.$dadosDeConjuntos = $( '#topBar-dataConjuntos' );
-        this.$porcentagemDoCurso = $( '#topBar-data__porcentagemDoCurso-conteudo' );
-        this.$creditosFeitos = $( '#topBar-data__creditosFeitos' );
-        this.$creditosParaFazer = $( '#topBar-data__creditosTotais' );
+        //Pegue os elementos do DOM
+        this.$camadaCarregando = $('#carregando');
+
+        this.$camadaSeletor = $('#seletor');
+        this.$cursosDropdown =  $('#cursoSeletor');
+        this.$universidadesDropdown =  $('#universidadeSeletor');
+        this.$carregarCurso = $('#carregar');
+
+        this.$camadaLista = $('#lista');
+        this.$listaDeDisciplinas = $('#lista-disciplinas');
+        this.$nomeDoCurso = $('#lista-nomeCurso');
+
+        this.$camadaBarraDoTopo = $('#query');
+        this.$maisDetalhes = $('#more__plus');
+        this.$sanfonaMestre = $('#topBar-minimizar');
+        this.$desfazerTodos = $('#topBar-desfazer');
+        this.$sairDeCurso = $('#topBar-sair');
+        this.$dadosDeConjuntos = $('#topBar-dataConjuntos');
+        this.$porcentagemDoCurso = $('#topBar-data__porcentagemDoCurso-conteudo');
+        this.$creditosFeitos = $('#topBar-data__creditosFeitos');
+        this.$creditosParaFazer = $('#topBar-data__creditosTotais');
         this.$barraDoTopoNomeDoCurso = $( '#topBar-data__nomeCurso' );
         this.$barraDePesquisa = $('#query-input');
 
-        this.$versao = $( '.footer-version' );
+        this.$versao = $('.footer-version');
 
-        //Variáveis dos controles na barra do topo
-        this.minimizar = true;
-        this.desejaDesfazer = false;
-
-        //Eventos
-        this.iniciarEvent = new Pogad.Event( this );
-        this.carregarCursoEvent = new Pogad.Event( this );
-        this.carregarUniversidadeEvent = new Pogad.Event( this );
-
-
-        this.checkboxCliqueEvent = new Pogad.Event( this );
-        this.infoCliqueEvent = new Pogad.Event( this );
-
-        this.separadorCliqueEvent = new Pogad.Event( this );
-
-        this.desfazerTodosEvent = new Pogad.Event( this );
-        this.mudarPesquisaEvent = new Pogad.Event( this );
-
-        //Coloque a versão em tela
-        this.$versao.text( versao );
-
-        //Quando o html terminar de caregar inicie o programa
-        $(document).ready( this.iniciar.bind(this) );
-    }
-
-    //Ao carregar
-    Visao.prototype.iniciar = function ( ) {
-        var
-        //Pegue a URL inteira do browser
-        caminhoInteiro = window.location.href,
-        //Separe ela pelo '#'' e pegue a segunda parte
-        caminho = caminhoInteiro.split('#')[1];
-
-        //Notifique que o aplicativo foi iniciado com esse caminho
-        this.iniciarEvent.notify( caminho );
-    };
-
-    //Tela inicial
-    Visao.prototype.iniciarSelecaoDeUniversidade = function ( listaDeUniversidades ) {
-        console.log("Iniciar seleção de universidade");
-
-        //Crie o seletor de universidade
+        //Iniciar seletores
+        //Crie seletor de universidades
         this.$universidadesDropdown.selectize({
                     maxItems: 1,
                     valueField: 'url',
                     labelField: 'nome',
                     searchField: 'nome',
-                    options: listaDeUniversidades,
-                    items: [],
+                    openOnFocus: false,
                     create: false
                 });
 
@@ -86,148 +77,102 @@
                     valueField: 'url',
                     labelField: 'nome',
                     searchField: 'nome',
+                    openOnFocus: false,
                     create: false
                 });
+
+        //Desabilite seletor de universidades
+        this.$universidadesDropdown[0].selectize.disable();
 
         //Desabilite seletor de cursos
         this.$cursosDropdown[0].selectize.disable();
 
-        //Esconda a camada de carregamento
+        //Coloque a versao do programa do rodapé
+        this.$versao.text( Agrade.prototype.versao );
+
+        //Adicione eventos aos botões e inputs
+        this.$universidadesDropdown[0].selectize.on( "change", this._aoSelecionarUniversidade.bind( this ) );
+        this.$carregarCurso.click( this._aoSelecionarCurso.bind( this ) );
+
+        this.$sanfonaMestre.click( this._aoClicarSanfonaMestre.bind( this ) );
+        this.$desfazerTodos.click( this._aoClicarDesfazerTodos.bind( this ) );
+        this.$maisDetalhes.click( this._aoClicarMaisDetalhes.bind( this ) );
+        this.$sairDeCurso.click( this._aoClicarSair.bind( this ) );
+        this.$barraDePesquisa.keyup( this._aoAlterarPesquisa.bind( this ) );
+
+        //Avise que o programa foi iniciado
+        this.emitir( 'iniciar', caminho );
+    };
+
+    /**
+        Define o endereço hash da url
+    */
+    Visao.prototype.definirUrl = function ( url ) {
+        //Define a hash da url
+        window.location.hash = url;
+    };
+
+    /**
+        Muda para a tela de carregamento
+    */
+    Visao.prototype.mudarTelaParaCarregar = function () {
+        this.$camadaCarregando.show();
+
+        this.$camadaSeletor.hide();
+
+        this.$camadaLista.hide();
+        this.$camadaBarraDoTopo.hide();
+    };
+
+    /**
+        Muda para a tela de seleção de curso
+    */
+    Visao.prototype.mudarTelaParaSelecao = function () {
+        this.$camadaSeletor.show();
+
         this.$camadaCarregando.hide();
 
-        //Quando for alterado o curso
-        this.$universidadesDropdown[0].selectize.on("change", this.carregarUniversidade.bind(this) );
+        this.$camadaLista.hide();
+        this.$camadaBarraDoTopo.hide();
     };
 
-    Visao.prototype.carregarUniversidade = function ( ) {
-        var caminho = this.$universidadesDropdown[0].selectize.getValue( );
+    /**
+        Muda a tela para a exibição de disciplinas
+    */
+    Visao.prototype.mudarTelaParaCurso = function () {
+        this.$camadaLista.show();
+        this.$camadaBarraDoTopo.show();
 
-        //Desabilite seletor de curso enquanto estiver carregando nova lista de universidade
-        this.$cursosDropdown[0].selectize.disable();
+        this.$camadaCarregando.hide();
 
-        this.carregarUniversidadeEvent.notify( caminho );
+        this.$camadaSeletor.hide();
     };
 
-    Visao.prototype.iniciarSelecaoDeCurso = function ( listaDeCursos ) {
-        console.log("iniciarSelecaoDeCurso");
+    /**
+        Coloca na lista de universidades as opções de universidades existentes
+    */
+    Visao.prototype.listarUniversidades = function ( listaDeUniversidades) {
+        this.$universidadesDropdown[0].selectize.clearOptions();
+        this.$universidadesDropdown[0].selectize.addOption( listaDeUniversidades );
+        this.$universidadesDropdown[0].selectize.enable();
+    };
 
-        //Inicie o seletor de curso
-        this.$cursosDropdown[0].selectize.enable();
+    /**
+        Coloca na lista de cursos as opções de cursos existentes
+    */
+    Visao.prototype.listarCursos = function ( listaDeCursos ) {
         this.$cursosDropdown[0].selectize.clearOptions();
-        this.$cursosDropdown[0].selectize.addOption( listaDeCursos );
-
-        //Esconda a camada de carregamento
-        this.$camadaCarregando.hide();
-
-        this.$carregarCurso.click( this.carregarCurso.bind(this) );
+        this.$cursosDropdown[0].selectize.addOption( listaDeUniversidades );
+        this.$cursosDropdown[0].selectize.enable();
     };
 
-    Visao.prototype.carregarCurso = function ( ) {
-        var caminho = this.$cursosDropdown[0].selectize.getValue( );
+    /**
+        Coloca as informações do cabeçalho do curso na barra de informações
+    no topo da tela
+    */
+    Visao.prototype.preencherCabecalho = function ( cabecalho ) {
+        var i;
 
-        this.carregarCursoEvent.notify( caminho );
-    };
-
-    //Tela exibição de disciplinas
-    Visao.prototype.iniciarListagemDoCurso = function ( curso ) {
-        var _this = this;
-        console.log( curso );
-
-        //Alterar url da pagina para condizer com curs
-        window.location.hash = curso.id;
-
-        if( this.template.itemCurso ){
-            this.$camadaCarregando.hide( );
-            this.$camadaSeletor.hide( );
-            this.$camadaLista.show( );
-            this.$camadaBarraDoTopo.show();
-
-            this.preencherCabecalho( curso );
-
-            this.$nomeDoCurso.text( curso.nomeCompleto );
-
-            this.$maisDetalhes.click( function ( ) {
-                var $this;
-
-                $this = $(this);
-
-                $this.toggleClass('glyphicon-minus');
-                $this.toggleClass('glyphicon-plus');
-
-                if(!(_this.$camadaBarraDoTopo.hasClass('aberta'))){
-                    _this.$camadaBarraDoTopo.addClass( 'aberta' );
-                    _this.$camadaBarraDoTopo.removeClass( 'fechada' );
-                }else{
-                    _this.$camadaBarraDoTopo.addClass( 'fechada' );
-                    _this.$camadaBarraDoTopo.removeClass( 'aberta' );
-                }
-            });
-
-            this.$minimizar.click( function ( ) {
-
-                $('.separador>.titulo>span', this.$listaDeDisciplinas).each( function ( element ) {
-                    var $this;
-
-                    $this = $(this).parent().parent();
-
-                    if(_this.minimizar){
-                        $('.titulo>span', $this).removeClass('glyphicon-minus');
-                        $('.titulo>span', $this).addClass('glyphicon-plus');
-                        $('.separador-conteudo', $this).hide();
-                    }else{
-                        $('.titulo>span', $this).addClass('glyphicon-minus');
-                        $('.titulo>span', $this).removeClass('glyphicon-plus');
-                        $('.separador-conteudo', $this).show();
-                    }
-                });
-
-                _this.minimizar = !_this.minimizar;
-                $('span', _this.$minimizar).toggleClass('glyphicon-minus');
-                $('span', _this.$minimizar).toggleClass('glyphicon-plus');
-            });
-
-            this.$desfazerTodos.click( function ( ) {
-
-                if( !_this.desejaDesfazer ){
-                    _this.desejaDesfazer = true;
-                    $(this).toggleClass('btn-warning');
-                    $(this).toggleClass('btn-danger');
-
-                    $(this).text('Confirmar');
-
-                    _$this = $(this);
-                    setTimeout( function(){
-                       _this.desejaDesfazer = false;
-                        _$this.addClass('btn-warning');
-                        _$this.removeClass('btn-danger');
-
-                        _$this.text('Desfazer todos');
-                    }
-                    , 1500);
-                }else {
-                    _this.desejaDesfazer = false;
-                    $(this).toggleClass('btn-warning');
-                    $(this).toggleClass('btn-danger');
-
-                    $(this).text('Desfazer todos');
-
-                    _this.desfazerTodosEvent.notify();
-                }
-            });
-
-            this.$barraDePesquisa.keyup( function ( ) {
-                _this.mudarPesquisaEvent.notify( $(this).val().toLowerCase() );
-            });
-        }else{
-            this.$camadaCarregando.show( );
-            this.template.caregarItemCursoEvent.onEventCall( function ( ) {
-                _this.iniciarListagemDoCurso( );
-            } );
-        }
-    };
-
-    //Cabeçalho
-    Visao.prototype.preencherCabecalho = function ( curso ) {
         this.$porcentagemDoCurso.text( ( ( curso.totalDeCreditosFeitos * 100 ) / curso.totalDeCreditos ).toFixed( 2 ) + '%' );
         this.$creditosFeitos.text( curso.totalDeCreditosFeitos );
         this.$creditosParaFazer.text( curso.totalDeCreditos );
@@ -235,168 +180,347 @@
 
         this.$dadosDeConjuntos.empty();
 
-        var $conjunto = $('<div class="col-md-12 col-sm-12 col-xs-12">')
-        var $row = $('<div class="row">')
+        this.$dadosDeConjuntos.append( this.template.conjuntoCabecalho );
 
-        $row.append($('<div class="col-md-6 col-sm-6 col-xs-3"> <h4> Conjunto </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Creditos </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Disciplinas </h4> </div>'));
-        $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> <h4> Porcentagem </h4> </div>'));
+        for( i = 0; i < curso.conjuntos.length; i++ ) {
+            var
+            conjunto = curso.conjuntos[i],
+            template = this.template.conjuntoLinha,
+            porcentagemDoCurso = ( ( conjunto.creditosFeitos * 100 ) / conjunto.creditos ).toFixed( 2 );
 
-        $conjunto.append($row);
-        this.$dadosDeConjuntos.append($conjunto);
-        for( i = 0; i < curso.conjuntos.length; i++){
-            var conjunto = curso.conjuntos[i];
-            var $conjunto = $('<div class="col-md-12 col-sm-12 col-xs-12">')
-            var $row = $('<div class="row">')
+            template.replace( '{{nome}}', conjunto.nome );
+            template.replace( '{{creditosFeitos}}', conjunto.creditosFeitos );
+            template.replace( '{{creditosTotais}}', conjunto.creditos );
+            template.replace( '{{disciplinasFeitas}}', conjunto.disciplinasFeitas );
+            template.replace( '{{disciplinasTotais}}', conjunto.disciplinas );
+            template.replace( '{{disciplinasTotais}}', conjunto.disciplinas );
+            template.replace( '{{porcentagem}}', porcentagemDoCurso );
 
-            $row.append($('<div class="col-md-6 col-sm-6 col-xs-3">'+ conjunto.nome +'</div>'));
-            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.creditosFeitos +' / ' + conjunto.creditos +' </div>'));
-            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ conjunto.disciplinasFeitas +' / ' + conjunto.disciplinas +' </div>'));
-            $row.append($('<div class="col-md-2 col-sm-2 col-xs-3"> '+ ((conjunto.creditosFeitos*100)/conjunto.creditos).toFixed( 2 ) +'% </div>'));
-
-            $conjunto.append($row);
-            this.$dadosDeConjuntos.append($conjunto);
+            this.$dadosDeConjuntos.append( $( template ) );
         }
     };
 
-    //Lista
-    Visao.prototype.criarGrupo = function ( id, nivel, $pai ) {
-        var separadorId = Math.min( nivel, this.template.separadores.length - 1);
+    /**
+        Coloca os grupos e as disciplinas em tela para que o usuário possa
+    interagir
+    */
+    Visao.prototype.preencherDisciplinas = function ( disciplinas ) {
+        var i, id;
 
-        var $separador = $('<div class="separador">'),
-            $titulo = $(this.template.separadores[separadorId]),
-            $conteudo = $(this.template.separadorConteudo);
-
-        id = id.charAt(0).toUpperCase() + id.slice(1);
-        $titulo.text(id);
-        $titulo.prepend($('<span class="glyphicon glyphicon-minus"></span>'));
-
-        $separador.attr('data-id', id);
-        $separador.addClass('col-md-12 col-sm-12 col-xs-12');
-        $separador.append($titulo);
-        $separador.append($conteudo);
-
-        ($pai).append($separador);
-
-        return $conteudo;
-    };
-
-    Visao.prototype.fazerLista = function ( disciplinasObj, infoId ) {
-        // console.log( disciplinasObj );
-        var _this = this;
-
+        //Garanta que a lista está vazia
         this.$listaDeDisciplinas.empty();
 
-        function lookDown ( obj, id, nivel, pai ) {
-            if(id)
-                pai = this.criarGrupo ( id, nivel, pai )
-            if( !( obj instanceof Array ) ){
-                for( x in obj ) {
-                    lookDown.bind(this)( obj[x], x, nivel+1, pai);
-                }
-            }else{
-                obj.forEach( function ( disciplina ) {
-                    this.adicionarDisciplina( disciplina, pai );
-                }, this);
+        if( disciplinas instanceof Array ) {
+            for( i = 0; i < disciplinas.length; i++ ) {
+                var disciplina = disciplinas[i];
+
+                this._adicionarDisciplina( disciplina );
+            }
+        } else {
+            for( id in disciplinas ) {
+                this._adicionarGrupo( id, disciplinas[id], $conteudoDoGrupo );
             }
         }
-
-        lookDown.bind(this)(disciplinasObj, null, -1, this.$listaDeDisciplinas);
-
-        if(typeof infoId !== 'undefined')
-            $($('.info[data-id='+ infoId + ']')[0]).addClass( 'selecionado' );
-
-        //Adicione evento no checkbox de cada disciplina
-        $('.checkbox', this.$listaDeDisciplinas).click(function ( ) {
-            var $this,
-                id;
-
-            event.stopPropagation();
-
-            $this = $( this );
-            id = $this.attr('data-id');
-
-            console.log( id );
-
-            _this.checkboxCliqueEvent.notify( id );
-        });
-
-        //Adicione evento no info de cada disciplina
-        $('.info', this.$listaDeDisciplinas).click(function ( ) {
-            var $this,
-                id;
-
-            event.stopPropagation();
-
-            $this = $( this );
-            id = $this.attr('data-id');
-
-            console.log( id );
-
-            _this.infoCliqueEvent.notify( id );
-        });
-
-        $('.separador>.titulo>span', this.$listaDeDisciplinas).click(function ( event ) {
-            var $this;
-
-            event.stopPropagation();
-
-            $this = $(this).parent().parent();
-
-            $($('.titulo>span', $this)[0]).toggleClass('glyphicon-minus');
-            $($('.titulo>span', $this)[0]).toggleClass('glyphicon-plus');
-            $($('.separador-conteudo', $this)[0]).toggle();
-        });
     };
 
-    Visao.prototype.selecionarInfo = function ( infoId ) {
-
+    /**
+        Minimiza todos os grupos de disciplinas
+    */
+    Visao.prototype.minimizarTodosGrupos = function ( ) {
+        this._minimizarGrupos( this.$listaDeDisciplinas );
     };
 
-    Visao.prototype.adicionarDisciplina = function ( disciplina, $pai ) {
-        var $disciplina,
-            html;
+    /**
+        Expande todos os grupos de disciplinas
+    */
+    Visao.prototype.expandirTodosGrupos = function ( ) {
+        this._expandirGrupos( this.$listaDeDisciplinas );
+    };
 
-        html = this.template.itemCurso;
-        html = html.replace(new RegExp('{{disciplina.id}}', 'g'), disciplina.id);
-        html = html.replace(new RegExp('{{disciplina.nome}}', 'g'), disciplina.nome);
 
-        $disciplina = $(html);
-        $disciplina.attr('data-id', disciplina.id);
+    /**
+        Cria grupo e lista todas as disciplinas desse grupo
+    */
+    Visao.prototype._adicionarGrupo = function ( id, disciplinas, $pai ) {
+        var
+        template = this.template.grupo;
 
-        if( !disciplina.liberada ) {
-            $('.checkbox', $disciplina).addClass( 'trancada' );
-        }else if( disciplina.feita ) {
-            $('.checkbox', $disciplina).addClass( 'feita' );
+
+        if( disciplinas instanceof Array ) {
+            for( i = 0; i < disciplinas.length; i++ ) {
+                var disciplina = disciplinas[i];
+
+                this._adicionarDisciplina( disciplina );
+            }
+        } else {
+            var
+            $grupo,
+            $conteudoDoGrupo,
+            $sanfona;
+
+            template.replace( '{{id}}', id );
+
+            $grupo = $( template );
+            $conteudoDoGrupo = $( '.conteudo', $grupo );
+            $sanfona = $( '.sanfona', $grupo );
+
+            // Adicionar evento ao clique em $sanfona
+            $sanfona.click( this._aoClicarSanfona );
+
+            for( id in disciplinas ) {
+                this._adicionarGrupo( id, disciplinas[id], $conteudoDoGrupo );
+            }
         }
-
-        $pai.append($disciplina);
     };
 
-    Visao.prototype.definirPesquisa = function ( pesquisa ) {
-        this.$barraDePesquisa.val( pesquisa );
+    /**
+        Adiciona uma disciplina em tela a partir do template para itemDisciplina
+    e o preenche com as informações recebidas
+    */
+    Visao.prototype._adicionarDisciplina = function ( disciplina, $pai ) {
+        var
+        template = this.template.disciplina,
+        $disciplina,
+        $checkbox,
+        $info;
+
+        template = Util.replaceAll( template, '{{id}}', disciplina.id);
+        template = Util.replaceAll( template, '{{nome}}', disciplina.nome);
+
+        $disciplina = $( template );
+
+        // Adicionar evento ao clique em $checkbox
+        $checkbox.click( this._aoClicarDisciplina );
+
+        // Adicionar evento ao clique em $info
+        $info.click( this._aoClicarInformacao );
+
+        $pai.append( $disciplina );
     };
 
+    /**
+        Atualiza uma lista de disciplinas
+    */
     Visao.prototype.atualizarDisciplinas = function ( disciplinas ) {
-        disciplinas.forEach( function ( disciplina ) {
-            $disciplina = $($('.checkbox[data-id='+ disciplina.id + ']')[0]);
+        var i;
 
-            if(disciplina.liberada){
-                $disciplina.removeClass( 'trancada' );
-                if(disciplina.feita){
-                    $disciplina.addClass( 'feita' );
-                }else{
-                    $disciplina.removeClass( 'feita' );
-                }
-            }else{
-                $disciplina.addClass( 'trancada' );
+        for( i = 0; i< disciplinas.length; i++ ) {
+            this._atualizarDisciplina( disciplinas[i] );
+        }
+    };
+
+    /**
+        É feita uma pesquisa na lista de disciplinas pelo id da disciplina que
+    deverá ser alterada e sem remover elementos do dom e somente alterando
+    algumas classes é atualizada a disciplina
+    */
+    Visao.prototype._atualizarDisciplina = function ( disciplina ) {
+        var $disciplina = this._get$disciplina( disciplina.id );
+
+        if( disciplina.liberada ) {
+            $disciplina.removeClass('trancada');
+            if( disciplina.feita ) {
+                $disciplina.addClass('feita');
+            } else {
+                $disciplina.removeClass('feita');
             }
-        });
+        } else {
+            $disciplina.removeClass('feita');
+            $disciplina.addClass('trancada');
+        }
+    };
+
+    /**
+        Pesquisa pelo elemento de disciplina com o id passado
+    */
+    Visao.prototype._get$disciplina = function( id ) {
+        return $( $( '.checkbox[data-id=' + id + ']')[0] );
+    };
+
+    /**
+        Minimiza todos os grupos dentro de um contexo. Um contexto é um elemento
+    pai onde estarão os grupos filhos para serem minimizados
+    */
+    Visao.prototype._minimizarGrupos = function( $contexto ) {
+        var i,
+        $grupos = $( '.grupo', $contexto );
+
+        for( i = 0; i < $grupos.length; i++ ) {
+            $grupo = $grupos[i];
+
+            this._minimizarGrupo( $grupo );
+        }
+    };
+
+    /**
+        Minimiza o grupo trocando a classe do icone e escondendo o conteudo do
+    grupo
+    */
+    Visao.prototype._minimizarGrupo = function ( $grupo ) {
+        var
+        $sanfona = $( '.sanfona', $grupo ),
+        $conteudo = $( '.conteudo', $grupo );
+
+        $sanfona.addClass('glyphicon-plus');
+        $sanfona.removeClass('glyphicon-minus');
+
+        $conteudo.hide();
+    };
+
+    /**
+        Expande todos os grupos dentro de um contexo. Um contexto é um elemento
+    pai onde estarão os grupos filhos para serem minimizados
+    */
+    Visao.prototype._expandirGrupos = function( $contexto ) {
+        var i,
+        $grupos = $( '.grupo', $contexto );
+
+        for( i = 0; i < $grupos.length; i++ ) {
+            $grupo = $grupos[i];
+
+            this._expandirGrupo( $grupo );
+        }
+    };
+
+    /**
+        Expande o grupo trocando a classe do icone e mostrando o conteudo do
+    grupo
+    */
+    Visao.prototype._expandirGrupo = function ( $grupo ) {
+        var
+        $sanfona = $( '.sanfona', $grupo ),
+        $conteudo = $( '.conteudo', $grupo );
+
+        $sanfona.removeClass('glyphicon-plus');
+        $sanfona.addClass('glyphicon-minus');
+
+        $conteudo.show();
+    };
+
+    /**
+        Se o grupo estiver minimizado ele expande e vice versa.
+    */
+    Visao.prototype._alternarGrupo = function ( $grupo ) {
+        var
+        $sanfona = $( '.sanfona', $grupo ),
+        $conteudo = $( '.conteudo', $grupo );
+
+        $sanfona.toggleClass('glyphicon-plus');
+        $sanfona.toggleClass('glyphicon-minus');
+
+        $conteudo.toggle();
     };
 
 
+    /**
+        Quando clicar no botão sair, emitimos o evento 'cliqueEmSairDeCurso'
+    */
+    Visao.prototype._aoClicarSair = function ( evento ) {
+        this.emitir('cliqueEmSairDeCurso');
+    };
 
-    window.Pogad = window.Pogad || { };
-    window.Pogad.Visao = Visao;
+    /**
+        Quando clicar no botão desfazer todos, emitimos o evento
+    'cliqueEmDesfazerTodos'
+    */
+    Visao.prototype._aoClicarDesfazerTodos = function ( evento ) {
+        this.emitir('cliqueEmDesfazerTodos');
+    };
+
+    /**
+        Quando clicar no botão de minimizar todos, emitimos o evento
+    'cliqueEmSanfonaMestre'
+    */
+    Visao.prototype._aoClicarSanfonaMestre = function ( evento ) {
+        this.emitir('cliqueEmSanfonaMestre');
+    };
+
+    /**
+        Quando o usuário altera o valor da barra de pesquisa, emitimos o evento
+    'alterarPesquisa'
+    */
+    Visao.prototype._aoAlterarPesquisa = function ( evento ) {
+        var
+        pesquisa = $barraDePesquisa.val();
+
+        this.emitir( 'alterarPesquisa', pesquisa );
+    };
+
+    /**
+        Quando o usuário clica em uma disciplina emitimos o evento
+    'cliqueEmDisciplina', com o id da disciplina em questão
+    */
+    Visao.prototype._aoClicarDisciplina = function ( evento ) {
+        var
+        $disciplina = $( evento.target ),
+        id = $disciplina.attr('data-id');
+
+        this.emitir( 'cliqueEmDisciplina', id );
+        evento.stopPropagation();
+    };
+
+    /**
+        Quando o usuário clica em uma informação emitimos o evento
+    'cliqueEmInformacao', com o id da disciplina em questão
+    */
+    Visao.prototype._aoClicarInformacao = function ( evento ) {
+        var
+        $info = $( evento.target ),
+        id = $info.attr('data-id');
+
+        this.emitir( 'cliqueEmInformacao', id );
+        evento.stopPropagation();
+    };
+
+    /**
+        Quando o usuário clica no síbolo de minimizar/maximizar grupo
+    Alternamos o estado da 'sanfona' do grupo
+    */
+    Visao.prototype._aoClicarSanfona = function ( evento ) {
+        var
+        $this = $( this ),
+        $grupo = $this.parent().parent();
+
+        this._alternarGrupo( $grupo );
+        evento.stopPropagation();
+    };
+
+    /**
+        Quando o usuário clica o no botão de mais detalhes do curso alternamos
+    o estado dele. Se estiver aberto, fecha. Se estiver fechado, abre.
+    */
+    Visao.prototype._aoClicarMaisDetalhes = function ( evento ) {
+        this.$maisDetalhes.toggleClass('glyphicon-minus');
+        this.$maisDetalhes.toggleClass('glyphicon-plus');
+
+        this.$camadaBarraDoTopo.toggleClass( 'aberta' );
+        this.$camadaBarraDoTopo.toggleClass( 'fechada' );
+    };
+
+    /**
+        Quando for alterado o valor selecionado da lista de universidades emite
+    o evento 'selecionarUniversidade' com o caminho da universidade selecionada
+    */
+    Visao.prototype._aoSelecionarUniversidade = function ( evento ) {
+        var caminho = this.$universidadesDropdown[0].selectize.getValue( );
+
+        //Desabilite seletor de curso enquanto estiver carregando nova lista
+        //de universidade
+        this.$cursosDropdown[0].selectize.disable();
+
+        this.emitir( 'selecionarUniversidade', caminho );
+    };
+
+    /**
+        Quando for mandado carregar o curso emitimos o evento 'selecionarCurso'
+    com o caminho do curso selecionado
+    */
+    Visao.prototype._aoSelecionarCurso = function ( evento ) {
+        var caminho = this.$cursosDropdown[0].selectize.getValue( );
+
+        this.emitir( 'selecionarCurso', caminho );
+    };
+
+    window.Agrade = window.Agrade || { };
+    window.Agrade.Visao = Visao;
 })();
