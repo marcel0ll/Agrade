@@ -2214,7 +2214,7 @@
         },
         {
             "id": "026190",
-            "minCreditos" : 160,
+            "minCreditos": 160,
             "requisitos": [
             ],
             "coRequisitos": [
@@ -2241,7 +2241,7 @@
         },
         {
             "id": "026239",
-            "minCreditos" : 160,
+            "minCreditos": 160,
             "requisitos": [
                 " "
             ],

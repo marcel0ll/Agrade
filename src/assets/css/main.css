@@ -3,21 +3,22 @@
 @import url('./libs/selectize.css');
 @import url('./fonts.css');
 
-a{
+a {
     text-decoration: none;
 }
 
-a:link, 
+a:link,
 a:visited,
 a:hover,
 a:active {
     color: #000000;
 }
+
 /*div {
-    -moz-user-select: none; 
-      -khtml-user-select: none; 
-     -webkit-user-select: none; 
-     -o-user-select: none;  
+    -moz-user-select: none;
+      -khtml-user-select: none;
+     -webkit-user-select: none;
+     -o-user-select: none;
 }*/
 
 .browsehappy {
@@ -33,11 +34,12 @@ a:active {
       height: 100%;
 }
 */
-html{
+html {
     position: relative;
     min-height: 100%;
 }
-body{
+
+body {
     margin-bottom: 120px;
 }
 
@@ -49,7 +51,7 @@ body{
     padding-right: 15px;
 }
 
-.footer{
+.footer {
     text-align: center;
     border-top: 1px solid black;
     padding-top: 15px;
@@ -61,7 +63,8 @@ body{
     height: 90px;
     background-color: #f5f5f5;
 }
-.footer-github{
+
+.footer-github {
     letter-spacing: 3px;
 }
 
@@ -69,7 +72,7 @@ body{
     text-align: center;
 }
 
-#titulo{
+#titulo {
     font-family: prototype;
 }
 
@@ -101,7 +104,7 @@ body{
 #lista {
     margin-top: 60px;
     padding-top: 60px;
-} 
+}
 
 .nomeCurso {
     text-align: center;
@@ -112,8 +115,9 @@ body{
     #lista {
         margin-top: 60px;
         padding-top: 60px;
-    }   
+    }
 }
+
 #query {
     position: fixed;
     max-height: 110px;
@@ -125,43 +129,42 @@ body{
     overflow: hidden;
 }
 
-#query.aberta{
+#query.aberta {
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-name: abrirBarra;
     max-height: 100%;
 }
 
-#query.fechada{
+#query.fechada {
     animation-duration: 0.25s;
     animation-iteration-count: 1;
-    animation-name: fecharBarra;    
+    animation-name: fecharBarra;
     max-height: 110px;
 }
 
 @keyframes abrirBarra {
-  from {
-    max-height: 110px;
-  }
-  to {   
-    max-height: 100%;
-  }
+    from {
+        max-height: 110px;
+    }
+    to {
+        max-height: 100%;
+    }
 }
 
 @keyframes fecharBarra {
-  from {
-    max-height: 100%;
-  }
-  to {   
-    max-height: 110px;
-  }
+    from {
+        max-height: 100%;
+    }
+    to {
+        max-height: 110px;
+    }
 }
-
 
 .disciplina {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-   
+
     border-left: 2px solid black;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -178,11 +181,12 @@ body{
     white-space: nowrap;
     overflow: hidden;
 }
+
 .info {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-   
-    border: 2px solid black;    
+
+    border: 2px solid black;
 
     box-sizing: border-box;
 
@@ -196,43 +200,47 @@ body{
     text-align: center;
 }
 
-.disciplina>input[type="checkbox"] {
-    margin-left: 0px;  
+.disciplina > input[type="checkbox"] {
+    margin-left: 0px;
 }
 
 .checkbox, .info {
     cursor: pointer;
 }
 
-#query-formGroup{
+#query-formGroup {
     margin-bottom: 0px;
 }
 
-.separador>h4, .separador>h3, .separador>p {
+.separador > h4, .separador > h3, .separador > p {
     position: relative;
     cursor: pointer;
 }
-.separador>h3{
+
+.separador > h3 {
     left: 20px;
-} 
-.separador>h4 {
+}
+
+.separador > h4 {
     left: 40px;
 }
-.separador>p {
+
+.separador > p {
     left: 60px;
 }
-.separador>h3>span,
-.separador>h4>span,
-.separador>p>span{
+
+.separador > h3 > span,
+.separador > h4 > span,
+.separador > p > span {
     margin-right: 10px;
 }
 
 .checkbox.requisito {
-     background-color: rgb(193, 111, 83) !important;
+    background-color: rgb(193, 111, 83) !important;
 }
 
 .checkbox.libera {
-     background-color: green !important;
+    background-color: green !important;
 }
 
 .checkbox.trancada {
@@ -249,35 +257,34 @@ body{
     color: white;
 }
 
-#topBar-data{
-    color:  white;
+#topBar-data {
+    color: white;
     padding-top: 5px;
 }
 
-#topBar-dataConjuntos{
-    color:  white;
+#topBar-dataConjuntos {
+    color: white;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.conteudo{
+.conteudo {
     position: absolute;
     right: 15px;
 }
 
-
-#more__wrapper{
+#more__wrapper {
 
 }
 
-#more__plus{
+#more__plus {
     line-height: 30px;
     color: white;
 
     cursor: pointer;
 }
 
-.glyphicon-info-sign{
+.glyphicon-info-sign {
     top: 2px;
-    left:  2px;
+    left: 2px;
 }
