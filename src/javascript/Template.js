@@ -38,6 +38,6 @@
         }
     });
 
-    window.Pogad = window.Pogad || {};
-    window.Pogad.Template = Template;
+    window.Agrade = window.Agrade || {};
+    window.Agrade.Template = Template;
 })();

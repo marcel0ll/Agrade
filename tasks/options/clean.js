@@ -10,5 +10,8 @@ module.exports = {
             ]
         }]
     },
+    docs: {
+        src: ['<%= pkg.documentation_path %>']
+    },
     server: '.tmp'
 };

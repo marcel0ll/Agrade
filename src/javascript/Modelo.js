@@ -580,6 +580,6 @@
         });
     };
 
-    window.Pogad = window.Pogad || {};
-    window.Pogad.Modelo = Modelo
+    window.Agrade = window.Agrade || {};
+    window.Agrade.Modelo = Modelo
 })();

@@ -248,7 +248,7 @@
      Quando o modelo tiver uma nova lista de disciplinas para ser exposta,
      nós repassamos ela para a visao exibi-la.
 
-     @param {Array.<Disciplina>}
+     @param {Array.<Disciplina>} listaDeDisciplinas
      */
     Controlador.prototype.aoProcessarListaDeDisciplinas = function (listaDeDisciplinas) {
         console.info('Controlador: Nova lista de disciplinas:', listaDeDisciplinas);
@@ -260,7 +260,7 @@
      Quando houver somente um conjunto de disciplinas alterada, repassamos
      isso para a visão somente atualizá-las. Sem ter que refazer a lista.
 
-     @param {Array.<Disciplina>}
+     @param {Array.<Disciplina>} disciplinas
      */
     Controlador.prototype.aoModificarDisciplinas = function (disciplinas) {
         console.info('Controlador: Disciplinas modificadas:', disciplinas);
@@ -272,7 +272,7 @@
      Quando houver alguma alteração do cabeçalho, mandamos a visão
      atualiza-lo
 
-     @param {Object}
+     @param {Object} cabecalho
      */
     Controlador.prototype.aoModificarCabecalho = function (cabecalho) {
         console.info('Controlador: Cabecalho modificado:', cabecalho);

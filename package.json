@@ -1,6 +1,7 @@
 {
     "app": "src",
     "dist": "build",
+    "documentation_path": "docs",
     "port": 8080,
     "testPort": 8081,
 
@@ -30,6 +31,7 @@
         "grunt-svgmin": "^2.0.1",
         "grunt-usemin": "^3.0.0",
         "grunt-wiredep": "^2.0.0",
+        "grunt-jsdoc": "^0.5.7",
         "jit-grunt": "^0.9.1",
         "load-grunt-tasks": "^3.3.0",
         "time-grunt": "^1.1.0"
