@@ -1,23 +1,9 @@
-# Pogad
+# Agrade ![Is build passing](https://travis-ci.org/0tho/Agrade.svg?branch=agrade2)
 
-Uma versão alternativa para controlar a sua grade universitária 
+Um software para visualização e controle de sua grade curricular.
 
-Você pode usá-lo de seu computador ou aparelho móvel, [aqui](http://0tho.github.io/Pogad).
+Você pode usá-lo  [aqui](http://www.agrade.info), de seu computador ou aparelho móvel.
 
-# Wiki
+### Como contribuir
 
-O projeto cotém uma [wiki](https://github.com/0tho/Pogad/wiki) para que você poça se esclarecer sobre o programa
-
-***
-
-### Licença
-
-Pode usar
-
-Pode modificar
-
-Pode re-publicar, contanto que faça referência à esse projeto
-
-NÃO PODE sob nenhuma circunstância cobrar de qualquer forma para usar o programa ou ver seu código 
-
-NÃO PODE liberar esse programa sob outra licença
+Se achar um bug ou tiver uma sugestão nos envie [aqui](https://github.com/0tho/Agrade/issues).
