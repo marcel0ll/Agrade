@@ -7,17 +7,17 @@ a{
     text-decoration: none;
 }
 
-a:link, 
+a:link,
 a:visited,
 a:hover,
 a:active {
     color: #000000;
 }
 /*div {
-    -moz-user-select: none; 
-      -khtml-user-select: none; 
-     -webkit-user-select: none; 
-     -o-user-select: none;  
+    -moz-user-select: none;
+      -khtml-user-select: none;
+     -webkit-user-select: none;
+     -o-user-select: none;
 }*/
 
 .browsehappy {
@@ -80,6 +80,7 @@ body{
 #carregando {
     z-index: 10;
 
+    display: none;
     position: absolute;
     background-color: white;
     width: 100%;
@@ -101,7 +102,7 @@ body{
 #lista {
     margin-top: 60px;
     padding-top: 60px;
-} 
+}
 
 .nomeCurso {
     text-align: center;
@@ -112,7 +113,7 @@ body{
     #lista {
         margin-top: 60px;
         padding-top: 60px;
-    }   
+    }
 }
 #query {
     position: fixed;
@@ -135,7 +136,7 @@ body{
 #query.fechada{
     animation-duration: 0.25s;
     animation-iteration-count: 1;
-    animation-name: fecharBarra;    
+    animation-name: fecharBarra;
     max-height: 110px;
 }
 
@@ -143,7 +144,7 @@ body{
   from {
     max-height: 110px;
   }
-  to {   
+  to {
     max-height: 100%;
   }
 }
@@ -152,7 +153,7 @@ body{
   from {
     max-height: 100%;
   }
-  to {   
+  to {
     max-height: 110px;
   }
 }
@@ -161,7 +162,7 @@ body{
 .disciplina {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-   
+
     border-left: 2px solid black;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -181,8 +182,8 @@ body{
 .info {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-   
-    border: 2px solid black;    
+
+    border: 2px solid black;
 
     box-sizing: border-box;
 
@@ -197,7 +198,7 @@ body{
 }
 
 .disciplina>input[type="checkbox"] {
-    margin-left: 0px;  
+    margin-left: 0px;
 }
 
 .checkbox, .info {
@@ -214,7 +215,7 @@ body{
 }
 .separador>h3{
     left: 20px;
-} 
+}
 .separador>h4 {
     left: 40px;
 }

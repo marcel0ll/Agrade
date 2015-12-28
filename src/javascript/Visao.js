@@ -5,6 +5,8 @@
 */
 (function ( ) {
 
+    var Util = Agrade.Util;
+
     /**
         Classe da Visao do programa Agrade
 
@@ -16,14 +18,14 @@
         //atributos necessários para usar suas funções
         Agrade.ControladorDeEvento.apply( this );
 
-        this.template = template;
+        this.template = Agrade.Template;
 
         $(document).ready(this.iniciar.bind( this ));
     }
 
     //Adicionar as funções do prototipo de controlador de eventos no prototipo
     //da Visao
-    Agrade.Util.mixInto( Visao.prototype, Agrade.ControladorDeEvento.prototype );
+    Util.mixInto( Visao.prototype, Agrade.ControladorDeEvento.prototype );
 
     /**
         Assim que o html tiver carregado, pegamos o endereço hash da url e
@@ -34,12 +36,17 @@
         //Pegue a url após '#' do browser
         caminho = window.location.hash;
 
+        if( caminho ) {
+            caminho = caminho.substring(1);
+        }
+
         //Pegue os elementos do DOM
         this.$camadaCarregando = $('#carregando');
 
         this.$camadaSeletor = $('#seletor');
-        this.$cursosDropdown =  $('#cursoSeletor');
         this.$universidadesDropdown =  $('#universidadeSeletor');
+        this.$campusDropdown =  $('#campusSeletor');
+        this.$cursosDropdown =  $('#cursoSeletor');
         this.$carregarCurso = $('#carregar');
 
         this.$camadaLista = $('#lista');
@@ -71,6 +78,16 @@
                     create: false
                 });
 
+        //Crie seletor de campus
+        this.$campusDropdown.selectize({
+                    maxItems: 1,
+                    valueField: 'url',
+                    labelField: 'nome',
+                    searchField: 'nome',
+                    openOnFocus: false,
+                    create: false
+                });
+
         //Crie seletor de cursos
         this.$cursosDropdown.selectize({
                     maxItems: 1,
@@ -84,14 +101,18 @@
         //Desabilite seletor de universidades
         this.$universidadesDropdown[0].selectize.disable();
 
+        //Desabilite seltor de campus
+        this.$campusDropdown[0].selectize.disable();
+
         //Desabilite seletor de cursos
         this.$cursosDropdown[0].selectize.disable();
 
         //Coloque a versao do programa do rodapé
-        this.$versao.text( Agrade.prototype.versao );
+        this.$versao.text( Agrade.App.versao );
 
         //Adicione eventos aos botões e inputs
         this.$universidadesDropdown[0].selectize.on( "change", this._aoSelecionarUniversidade.bind( this ) );
+        this.$campusDropdown[0].selectize.on( "change", this._aoSelecionarCampus.bind( this ) );
         this.$carregarCurso.click( this._aoSelecionarCurso.bind( this ) );
 
         this.$sanfonaMestre.click( this._aoClicarSanfonaMestre.bind( this ) );
@@ -158,11 +179,20 @@
     };
 
     /**
+        Coloca na lista de universidades as opções de universidades existentes
+    */
+    Visao.prototype.listarCampus = function ( listaDeCampus) {
+        this.$campusDropdown[0].selectize.clearOptions();
+        this.$campusDropdown[0].selectize.addOption( listaDeCampus );
+        this.$campusDropdown[0].selectize.enable();
+    };
+
+    /**
         Coloca na lista de cursos as opções de cursos existentes
     */
     Visao.prototype.listarCursos = function ( listaDeCursos ) {
         this.$cursosDropdown[0].selectize.clearOptions();
-        this.$cursosDropdown[0].selectize.addOption( listaDeUniversidades );
+        this.$cursosDropdown[0].selectize.addOption( listaDeCursos );
         this.$cursosDropdown[0].selectize.enable();
     };
 
@@ -173,30 +203,29 @@
     Visao.prototype.preencherCabecalho = function ( cabecalho ) {
         var i;
 
-        this.$porcentagemDoCurso.text( ( ( curso.totalDeCreditosFeitos * 100 ) / curso.totalDeCreditos ).toFixed( 2 ) + '%' );
-        this.$creditosFeitos.text( curso.totalDeCreditosFeitos );
-        this.$creditosParaFazer.text( curso.totalDeCreditos );
-        this.$barraDoTopoNomeDoCurso.text( curso.nome );
+        this.$porcentagemDoCurso.text( ( ( cabecalho.totalDeCreditosFeitos * 100 ) / cabecalho.totalDeCreditos ).toFixed( 2 ) + '%' );
+        this.$creditosFeitos.text( cabecalho.totalDeCreditosFeitos );
+        this.$creditosParaFazer.text( cabecalho.totalDeCreditos );
+        this.$barraDoTopoNomeDoCurso.text( cabecalho.nome );
 
         this.$dadosDeConjuntos.empty();
 
         this.$dadosDeConjuntos.append( this.template.conjuntoCabecalho );
 
-        for( i = 0; i < curso.conjuntos.length; i++ ) {
+        for( i = 0; i < cabecalho.conjuntos.length; i++ ) {
             var
-            conjunto = curso.conjuntos[i],
-            template = this.template.conjuntoLinha,
+            conjunto = cabecalho.conjuntos[i],
+            html = this.template.conjuntoLinha,
             porcentagemDoCurso = ( ( conjunto.creditosFeitos * 100 ) / conjunto.creditos ).toFixed( 2 );
 
-            template.replace( '{{nome}}', conjunto.nome );
-            template.replace( '{{creditosFeitos}}', conjunto.creditosFeitos );
-            template.replace( '{{creditosTotais}}', conjunto.creditos );
-            template.replace( '{{disciplinasFeitas}}', conjunto.disciplinasFeitas );
-            template.replace( '{{disciplinasTotais}}', conjunto.disciplinas );
-            template.replace( '{{disciplinasTotais}}', conjunto.disciplinas );
-            template.replace( '{{porcentagem}}', porcentagemDoCurso );
+            html = Util.replaceAll(html, '{{nome}}', conjunto.nome );
+            html = Util.replaceAll(html, '{{creditosFeitos}}', conjunto.creditosFeitos );
+            html = Util.replaceAll(html, '{{creditosTotais}}', conjunto.creditos );
+            html = Util.replaceAll(html, '{{disciplinasFeitas}}', conjunto.disciplinasFeitas );
+            html = Util.replaceAll(html, '{{disciplinasTotais}}', conjunto.disciplinas );
+            html = Util.replaceAll(html, '{{porcentagem}}', porcentagemDoCurso );
 
-            this.$dadosDeConjuntos.append( $( template ) );
+            this.$dadosDeConjuntos.append( $( html ) );
         }
     };
 
@@ -214,11 +243,11 @@
             for( i = 0; i < disciplinas.length; i++ ) {
                 var disciplina = disciplinas[i];
 
-                this._adicionarDisciplina( disciplina );
+                this._adicionarDisciplina( disciplina, this.$listaDeDisciplinas );
             }
         } else {
             for( id in disciplinas ) {
-                this._adicionarGrupo( id, disciplinas[id], $conteudoDoGrupo );
+                this._adicionarGrupo( id, disciplinas[id], this.$listaDeDisciplinas );
             }
         }
     };
@@ -279,15 +308,17 @@
     */
     Visao.prototype._adicionarDisciplina = function ( disciplina, $pai ) {
         var
-        template = this.template.disciplina,
+        html = this.template.disciplina,
         $disciplina,
         $checkbox,
         $info;
 
-        template = Util.replaceAll( template, '{{id}}', disciplina.id);
-        template = Util.replaceAll( template, '{{nome}}', disciplina.nome);
+        html = Util.replaceAll( html, '{{id}}', disciplina.id);
+        html = Util.replaceAll( html, '{{nome}}', disciplina.nome);
 
-        $disciplina = $( template );
+        $disciplina = $( html );
+        $checkbox = $( '.checkbox', $disciplina );
+        $info = $( '.info', $disciplina );
 
         // Adicionar evento ao clique em $checkbox
         $checkbox.click( this._aoClicarDisciplina );
@@ -490,11 +521,15 @@
     o estado dele. Se estiver aberto, fecha. Se estiver fechado, abre.
     */
     Visao.prototype._aoClicarMaisDetalhes = function ( evento ) {
+        if(!this.$camadaBarraDoTopo.hasClass('aberta') && !this.$camadaBarraDoTopo.hasClass('fechada')){
+            this.$camadaBarraDoTopo.addClass( 'aberta' );
+        }else{
+            this.$camadaBarraDoTopo.toggleClass( 'aberta' );
+            this.$camadaBarraDoTopo.toggleClass( 'fechada' );
+        }
+
         this.$maisDetalhes.toggleClass('glyphicon-minus');
         this.$maisDetalhes.toggleClass('glyphicon-plus');
-
-        this.$camadaBarraDoTopo.toggleClass( 'aberta' );
-        this.$camadaBarraDoTopo.toggleClass( 'fechada' );
     };
 
     /**
@@ -502,13 +537,27 @@
     o evento 'selecionarUniversidade' com o caminho da universidade selecionada
     */
     Visao.prototype._aoSelecionarUniversidade = function ( evento ) {
-        var caminho = this.$universidadesDropdown[0].selectize.getValue( );
+        var caminho = this.$universidadesDropdown[0].selectize.getValue();
 
-        //Desabilite seletor de curso enquanto estiver carregando nova lista
-        //de universidade
+        //Desabilite seletor de curso e de campus enquanto estiver carregando
+        //nova lista de campus
+        this.$campusDropdown[0].selectize.disable();
         this.$cursosDropdown[0].selectize.disable();
 
         this.emitir( 'selecionarUniversidade', caminho );
+    };
+
+    /**
+        Quando for alterado o valor selecionado da lista de campus emite
+    o evento 'selecionarCampus' com o caminho da universidade selecionada
+    */
+    Visao.prototype._aoSelecionarCampus = function ( evento ) {
+        var caminho = this.$campusDropdown[0].selectize.getValue();
+
+        //Desabilite seletor de curso enquanto estiver carregando novo campus
+        this.$cursosDropdown[0].selectize.disable();
+
+        this.emitir( 'selecionarCampus', caminho );
     };
 
     /**
@@ -516,7 +565,7 @@
     com o caminho do curso selecionado
     */
     Visao.prototype._aoSelecionarCurso = function ( evento ) {
-        var caminho = this.$cursosDropdown[0].selectize.getValue( );
+        var caminho = this.$cursosDropdown[0].selectize.getValue();
 
         this.emitir( 'selecionarCurso', caminho );
     };

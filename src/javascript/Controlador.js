@@ -10,7 +10,7 @@
 
         @const
     */
-    var PESQUISA_INICIAL = 'perfil conjunto';
+    var PESQUISA_INICIAL = '/perfil /conjunto .perfil< testando issaQui';
 
     /**
         Classe do controlador do programa Agrade.
@@ -24,11 +24,14 @@
 
     */
     function Controlador ( modelo, visao ) {
+        console.info( 'Controlador: Controlador criado' );
         this.modelo = modelo;
         this.visao = visao;
 
         //
         this.ultimoCaminhoDeUniversidade = '';
+        this.ultimoCaminhoDeCampus = '';
+        this.ultimoCaminhoDeCurso = '';
 
         this.ultimaPesquisa = PESQUISA_INICIAL;
         this.minimizar = true;
@@ -39,6 +42,7 @@
         // Escute os eventos da Visao do programa
         this.visao.ao( 'iniciar', this.aoIniciar.bind(this) );
         this.visao.ao( 'selecionarCurso', this.aoSelecionarCurso.bind(this) );
+        this.visao.ao( 'selecionarCampus', this.aoSelcionarCampus.bind(this) );
         this.visao.ao( 'selecionarUniversidade', this.aoSelecionarUniversidade.bind(this) );
         this.visao.ao( 'alterarPesquisa', this.aoMudarPesquisa.bind(this) );
         this.visao.ao( 'cliqueEmDisciplina', this.aoCliqueEmDisciplina.bind(this) );
@@ -49,7 +53,8 @@
 
         // Escute os eventos do Modelo do programa
         this.modelo.ao( 'carregarListaDeUniversidades', this.aoCarregarListaDeUniversidades.bind(this) );
-        this.modelo.ao( 'carregarListaDeCursosDeUniversidade', this.aoCarregarListaDeCursosDeUniversidade.bind(this) );
+        this.modelo.ao( 'carregarListaDeCampusDeUniversidade', this.aoCarregarListaDeCampusDeUniversidade.bind(this) );
+        this.modelo.ao( 'carregarListaDeCursosDeCampus', this.aoCarregarListaDeCursosDeCampus.bind(this) );
         this.modelo.ao( 'carregarCurso', this.aoCarregarCurso.bind(this) );
 
         this.modelo.ao( 'processarListaDeDisciplinas', this.aoProcessarListaDeDisciplinas.bind(this) );
@@ -70,8 +75,37 @@
     Controlador.prototype.aoIniciar = function ( caminho ) {
         console.info( 'Controlador: Programa iniciado com url#' + caminho );
 
-        if( typeof caminho !== 'undefined' ) {
-            this.modelo.carregarCursoDaUrl( caminho );
+
+        if( typeof caminho !== 'undefined' && caminho !== '' ) {
+            var
+            parser = caminho.split( '/' );
+
+            this.modelo.carregarListaDeUniversidades();
+            if( parser.length > 0) {
+                this.ultimoCaminhoDeUniversidade = parser[0];
+                this.modelo.carregarListaDeCampusDeUniversidade( this.ultimoCaminhoDeUniversidade );
+                if(parser.length > 1) {
+                   this.ultimoCaminhoDeCampus = parser[1];
+                    this.modelo.carregarListaDeCursosDeCampus( this.ultimoCaminhoDeUniversidade, this.ultimoCaminhoDeCampus );
+                    if(parser.length > 2) {
+                        this.ultimoCaminhoDeCurso = parser[2];
+                        this.modelo.carregarCurso( this.ultimoCaminhoDeUniversidade, this.ultimoCaminhoDeCampus, this.ultimoCaminhoDeCurso );
+                    } else {
+
+                    }
+                }
+            }
+
+            if( parser.length >= 3 ) {
+
+            } else if (parser.length == 2) {
+
+            } else if (parser.length == 1) {
+
+            } else {
+                console.error ("Isso não deveria acontecer");
+            }
+
         } else {
             this.modelo.carregarListaDeUniversidades();
         }
@@ -86,13 +120,33 @@
     Controlador.prototype.aoSelecionarCurso = function ( caminho ) {
         console.info( 'Controlador: Curso Selecionado: ' + caminho );
 
-        this.visao.mudarTelaParaCarregar();
-        this.modelo.carregarCurso( caminho );
+        if( this.ultimoCaminhoDeCurso !== caminho ) {
+            this.visao.mudarTelaParaCarregar();
+            this.ultimoCaminhoDeCurso = caminho;
+            this.modelo.carregarCurso( this.ultimoCaminhoDeUniversidade, this.ultimoCaminhoDeCampus, this.ultimoCaminhoDeCurso );
+            this.visao.definirUrl(this.ultimoCaminhoDeUniversidade + '/' + this.ultimoCaminhoDeCampus + '/' + this.ultimoCaminhoDeCurso );
+        }
+    };
+
+     /**
+        Ao selecionar um Campus das opções mandamos o modelo carregar
+    a lista de cursos desse Campus
+
+        @param {string}
+    */
+    Controlador.prototype.aoSelcionarCampus = function ( caminho ) {
+        console.info( 'Controlador: Campus Selecionado: ' + caminho );
+
+        if(this.ultimoCaminhoDeCampus !== caminho) {
+            this.ultimoCaminhoDeCampus = caminho;
+            this.modelo.carregarListaDeCursosDeCampus( this.ultimoCaminhoDeUniversidade, this.ultimoCaminhoDeCampus );
+            this.visao.definirUrl(this.ultimoCaminhoDeUniversidade + '/' + this.ultimoCaminhoDeCampus);
+        }
     };
 
     /**
         Ao selecionar uma universidade das opções mandamos o modelo carregar
-    a lista de cursos dessa universidade
+    a lista de campus dessa universidade
 
         @param {string}
     */
@@ -100,8 +154,9 @@
         console.info( 'Controlador: Universidade Selecionada: ' + caminho );
 
         if(this.ultimoCaminhoDeUniversidade !== caminho) {
-            this.modelo.carregarListaDeCursosDeUniversidade( caminho );
             this.ultimoCaminhoDeUniversidade = caminho;
+            this.modelo.carregarListaDeCampusDeUniversidade( this.ultimoCaminhoDeUniversidade );
+            this.visao.definirUrl(this.ultimoCaminhoDeUniversidade);
         }
     };
 
@@ -199,11 +254,12 @@
 
         @param {Array.<Object>}
     */
-    Controlador.prototype.aoCarregarListaDeUniversidades = function ( sucesso, listaDeUniversidades ) {
-        console.info( 'Controlador: Universidades carregadas:', listaDeUniversidades );
+    Controlador.prototype.aoCarregarListaDeUniversidades = function ( evento ) {
+        console.info( 'Controlador: Universidades carregadas:', evento.listaDeUniversidades );
 
-        if( sucesso ) {
-            this.visao.listarUniversidades( listaDeUniversidades );
+        if( evento.sucesso ) {
+            this.visao.mudarTelaParaSelecao();
+            this.visao.listarUniversidades( evento.listaDeUniversidades );
         } else {
             console.error('Controlador: Falha ao carregar lista de universidades');
         }
@@ -215,13 +271,29 @@
 
         @param {Array.<Object>}
     */
-    Controlador.prototype.aoCarregarListaDeCursosDeUniversidade = function ( sucesso, listaDeCursos ) {
-        console.info( 'Controlador: Lista de cursos carregado:', listaDeCursos );
+    Controlador.prototype.aoCarregarListaDeCampusDeUniversidade = function ( evento ) {
+        console.info( 'Controlador: Lista de cursos carregado:', evento.listaDeCampus );
 
-        if( sucesso ) {
-            this.visao.listarCursos( listaDeCursos );
+        if( evento.sucesso ) {
+            this.visao.listarCampus( evento.listaDeCampus );
         } else {
-            console.error( 'Controlador: Falha ao carregar lista de cursos da universidade:' + this.ultimoCaminhoDeUniversidade );
+            console.error( 'Controlador: Falha ao carregar lista de campus da universidade:' + this.ultimoCaminhoDeUniversidade );
+        }
+    };
+
+    /**
+        Quando o modelo termina de carregar a lista de cursos de uma
+    universidade, mandamos a visao exibi-la
+
+        @param {Array.<Object>}
+    */
+    Controlador.prototype.aoCarregarListaDeCursosDeCampus = function ( evento ) {
+        console.info( 'Controlador: Lista de cursos carregado:', evento.listaDeCursos );
+
+        if( evento.sucesso ) {
+            this.visao.listarCursos( evento.listaDeCursos );
+        } else {
+            console.error( 'Controlador: Falha ao carregar lista de cursos do campus:' + this.ultimoCaminhoDeUniversidade + '/' + this.ultimoCaminhoDeCampus );
         }
     };
 
@@ -231,12 +303,12 @@
 
         @param {Object}
     */
-    Controlador.prototype.aoCarregarCurso = function ( sucesso, cabecalho ) {
-        console.info( 'Controlador: Curso Carregado, cabeçalho:', cabecalho );
+    Controlador.prototype.aoCarregarCurso = function ( evento ) {
+        console.info( 'Controlador: Curso Carregado, cabeçalho:', evento.cabecalho );
 
-        if( sucesso ) {
+        if( evento.sucesso ) {
             this.visao.mudarTelaParaCurso();
-            this.visao.preencherCabecalho( cabecalho );
+            this.visao.preencherCabecalho( evento.cabecalho );
             this.modelo.pesquisar( PESQUISA_INICIAL );
         } else {
             console.error('Controlador: Falha ao carregar arquivo de curso ou arquivo inválido');
@@ -250,10 +322,10 @@
 
         @param {Array.<Disciplina>}
     */
-    Controlador.prototype.aoProcessarListaDeDisciplinas = function( listaDeDisciplinas ) {
-        console.info( 'Controlador: Nova lista de disciplinas:', listaDeDisciplinas );
+    Controlador.prototype.aoProcessarListaDeDisciplinas = function( evento ) {
+        console.info( 'Controlador: Nova lista de disciplinas:', evento.disciplinas );
 
-        this.visao.preencherDisciplinas( listaDeDisciplinas );
+        this.visao.preencherDisciplinas( evento.disciplinas );
     };
 
     /**
@@ -283,4 +355,5 @@
     //Deixar exposto o construtor da classe 'Controlador'
     window.Agrade = window.Agrade || {};
     window.Agrade.Controlador = Controlador;
+
 })();

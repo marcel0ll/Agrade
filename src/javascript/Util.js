@@ -49,5 +49,5 @@
     };
 
     window.Agrade = window.Agrade || {};
-    window.Agrade.Util = new Util();
+    window.Agrade.Util = Util.prototype;
 })();

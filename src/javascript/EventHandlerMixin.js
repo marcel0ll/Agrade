@@ -15,6 +15,7 @@ adicionada nas classes que precisam emitir eventos e chamar callbacks.
         @author Otho
     */
     function ControladorDeEvento ( ) {
+        console.info( 'ControladorDeEvento: ControladorDeEvento chamado' );
         this._handlers = {};
     }
 
@@ -49,4 +50,5 @@ adicionada nas classes que precisam emitir eventos e chamar callbacks.
 
     window.Agrade = window.Agrade || { };
     window.Agrade.ControladorDeEvento = ControladorDeEvento;
+
 })();

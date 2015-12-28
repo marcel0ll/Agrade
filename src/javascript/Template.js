@@ -1,43 +1,145 @@
-( function ( ) {
+/**
+    @file Arquivo define classe Template responsável por carregar os templates
+em html para que sejam usadas pela Visao
 
-    function Template ( ) {
-        // this.separadores = ['<h3 class="col-md-12 col-sm-12 col-xs-12">', '<h4 class="col-md-12 col-sm-12 col-xs-12">', '<p class="col-md-12 col-sm-12 col-xs-12">'];
-        this.separadores = ['<h3 class="titulo row">', '<h4 class="titulo row">', '<p class="titulo row">'];
-        // this.separadorConteudo = '<div class="separador-conteudo col-md-12 col-sm-12 col-xs-12">';
-        this.separadorConteudo = '<div class="separador-conteudo row">';
-        this._itemCurso;
+    @author Otho
+*/
+(function () {
 
-        this.caregarItemCursoEvent = new Pogad.Event ( this );
+    /**
+        Classe responsável por carregar templates html
 
-        this.requisitarArquivosHtml( );
+        @author Otho
+    */
+    function Template () {
+        //Use o construtor do Controlador de eventos para que o template tenha
+        //os atributos necessários para usar suas funções
+        Agrade.ControladorDeEvento.apply( this );
+
+        this._conjuntoCabecalho = false;
+        this._conjuntoLinha = false;
+
+        this._grupo = false;
+
+        this._disciplina = false;
+
+        this.requisitarArquivosHtml();
     }
 
-    Template.prototype.requisitarArquivosHtml = function ( ) {
-        var _this = this;
+    //Adicionar as funções do prototipo de controlador de eventos no prototipo
+    //de Template
+    Agrade.Util.mixInto( Template.prototype, Agrade.ControladorDeEvento.prototype );
+
+    /**
+
+    */
+    Template.prototype.requisitarTemplateConjuntoCabecalho = function () {
         $.ajax({
-            url : './assets/html/itemCurso.html',
+            url : './assets/html/conjuntoCabecalho.html',
             datatype: 'html'
         })
         .success(function ( data ) {
-            _this._itemCurso = data;
-            _this.caregarItemCursoEvent.notify( true );
-        })
-        .error(function ( ) {
-            _this.caregarItemCursoEvent.notify( false );
-            throw new Error( 'Error: Falha ao carregar "itemCurso.html", favor reporte esse erro' );
-        });
-    }
+            this._conjuntoCabecalho = data;
 
-    Object.defineProperty(Template.prototype, 'itemCurso', {
-        get: function ( ) { 
-            if( this._itemCurso ){
-                return this._itemCurso;
-            }else{
-                return false;
+            if( this._conjuntoLinha ) {
+                this.emitir('carregarCabecalho');
             }
+        }.bind( this ) )
+        .error(function ( ) {
+            throw new Error( 'Error: Falha ao carregar "conjuntoCabecalho.html", favor reporte esse erro' );
+        }.bind( this ) );
+    };
+
+    /**
+
+    */
+    Template.prototype.requisitarTemplateConjuntoLinha = function () {
+        $.ajax({
+            url : './assets/html/conjuntoLinha.html',
+            datatype: 'html'
+        })
+        .success(function ( data ) {
+            this._conjuntoLinha = data;
+
+            if( this._conjuntoCabecalho ) {
+                this.emitir('carregarCabecalho');
+            }
+        }.bind( this ) )
+        .error(function ( ) {
+            throw new Error( 'Error: Falha ao carregar "conjuntoLinha.html", favor reporte esse erro' );
+        }.bind( this ) );
+    };
+
+    /**
+
+    */
+    Template.prototype.requisitarTemplateGrupo = function () {
+        $.ajax({
+            url : './assets/html/grupo.html',
+            datatype: 'html'
+        })
+        .success(function ( data ) {
+            this._grupo = data;
+
+            this.emitir('carregarGrupo');
+        }.bind( this ) )
+        .error(function ( ) {
+            throw new Error( 'Error: Falha ao carregar "grupo.html", favor reporte esse erro' );
+        }.bind( this ) );
+    };
+
+    /**
+
+    */
+    Template.prototype.requisitarTemplateDisciplina = function () {
+        $.ajax({
+            url : './assets/html/disciplina.html',
+            datatype: 'html'
+        })
+        .success(function ( data ) {
+            this._disciplina = data;
+
+            this.emitir('carregarDisciplina');
+        }.bind( this ) )
+        .error(function ( ) {
+            throw new Error( 'Error: Falha ao carregar "disciplina.html", favor reporte esse erro' );
+        }.bind( this ) );
+    };
+
+    /**
+
+    */
+    Template.prototype.requisitarArquivosHtml = function () {
+        this.requisitarTemplateConjuntoLinha();
+        this.requisitarTemplateGrupo();
+        this.requisitarTemplateConjuntoCabecalho();
+        this.requisitarTemplateDisciplina();
+    };
+
+    Object.defineProperty(Template.prototype, 'conjuntoCabecalho', {
+        get: function ( ) {
+            return this._conjuntoCabecalho;
         }
     });
 
-    window.Pogad = window.Pogad || { };
-    window.Pogad.Template = Template;
-} )( );
+    Object.defineProperty(Template.prototype, 'conjuntoLinha', {
+        get: function ( ) {
+            return this._conjuntoLinha;
+        }
+    });
+
+    Object.defineProperty(Template.prototype, 'grupo', {
+        get: function ( ) {
+            return this._grupo;
+        }
+    });
+
+    Object.defineProperty(Template.prototype, 'disciplina', {
+        get: function ( ) {
+            return this._disciplina;
+        }
+    });
+
+    window.Agrade = window.Agrade || {};
+    window.Agrade.Template = new Template();
+})();

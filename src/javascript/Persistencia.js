@@ -39,6 +39,6 @@
         localStorage[chave] = JSON.stringify(disciplinas);
     };
 
-    window.Pogad = window.Pogad || { };
-    window.Pogad.Persistencia = new Persistencia();
+    window.Agrade = window.Agrade || { };
+    window.Agrade.Persistencia = new Persistencia();
 })();
