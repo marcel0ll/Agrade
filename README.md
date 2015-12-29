@@ -6,4 +6,4 @@ Você pode usá-lo  [aqui](http://www.agrade.info), de seu computador ou aparelh
 
 ### Como contribuir
 
-Se achar um bug ou tiver uma sugestão nos envie [aqui](https://github.com/0tho/Agrade/issues).
+Se achar um bug ou tiver uma sugestão envie [aqui](https://github.com/0tho/Agrade/issues).
