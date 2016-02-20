@@ -1,8 +1,22 @@
-.idea
-node_modules
-dist
-build
-.tmp
-bower_components
+#   IDE
+.idea/
 
-/projeto
+#   NODE
+node_modules/
+
+#   BOWER
+libs/
+
+#   GRUNT
+.grunt
+
+#   Production
+dev/
+prod/
+dist/
+
+#   JS LINTING
+jscs.log
+
+#   JsDoc Documentation
+docs/
