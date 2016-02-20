@@ -4,24 +4,24 @@ module.exports = {
         sourceMap: true,
         sourceMapEmbed: true,
         sourceMapContents: true,
-        includePaths: ['.']
+        includePaths: [ "." ]
     },
-    dist: {
-        files: [{
-            expand: true,
-            cwd: '<%= pkg.app %>/styles',
-            src: ['*.{scss,sass}'],
-            dest: '.tmp/styles',
-            ext: '.css'
-        }]
-    },
-    server: {
-        files: [{
-            expand: true,
-            cwd: '<%= pkg.app %>/styles',
-            src: ['*.{scss,sass}'],
-            dest: '.tmp/styles',
-            ext: '.css'
-        }]
+    dev: {
+        files: [
+            {
+                expand: true,
+                cwd: "<%= pkg.source %>",
+                src: [ "{app,components}/**/*.{scss,sass}" ],
+                dest: "<%= pkg.development %>",
+                ext: ".css"
+            },
+            {
+                expand: true,
+                cwd: "<%= pkg.development %>/<%= pkg.dependenciesFolder %>",
+                src: [ "*.{scss,sass}" ],
+                dest: "<%= pkg.development %>/<%= pkg.dependenciesFolder %>",
+                ext: ".css"
+            }
+        ]
     }
 };

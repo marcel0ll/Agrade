@@ -1,11 +1,13 @@
-// The following *-min tasks produce minified files in the dist folder
+// Minifies image files
 module.exports = {
     dist: {
-        files: [{
-            expand: true,
-            cwd: '<%= pkg.app %>/images',
-            src: '{,*/}*.{gif,jpeg,jpg,png}',
-            dest: '<%= pkg.dist %>/images'
-        }]
+        files: [
+            {
+                expand: true,
+                cwd: "<%= pkg.source %>/images",
+                src: "{,*/}*.{gif,jpeg,jpg,png}",
+                dest: "<%= pkg.dist %>/images"
+            }
+        ]
     }
 };

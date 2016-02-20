@@ -1,23 +1,30 @@
 // Copies remaining files to places other tasks can use
 module.exports = {
-    dist: {
-        files: [{
-            expand: true,
-            dot: true,
-            cwd: '<%= pkg.app %>',
-            dest: '<%= pkg.dist %>',
-            src: [
-                '*.{ico,png,txt}',
-                'images/{,*/}*.webp',
-                '{,*/}*.html',
-                'styles/fonts/{,*/}*.*'
-            ]
-        }, {
-            expand: true,
-            dot: true,
-            cwd: '.',
-            src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
-            dest: '<%= pkg.dist %>'
-        }]
+    dev: {
+        files: [
+            {
+                expand: true,
+                cwd: "node_modules/",
+                dest: "<%= pkg.development %>/<%= pkg.dependenciesFolder %>/",
+                src: [
+                    "angular-material/angular-material.scss",
+
+                    "angular/angular.js",
+                    "angular-animate/angular-animate.js",
+                    "angular-aria/angular-aria.js",
+                    "angular-messages/angular-messages.js",
+                    "angular-ui-router/release/angular-ui-router.js",
+
+                    "angular-material/angular-material.js"
+                ],
+                flatten: true
+            },
+            {
+                expand: true,
+                cwd: "<%= pkg.source %>/assets",
+                src: "**",
+                dest: "<%= pkg.development %>/assets"
+            }
+        ]
     }
 };

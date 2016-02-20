@@ -1,7 +1,5 @@
-module.exports = function (grunt) {
-    grunt.registerTask('default', [
-        'newer:eslint',
-        'test',
-        'build'
+module.exports = function( grunt ) {
+    grunt.registerTask("default", [
+
     ]);
 };

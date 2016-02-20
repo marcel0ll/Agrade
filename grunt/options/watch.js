@@ -1,26 +1,35 @@
 // Watches files for changes and runs tasks based on the changed files
 module.exports = {
     bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
+        files: [ "bower.json" ],
+        tasks: [ "wiredep" ]
     },
     babel: {
-        files: ['<%= pkg.app %>/scripts/{,*/}*.js'],
-        tasks: ['babel:dist']
+        files: [ "<%= pkg.source %>/scripts/{,*/}*.js" ],
+        tasks: [ "babel:dist" ]
     },
     babelTest: {
-        files: ['test/spec/{,*/}*.js'],
-        tasks: ['babel:test', 'test:watch']
+        files: [ "test/spec/{,*/}*.js" ],
+        tasks: [
+            "babel:test",
+            "test:watch"
+        ]
     },
     gruntfile: {
-        files: ['Gruntfile.js']
+        files: [ "Gruntfile.js" ]
     },
     sass: {
-        files: ['<%= pkg.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass:server', 'postcss']
+        files: [ "<%= pkg.source %>/styles/{,*/}*.{scss,sass}" ],
+        tasks: [
+            "sass:server",
+            "postcss"
+        ]
     },
     styles: {
-        files: ['<%= pkg.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'postcss']
+        files: [ "<%= pkg.source %>/styles/{,*/}*.css" ],
+        tasks: [
+            "newer:copy:styles",
+            "postcss"
+        ]
     }
 };

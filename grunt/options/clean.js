@@ -1,17 +1,12 @@
 // Empties folders to start fresh
 module.exports = {
-    dist: {
-        files: [{
-            dot: true,
-            src: [
-                '.tmp',
-                '<%= pkg.dist %>/*',
-                '!<%= pkg.dist %>/.git*'
-            ]
-        }]
+    dev: {
+        src: [ "<%= pkg.development %>" ]
+    },
+    prod: {
+        src: [ "<%= pkg.production %>" ]
     },
     docs: {
-        src: ['<%= pkg.docs %>']
-    },
-    server: '.tmp'
+        src: [ "<%= pkg.docs %>" ]
+    }
 };

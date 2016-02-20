@@ -1,4 +1,4 @@
-// disc
+// htmlmin
 module.exports = {
     dist: {
         options: {
@@ -13,11 +13,13 @@ module.exports = {
             removeRedundantAttributes: false,
             useShortDoctype: true
         },
-        files: [{
-            expand: true,
-            cwd: '<%= pkg.dist %>',
-            src: '{,*/}*.html',
-            dest: '<%= pkg.dist %>'
-        }]
+        files: [
+            {
+                expand: true,
+                cwd: "<%= pkg.dist %>",
+                src: "{,*/}*.html",
+                dest: "<%= pkg.dist %>"
+            }
+        ]
     }
 };

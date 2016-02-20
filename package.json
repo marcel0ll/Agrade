@@ -1,12 +1,30 @@
 {
-  "app": "src",
-  "dist": "build",
-  "docs": "docs",
+  "dependenciesFolder": "dependencies",
+  "source": "src",
+  "development": "dev",
+  "production": "prod",
+  "releases": "dist",
+  "documentation": "docs",
+  "tests": "tests",
   "port": 8080,
   "testPort": 8081,
-  "private": true,
   "name": "Agrade",
+  "author": "Otho",
+  "description": "Software para controle das atividades curriculares feitas",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/Otho/Agrade.git"
+  },
   "version": "1.0.0-alpha-0",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-aria": "^1.5.0",
+    "angular-material": "^1.0.5",
+    "angular-messages": "^1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "normalize.css": "^3.0.3"
+  },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
     "glob": "^7.0.0",
@@ -16,22 +34,25 @@
     "grunt-concurrent": "^2.2.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-connect": "^0.11.2",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-htmlmin": "^0.6.0",
     "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jade": "^0.15.0",
     "grunt-contrib-jasmine": "^1.0.0",
     "grunt-contrib-uglify": "^0.11.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-eslint": "^18.0.0",
+    "grunt-injector": "^0.6.1",
     "grunt-jscs": "^2.7.0",
     "grunt-jsdoc": "^1.1.0",
     "grunt-modernizr": "^1.0.2",
     "grunt-newer": "^1.1.0",
     "grunt-postcss": "^0.7.2",
+    "grunt-replace": "^0.11.0",
     "grunt-sass": "^1.0.0",
     "grunt-svgmin": "^3.1.2",
-    "grunt-wiredep": "^2.0.0",
     "ink-docstrap": "^1.0.0",
     "jit-grunt": "^0.9.1",
     "load-grunt-tasks": "^3.3.0",
@@ -53,12 +74,5 @@
         "single"
       ]
     }
-  },
-  "dependencies": {
-    "angular": "^1.5.0",
-    "angular-animate": "^1.5.0",
-    "angular-aria": "^1.5.0",
-    "angular-material": "^1.0.5",
-    "normalize.css": "^3.0.3"
   }
 }

@@ -4,9 +4,6 @@
 #   NODE
 node_modules/
 
-#   BOWER
-libs/
-
 #   GRUNT
 .grunt
 

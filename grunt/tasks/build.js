@@ -1,17 +1,16 @@
-module.exports = function (grunt) {
-    grunt.registerTask('build', [
-        'clean:dist',
-        'wiredep',
-        'useminPrepare',
-        'concurrent:dist',
-        'postcss',
-        'concat',
-        'cssmin',
-        'uglify',
-        'copy:dist',
-        'modernizr',
-        'filerev',
-        'usemin',
-        'htmlmin'
-    ]);
+module.exports = function( grunt ) {
+    grunt.registerTask("build", "Builds project", function( target ) {
+
+        grunt.task.run([
+            "jscs",
+            "clean:dev",
+            "jade:dev",
+            "copy:dev",
+            "sass:dev",
+            "babel:dev",
+            "injector:dependencies",
+            "injector:dev"
+        ]);
+    });
+
 };

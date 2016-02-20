@@ -2,13 +2,13 @@
 // reference in your app
 module.exports = {
     dist: {
-        devFile: 'bower_components/modernizr/modernizr.js',
-        outputFile: '<%= pkg.dist %>/scripts/vendor/modernizr.js',
+        devFile: "bower_components/modernizr/modernizr.js",
+        outputFile: "<%= pkg.dist %>/scripts/vendor/modernizr.js",
         files: {
             src: [
-                '<%= pkg.dist %>/scripts/{,*/}*.js',
-                '<%= pkg.dist %>/styles/{,*/}*.css',
-                '!<%= pkg.dist %>/scripts/vendor/*'
+                "<%= pkg.dist %>/scripts/{,*/}*.js",
+                "<%= pkg.dist %>/styles/{,*/}*.css",
+                "!<%= pkg.dist %>/scripts/vendor/*"
             ]
         },
         uglify: true

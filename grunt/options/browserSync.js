@@ -1,4 +1,4 @@
-// desc
+// browserSync
 module.exports = {
     options: {
         notify: false,
@@ -7,30 +7,37 @@ module.exports = {
     livereload: {
         options: {
             files: [
-                '<%= pkg.app %>/{,*/}*.html',
-                '.tmp/styles/{,*/}*.css',
-                '<%= pkg.app %>/images/{,*/}*',
-                '.tmp/scripts/{,*/}*.js'
+                "<%= pkg.source %>/{,*/}*.html",
+                ".tmp/styles/{,*/}*.css",
+                "<%= pkg.source %>/images/{,*/}*",
+                ".tmp/scripts/{,*/}*.js"
             ],
-            port: '<%= pkg.port %>',
+            port: "<%= pkg.port %>",
             server: {
-                baseDir: ['.tmp', '<%= pkg.app %>'],
+                baseDir: [
+                    ".tmp",
+                    "<%= pkg.source %>"
+                ],
                 routes: {
-                    '/bower_components': './bower_components'
+                    "/bower_components": "./bower_components"
                 }
             }
         }
     },
     test: {
         options: {
-            port: '<%= pkg.testPort %>',
+            port: "<%= pkg.testPort %>",
             open: false,
-            logLevel: 'silent',
-            host: 'localhost',
+            logLevel: "silent",
+            host: "localhost",
             server: {
-                baseDir: ['.tmp', './test', '<%= pkg.app %>'],
+                baseDir: [
+                    ".tmp",
+                    "./test",
+                    "<%= pkg.source %>"
+                ],
                 routes: {
-                    '/bower_components': './bower_components'
+                    "/bower_components": "./bower_components"
                 }
             }
         }
@@ -38,7 +45,7 @@ module.exports = {
     dist: {
         options: {
             background: false,
-            server: '<%= config.dist %>'
+            server: "<%= config.dist %>"
         }
     }
 };

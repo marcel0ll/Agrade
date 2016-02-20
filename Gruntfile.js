@@ -13,7 +13,7 @@ module.exports = function( grunt ) {
     // Automatically load required grunt tasks
     // load all grunt tasks matching the ["grunt-*", "@*/grunt-*"] patterns
     require("load-grunt-tasks")( grunt );
-    grunt.loadTasks("tasks");
+    grunt.loadTasks("./grunt/tasks/");
 
     // Function to load config separately
     function loadConfig( path ) {
