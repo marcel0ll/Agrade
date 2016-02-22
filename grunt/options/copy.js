@@ -15,7 +15,9 @@ module.exports = {
                     "angular-messages/angular-messages.js",
                     "angular-ui-router/release/angular-ui-router.js",
 
-                    "angular-material/angular-material.js"
+                    "angular-material/angular-material.js",
+                    "angular-material-icons/angular-material-icons.js",
+                    "angular-material-icons/angular-material-icons.css"
                 ],
                 flatten: true
             },

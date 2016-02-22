@@ -6,6 +6,7 @@ module.exports = function( grunt ) {
             "clean:dev",
             "jade:dev",
             "copy:dev",
+            "injector:scss",
             "sass:dev",
             "babel:dev",
             "injector:dependencies",

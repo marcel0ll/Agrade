@@ -1,35 +1,38 @@
 // Watches files for changes and runs tasks based on the changed files
 module.exports = {
-    bower: {
-        files: [ "bower.json" ],
-        tasks: [ "wiredep" ]
+    options: {
+        livereload: false
     },
-    babel: {
-        files: [ "<%= pkg.source %>/scripts/{,*/}*.js" ],
-        tasks: [ "babel:dist" ]
-    },
-    babelTest: {
-        files: [ "test/spec/{,*/}*.js" ],
+    jade: {
+        files: [ "<%= pkg.source %>/**/*.jade" ],
         tasks: [
-            "babel:test",
-            "test:watch"
+            "jade:dev",
+            "injector:dependencies",
+            "injector:dev"
         ]
     },
-    gruntfile: {
-        files: [ "Gruntfile.js" ]
+    assets: {
+        files: [ "<%= pkg.source %>/assets/**/*" ],
+        tasks: [ "copy:dev" ]
     },
     sass: {
-        files: [ "<%= pkg.source %>/styles/{,*/}*.{scss,sass}" ],
+        files: [ "<%= pkg.source %>/{app,components}/**/*.{scss,sass}" ],
+        tasks: [ "sass:dev" ]
+    },
+    js: {
+        files: [ "<%= pkg.source %>/{app,components}/**/!(*.spec).js" ],
         tasks: [
-            "sass:server",
-            "postcss"
+            "jscs",
+            "babel:dev",
+            "injector:dev"
         ]
     },
-    styles: {
-        files: [ "<%= pkg.source %>/styles/{,*/}*.css" ],
-        tasks: [
-            "newer:copy:styles",
-            "postcss"
-        ]
+
+    livereload: {
+        options: {
+            livereload: true
+        },
+        files: [ "<%= pkg.development %>/**/*" ]
     }
 };
+

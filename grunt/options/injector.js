@@ -20,7 +20,21 @@ module.exports = {
             ignorePath: "<%= pkg.development %>/"
         },
         files: {
-            "<%= pkg.development %>/index.html": [ "<%= pkg.development %>/{app,components}/**/*.{js,css}" ]
+            "<%= pkg.development %>/index.html": [ "<%= pkg.development %>/{app,components}/**/*.js" ]
+        }
+    },
+    scss: {
+        options: {
+            relative: false,
+            ignorePath: "<%= pkg.source %>/",
+            starttag: "/* injector:scss */",
+            endtag: "/* injectorend */",
+            transform: function( filepath, index, length ) {
+                return "@import '.." + filepath + "';";
+            }
+        },
+        files: {
+            "<%= pkg.source %>/app/app.scss": [ "<%= pkg.source %>/{app,components}/**/!(app).scss" ]
         }
     }
 };

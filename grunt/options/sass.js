@@ -11,7 +11,8 @@ module.exports = {
             {
                 expand: true,
                 cwd: "<%= pkg.source %>",
-                src: [ "{app,components}/**/*.{scss,sass}" ],
+                // src: [ "{app,components}/**/*.{scss,sass}" ],
+                src: [ "app/app.scss" ],
                 dest: "<%= pkg.development %>",
                 ext: ".css"
             },
