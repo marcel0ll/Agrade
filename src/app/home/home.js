@@ -4,7 +4,7 @@ angular.module("Agrade")
     .config(function( $stateProvider ) {
         $stateProvider
             .state("home", {
-                url: "/",
+                url: "/a",
                 templateUrl: "app/home/home.html",
                 controller: "HomeController",
                 controllerAs: "home"

@@ -1,0 +1,15 @@
+header
+    sidenav
+    toptoolbar
+main
+    md-list
+        md-divider(ng-click='showChildren = !showChildren')
+            md-subheader.md-no-sticky Separação teste
+        md-list-item.md-2-line(ng-repeat='item in todos', ng-show="showChildren")
+            ng-md-icon(icon='menu')
+            md-checkbox(ng-model='item.force')
+            .md-list-item-text
+                h3 {{item.title}}
+                p {{item.description}}
+            md-button(class="md-secondary") info
+

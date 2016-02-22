@@ -1,0 +1,39 @@
+$color1: #9D9483;
+$color2: #A0BFAD;
+$color3: #97D2BE;
+$color4: #E0DCB7;
+$color5: #FFF5D2;
+
+a {
+    color: #106CC8;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+body {
+    //font-family: "Roboto";
+    // background-color: $color1;
+    // background-image:
+    //     linear-gradient(white 2px,transparent 2px),
+    //     linear-gradient(90deg,white 2px,transparent 2px),
+    //     linear-gradient(rgba(255,255,255,.3) 1px,transparent 1px),
+    //     linear-gradient(90deg,rgba(255,255,255,.3) 1px,transparent 1px);
+    // background-size:
+    //     100px 100px,
+    //     100px 100px,
+    //     20px 20px,
+    //     20px 20px;
+    // background-position:
+    //     -2px -2px,
+    //     -2px -2px,
+    //     -1px -1px,
+    //     -1px -1px;
+}
+
+/* injector:scss */
+@import '../app/fonts.scss';
+@import '../app/grade/grade.scss';
+@import '../app/home/home.scss';
+@import '../components/sidenav/sidenav.scss';
+@import '../components/topToolbar/topToolbar.scss';
+/* injectorend */

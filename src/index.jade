@@ -5,18 +5,18 @@ html(lang="pt")
 
         <!-- injector:dep:css -->
         <!-- endinjector -->
-        <!-- injector:css -->
-        <!-- endinjector -->
-    body(ng-app="Agrade", ngCloak="")
+        base(href="/")
+        link(rel="stylesheet", href="app/app.css")
+    body(ng-app="Agrade", ngCloak="", layout="row")
 
-        header
+        main(layout="column", ui-view="", layout-fill, role="main")
 
-        main(ui-view="")
-
-        footer.
-
+        //Dependencias
 
         <!-- injector:dep:js -->
         <!-- endinjector -->
+
+        //App
+
         <!-- injector:js -->
         <!-- endinjector -->
