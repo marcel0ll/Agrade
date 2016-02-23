@@ -3,7 +3,7 @@
 class TopToolbarController {
 
     constructor( $scope, $mdSidenav ) {
-        $scope.context = "Home";
+        $scope.context = "Ciência da Computação";
         $scope.toggleSidenav = function( side ) {
             $mdSidenav( side ).toggle();
         };

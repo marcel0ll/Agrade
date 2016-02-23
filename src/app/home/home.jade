@@ -1,16 +1,16 @@
-div.home(layout="row", layout-align="center start")
-    div(flex="15")
-    md-content.selecao(layout="column", flex="auto", layout-align="center center")
+div(layout-align="center center", layout="row", layout-fill)
+    div(flex='15', hide-xs)
+    md-content.md-whiteframe-z3.selecao.home(layout="column", flex="auto", layout-align="center center")
         h1 Agrade
         h5 Seu auxiliar de curso
-        span.version v1.0.0
+        //span.version v1.0.0
         h3 Selecione sua universidade
         md-autocomplete(
             md-selected-item='universidade',
             md-search-text='searchUniversidade',
             md-items='item in getUniversidades( searchUniversidade )',
             md-item-text='item.name',
-            placeholder="Qual universidade você estuda?",
+            placeholder="Em qual universidade você estuda?",
             md-min-length="0")
             md-item-template
                 span(md-highlight-text='searchUniversidade') {{item.name}}
@@ -24,7 +24,7 @@ div.home(layout="row", layout-align="center start")
             md-search-text='searchCampus',
             md-items='item in getCampus( searchCampus )',
             md-item-text='item.name',
-            placeholder="Qual campus você estuda?",
+            placeholder="Em qual campus você estuda?",
             md-min-length="0")
             md-item-template
                 span(md-highlight-text='searchCampus') {{item.name}}
@@ -51,6 +51,4 @@ div.home(layout="row", layout-align="center start")
             )
             ng-md-icon(icon='view_list')
             |  Entrar
-
-    div(flex="15")
-
+    div(flex='15', hide-xs)

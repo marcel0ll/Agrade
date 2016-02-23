@@ -13,7 +13,7 @@ angular.module( "Agrade", [
 
         $locationProvider.html5Mode( true );
         $mdThemingProvider.theme("default")
-            .primaryPalette("blue")
+            .primaryPalette("teal")
             .accentPalette("orange")
             .warnPalette("yellow")
             .backgroundPalette("grey");
