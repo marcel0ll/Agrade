@@ -1,0 +1,51 @@
+{
+    "nome": "Ciências da Computação",
+    "min": "3 anos e meio",
+    "max": "7 anos",
+    "anoDaEmenta": 2006,
+    "presencial": true,
+    "periodo": "Integral",
+    "value": "créditos",
+    "maxValue": 250,
+    "actValue": "sumTypeValue('disciplina')",
+
+    "conditions": [
+        "sumArr(queryType('disciplina'), 'value') === 100"
+        "id('00000000')"
+    ],
+
+    "types": {
+        "disciplina" : {
+            "title": "{{id}} - {{name}} ({{aka}})",
+            "description": "{{value}} créditos",
+            "icon": "menu",
+            "maxValue": 100
+        }
+    },
+
+    "components": [
+        {
+            "id": "00000000",
+            "name": "Contrução de Algoritmos e Programação",
+            "value": 8,
+            "type": "disciplina",
+            "tags": [
+                "obrigatoria"
+            ],
+            "conditions": [
+                "sumArr(queryType('disciplina'), 'value') >= 60",
+                "id('000000')"
+            ],
+
+            "descricao": "",
+            "aka": "CAP"
+        }
+    ],
+
+    "tags": {
+        "obrigatoria" : {
+            "titulo": "Obrigatória"
+        }
+    }
+}
+
