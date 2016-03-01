@@ -3,7 +3,7 @@ module.exports = function( grunt ) {
 
         if ( target === "dist" ) {
             return grunt.task.run([
-                'connect:prod'
+                "connect:prod"
             ]);
         }
 
