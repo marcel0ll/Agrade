@@ -1,51 +1,1011 @@
 {
-    "nome": "Ciências da Computação",
-    "min": "3 anos e meio",
-    "max": "7 anos",
-    "anoDaEmenta": 2006,
-    "presencial": true,
-    "periodo": "Integral",
-    "value": "créditos",
-    "maxValue": 250,
-    "actValue": "sumTypeValue('disciplina')",
+    "name": "CC 2006/1 - CIÊNCIA DA COMPUTAÇÃO",
+    "valueUnit": "créditos",
 
-    "conditions": [
-        "sumArr(queryType('disciplina'), 'value') === 100"
-        "id('00000000')"
+    "maxValue": [
+        "4",
+        "154",
+        "26",
+        "20",
+        "12"
     ],
 
-    "types": {
-        "disciplina" : {
-            "title": "{{id}} - {{name}} ({{aka}})",
-            "description": "{{value}} créditos",
-            "icon": "menu",
-            "maxValue": 100
-        }
-    },
+    "actValue": [
+        "sum(queryTag('Obrigatória'),'value')",
+        "sum(queryTag('Optativa de Humanas ou Computação'),'value')",
+        "sum(queryTag('OPT.PROFIS.'),'value')",
+        "sum(queryTag('Estágio'),'value')",
+        "sum(queryTag('Atividades Complementares'),'value')"
+    ],
 
-    "components": [
+    "types": [
         {
-            "id": "00000000",
-            "name": "Contrução de Algoritmos e Programação",
-            "value": 8,
-            "type": "disciplina",
-            "tags": [
-                "obrigatoria"
-            ],
-            "conditions": [
-                "sumArr(queryType('disciplina'), 'value') >= 60",
-                "id('000000')"
-            ],
-
-            "descricao": "",
-            "aka": "CAP"
+            "id": "disciplina",
+            "name": "Disciplina",
+            "title": "{{id}} - {{name}}",
+            "actValue": ""
         }
     ],
 
-    "tags": {
-        "obrigatoria" : {
-            "titulo": "Obrigatória"
+    "components": {
+        "020001": {
+            "id": "020001",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 1",
+                "Obrigatória"
+            ],
+            "name": "Orientacao Profissional Em Computacao",
+            "value": 2
+        },
+        "020338": {
+            "id": "020338",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 1",
+                "Obrigatória"
+            ],
+            "name": "Introdução À Lógica",
+            "value": 4
+        },
+        "025070": {
+            "id": "025070",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 1",
+                "Obrigatória"
+            ],
+            "name": "Construção De Algoritmos E Programação",
+            "value": 8
+        },
+        "081116": {
+            "id": "081116",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 1",
+                "Obrigatória"
+            ],
+            "name": "Geometria Analitica",
+            "value": 4
+        },
+        "089109": {
+            "id": "089109",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 1",
+                "Obrigatória"
+            ],
+            "name": "Cálculo 1",
+            "value": 4
+        },
+        "096130": {
+            "id": "096130",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 1",
+                "Obrigatória"
+            ],
+            "name": "Fundamentos De Fisica Para A Computacao",
+            "value": 4
+        },
+        "201006": {
+            "id": "201006",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 1",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Introdução À Lingua Brasileira De Sinais - Libras I",
+            "value": 2
+        },
+        "020281": {
+            "id": "020281",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 2",
+                "Obrigatória"
+            ],
+            "name": "Estruturas Discretas",
+            "value": 2
+        },
+        "024376": {
+            "id": "024376",
+            "type": "disciplina",
+            "condition": "id('020338') || id('343110')",
+            "tags": [
+                "Perfil 2",
+                "Obrigatória"
+            ],
+            "name": "Circuitos Digitais",
+            "value": 4
+        },
+        "024384": {
+            "id": "024384",
+            "type": "disciplina",
+            "condition": "id('020338') || id('343110') || id('480118')",
+            "tags": [
+                "Perfil 2",
+                "Obrigatória"
+            ],
+            "name": "Laboratório De Circuitos Digitais",
+            "value": 2
+        },
+        "025020": {
+            "id": "025020",
+            "type": "disciplina",
+            "condition": "id('025011') || id('020184') || id('025054') || id('025070') || id('343137') || ((id('481114') || id('343323')) && id('481220'))",
+            "tags": [
+                "Perfil 2",
+                "Obrigatória"
+            ],
+            "name": "Programação De Computadores",
+            "value": 4
+        },
+        "080136": {
+            "id": "080136",
+            "type": "disciplina",
+            "condition": "id('081116') || (id('215279') && id('215384')) || id('343510') || id('342017') || id('342190') || id('081515') || id('345083') || id('345970') || id('524182')",
+            "tags": [
+                "Perfil 2",
+                "Obrigatória"
+            ],
+            "name": "Algebra Linear 1",
+            "value": 4
+        },
+        "082260": {
+            "id": "082260",
+            "type": "disciplina",
+            "condition": "id('082210') || id('089109') || id('524034') || id('344001') || id('342009') || id('342211') || id('340456') || id('082015') || (id('082619') && id('082627')) || (id('215171') && id('215287'))",
+            "tags": [
+                "Perfil 2",
+                "Obrigatória"
+            ],
+            "name": "Calculo Diferencial E Series",
+            "value": 4
+        },
+        "110124": {
+            "id": "110124",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 2",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Microeconomia",
+            "value": 4
+        },
+        "112194": {
+            "id": "112194",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 2",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Teoria Das Organizações",
+            "value": 4
+        },
+        "152056": {
+            "id": "152056",
+            "type": "disciplina",
+            "condition": "id('082210') || id('089109') || id('524034') || id('344001') || id('342009') || id('342211') || id('340456') || (id('215171') && id('215287')) || (id('082619') && id('082627'))",
+            "tags": [
+                "Perfil 2",
+                "Obrigatória"
+            ],
+            "name": "Introducao A Probabilidade 1",
+            "value": 4
+        },
+        "162078": {
+            "id": "162078",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 2",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Historia Das Revolucoes Modernas",
+            "value": 4
+        },
+        "180017": {
+            "id": "180017",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 2",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Metodos E Tecnicas De Pesquisa",
+            "value": 4
+        },
+        "180025": {
+            "id": "180025",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 2",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Filosofia Da Ciência",
+            "value": 4
+        },
+        "180041": {
+            "id": "180041",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 2",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Introducao A Filosofia",
+            "value": 4
+        },
+        "370053": {
+            "id": "370053",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 2",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Introdução À Sociologia Geral",
+            "value": 4
+        },
+        "370088": {
+            "id": "370088",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 2",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Sociologia Industrial E Do Trabalho",
+            "value": 4
+        },
+        "025208": {
+            "id": "025208",
+            "type": "disciplina",
+            "condition": "(id('025020') || id('020192') || id('343188'))",
+            "tags": [
+                "Perfil 3",
+                "Obrigatória"
+            ],
+            "name": "Estruturas De Dados",
+            "value": 4
+        },
+        "025607": {
+            "id": "025607",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 3",
+                "Obrigatória"
+            ],
+            "name": "Introducao Aos Sistemas De Informacao",
+            "value": 4
+        },
+        "027359": {
+            "id": "027359",
+            "type": "disciplina",
+            "condition": "id('024376') || id('482110') || id('343170') || id('027324') || id('020257') || id('025046')",
+            "tags": [
+                "Perfil 3",
+                "Obrigatória"
+            ],
+            "name": "Arquitetura E Organizacao De Computadores 1",
+            "value": 4
+        },
+        "027367": {
+            "id": "027367",
+            "type": "disciplina",
+            "condition": "id('024376') || id('482110') || id('343170') || id('027324') || id('020257') || id('025046')",
+            "tags": [
+                "Perfil 3",
+                "Obrigatória"
+            ],
+            "name": "Laboratorio De Arquitetura E Organizacao De Computadores 1",
+            "value": 2
+        },
+        "061085": {
+            "id": "061085",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 3",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Ingles Instrumental Para Computacao 1",
+            "value": 4
+        },
+        "061093": {
+            "id": "061093",
+            "type": "disciplina",
+            "condition": "(id('061085') || id('061018'))",
+            "tags": [
+                "Perfil 3",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Ingles Instrumental Para Computacao 2",
+            "value": 4
+        },
+        "062014": {
+            "id": "062014",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 3",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Comunicacao E Expressao",
+            "value": 4
+        },
+        "083020": {
+            "id": "083020",
+            "type": "disciplina",
+            "condition": "(id('082210') || id('089109') || id('524034') || id('082015') || id('344001') || id('342009') || id('342211') || id('340456') || (id('082619') && id('082627')) || (id('215171') && id('215287'))) && (id('081116') || id('524182') || id('345970') || id('081019') || id('081515') || id('342017') || id('342190') || id('343510') || id('345083')) && (id('020320') || id('020109') || id('020168') || id('025070') || ((id('481114') || id('343323')) && id('481220')) || id('020184') || id('020125') || id('025011') || id('025054') || id('092410') || id('020583') || id('105180') || id('025070') || id('343137') || id('342068') || id('025470') || id('025488') || id('430048') || id('580015') || id('092410')) || id('345970')",
+            "tags": [
+                "Perfil 3",
+                "Obrigatória"
+            ],
+            "name": "Cálculo Numérico",
+            "value": 4
+        },
+        "164003": {
+            "id": "164003",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 3",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Economia Geral",
+            "value": 4
+        },
+        "164054": {
+            "id": "164054",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 3",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Economia Da Empresa",
+            "value": 4
+        },
+        "180050": {
+            "id": "180050",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 3",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Nocoes Gerais De Direito",
+            "value": 4
+        },
+        "370223": {
+            "id": "370223",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 3",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Tecnologia E Sociedade",
+            "value": 4
+        },
+        "020265": {
+            "id": "020265",
+            "type": "disciplina",
+            "condition": "((id('020338') || id('343110')) && (id('020281') || id('480223') || id('343153'))) || (id('025054') && id('025062')) || id('025070') || ((id('481114') || id('343323')) && id('481220'))",
+            "tags": [
+                "Perfil 4",
+                "Obrigatória"
+            ],
+            "name": "Linguagens Formais E Automatos",
+            "value": 4
+        },
+        "020346": {
+            "id": "020346",
+            "type": "disciplina",
+            "condition": "((id('025020') || id('343188')) && (id('020281') || id('480223') || id('343153'))) || id('025054')",
+            "tags": [
+                "Perfil 4",
+                "Obrigatória"
+            ],
+            "name": "Teoria Dos Grafos",
+            "value": 4
+        },
+        "022667": {
+            "id": "022667",
+            "type": "disciplina",
+            "condition": "id('025208') || id('025259') || id('343161') || (id('020036') && id('020044'))",
+            "tags": [
+                "Perfil 4",
+                "Obrigatória"
+            ],
+            "name": "Organizacao E Recuperacao Da Informacao",
+            "value": 4
+        },
+        "025089": {
+            "id": "025089",
+            "type": "disciplina",
+            "condition": "id('025208') || id('343161')",
+            "tags": [
+                "Perfil 4",
+                "Obrigatória"
+            ],
+            "name": "Projeto E Análise De Algoritmos",
+            "value": 4
+        },
+        "025216": {
+            "id": "025216",
+            "type": "disciplina",
+            "condition": "id('025208') || id('343161') || id('020036') || id('025259') || id('025020') || id('343188')",
+            "tags": [
+                "Perfil 4",
+                "Obrigatória"
+            ],
+            "name": "Banco De Dados",
+            "value": 4
+        },
+        "025666": {
+            "id": "025666",
+            "type": "disciplina",
+            "condition": "(id('025607') || id('483559') || id('026018') || id('343269')) && (id('025020') || id('343188'))",
+            "tags": [
+                "Perfil 4",
+                "Obrigatória"
+            ],
+            "name": "Engenharia De Software 1",
+            "value": 4
+        },
+        "027375": {
+            "id": "027375",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 4",
+                "Obrigatória"
+            ],
+            "name": "Arquitetura E Organização De Computadores 2",
+            "value": 4
+        },
+        "027383": {
+            "id": "027383",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 4",
+                "Obrigatória"
+            ],
+            "name": "Laboratório De Arquitetura E Organização De Computadores 2",
+            "value": 2
+        },
+        "021130": {
+            "id": "021130",
+            "type": "disciplina",
+            "condition": "(id('025208') || id('343161') || id('020036') || id('025259')) && id('020265')",
+            "tags": [
+                "Perfil 5",
+                "Obrigatória"
+            ],
+            "name": "Construção De Compiladores 1",
+            "value": 4
+        },
+        "021270": {
+            "id": "021270",
+            "type": "disciplina",
+            "condition": "id('027359') || id('482226') || id('027120') || ((id('021067') || id('021040')) && (id('027367') || id('482331') || id('343560'))) || id('343200')",
+            "tags": [
+                "Perfil 5",
+                "Obrigatória"
+            ],
+            "name": "Sistemas Operacionais 1",
+            "value": 4
+        },
+        "025097": {
+            "id": "025097",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 5",
+                "Obrigatória"
+            ],
+            "name": "Paradigmas De Linguagens De Programacao",
+            "value": 4
+        },
+        "025224": {
+            "id": "025224",
+            "type": "disciplina",
+            "condition": "id('025216') || id('022640') || id('341177')",
+            "tags": [
+                "Perfil 5",
+                "Obrigatória"
+            ],
+            "name": "Laboratorio De Banco De Dados",
+            "value": 2
+        },
+        "025674": {
+            "id": "025674",
+            "type": "disciplina",
+            "condition": "id('025666') || id('025615') || id('341169')",
+            "tags": [
+                "Perfil 5",
+                "Obrigatória"
+            ],
+            "name": "Engenharia De Software 2",
+            "value": 4
+        },
+        "026093": {
+            "id": "026093",
+            "type": "disciplina",
+            "condition": "id('025020') || id('343188') || id('020192')",
+            "tags": [
+                "Perfil 5",
+                "Obrigatória"
+            ],
+            "name": "Projeto Acadêmico Em Computação",
+            "value": 2
+        },
+        "301540": {
+            "id": "301540",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 5",
+                "Obrigatória"
+            ],
+            "name": "Administração De Empresas 1",
+            "value": 4
+        },
+        "020397": {
+            "id": "020397",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Tópicos Em Informática 5",
+            "value": 4
+        },
+        "020400": {
+            "id": "020400",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Tópicos Em Informática 6",
+            "value": 4
+        },
+        "020419": {
+            "id": "020419",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Tópicos Em Informática 7",
+            "value": 4
+        },
+        "020427": {
+            "id": "020427",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Tópicos Em Informática 8",
+            "value": 4
+        },
+        "020435": {
+            "id": "020435",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Tópicos Em Informática 9",
+            "value": 4
+        },
+        "020443": {
+            "id": "020443",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Tópicos Em Informática 10",
+            "value": 4
+        },
+        "020451": {
+            "id": "020451",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Tópicos Em Informática 11",
+            "value": 4
+        },
+        "020460": {
+            "id": "020460",
+            "type": "disciplina",
+            "condition": "",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Tópicos Em Informática 12",
+            "value": 4
+        },
+        "021148": {
+            "id": "021148",
+            "type": "disciplina",
+            "condition": "id('021130') || id('025119')",
+            "tags": [
+                "Perfil 6",
+                "Obrigatória"
+            ],
+            "name": "Construção De Compiladores 2",
+            "value": 4
+        },
+        "021237": {
+            "id": "021237",
+            "type": "disciplina",
+            "condition": "id('025305') || id('021270')",
+            "tags": [
+                "Perfil 6",
+                "Obrigatória"
+            ],
+            "name": "Redes De Computadores",
+            "value": 4
+        },
+        "021288": {
+            "id": "021288",
+            "type": "disciplina",
+            "condition": "id('021270') || id('025305')",
+            "tags": [
+                "Perfil 6",
+                "Obrigatória"
+            ],
+            "name": "Sistemas Operacionais 2",
+            "value": 4
+        },
+        "022705": {
+            "id": "022705",
+            "type": "disciplina",
+            "condition": "id('025259') || id('025208') || id('343161') || id('020036') || id('020044') || id('020338') || id('343110') || id('025089') || id('343250')",
+            "tags": [
+                "Perfil 6",
+                "Obrigatória"
+            ],
+            "name": "Inteligência Artificial",
+            "value": 4
+        },
+        "025232": {
+            "id": "025232",
+            "type": "disciplina",
+            "condition": "id('025216') || id('022640') || id('020656') || id('020672') || id('341177')",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Projeto De Banco De Dados",
+            "value": 4
+        },
+        "025526": {
+            "id": "025526",
+            "type": "disciplina",
+            "condition": "(id('080136') || id('080535') || id('343145')) && (id('025020') || id('343188'))",
+            "tags": [
+                "Perfil 6",
+                "Obrigatória"
+            ],
+            "name": "Computação Gráfica E Multimídia",
+            "value": 4
+        },
+        "025593": {
+            "id": "025593",
+            "type": "disciplina",
+            "condition": "id('025674')",
+            "tags": [
+                "Perfil 6",
+                "Obrigatória"
+            ],
+            "name": "Metodologias De Desenvolvimento De Sistemas 1",
+            "value": 4
+        },
+        "027022": {
+            "id": "027022",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Topicos Em Informatica",
+            "value": 4
+        },
+        "027030": {
+            "id": "027030",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Topicos Em Informatica 2",
+            "value": 4
+        },
+        "027073": {
+            "id": "027073",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Sistemas De Tempo Real",
+            "value": 4
+        },
+        "027081": {
+            "id": "027081",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Planejamento E Gerenciamento De Sistemas De Informacao",
+            "value": 4
+        },
+        "027090": {
+            "id": "027090",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Empreendedores Em Informatica",
+            "value": 4
+        },
+        "027170": {
+            "id": "027170",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Topicos De Informatica 3",
+            "value": 4
+        },
+        "027189": {
+            "id": "027189",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Topicos Em Informatica 4",
+            "value": 4
+        },
+        "027260": {
+            "id": "027260",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Projeto E Manufatura Assistidos Por Computador",
+            "value": 4
+        },
+        "027278": {
+            "id": "027278",
+            "type": "disciplina",
+            "condition": "id('027375') || id('027324')",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Microcontroladores E Aplicações",
+            "value": 4
+        },
+        "027286": {
+            "id": "027286",
+            "type": "disciplina",
+            "condition": "id('027375') || id('027324')",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Laboratório De Microcontroladores E Aplicações",
+            "value": 2
+        },
+        "027430": {
+            "id": "027430",
+            "type": "disciplina",
+            "condition": "id('021270') || id('025305')",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Tecnologia E Comunicação De Dados",
+            "value": 4
+        },
+        "027448": {
+            "id": "027448",
+            "type": "disciplina",
+            "condition": "id('027359') || id('482226') || id('343200')",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Arquitetura De Sistemas Computacionais De Alto Desempenho",
+            "value": 4
+        },
+        "027456": {
+            "id": "027456",
+            "type": "disciplina",
+            "condition": "id('150010') || id('152056')",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Análise De Desempenho De Sistemas Computacionais",
+            "value": 4
+        },
+        "027464": {
+            "id": "027464",
+            "type": "disciplina",
+            "condition": "(id('025208') || id('343161')) && (id('025089') || id('343250')) && (id('025216') || id('341177'))",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Introdução À Bioinformática",
+            "value": 4
+        },
+        "027499": {
+            "id": "027499",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Empreendedorismo E Desenvolvimento De Negócios",
+            "value": 4
+        },
+        "029009": {
+            "id": "029009",
+            "type": "disciplina",
+            "condition": "id('025607') || id('483559') || id('026018') || id('343269')",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Metodologia Científica E Gerenciamento De Projetos",
+            "value": 4
+        },
+        "281190": {
+            "id": "281190",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 6",
+                "OPT.PROFIS."
+            ],
+            "name": "Teorias Dos Jogos",
+            "value": 2
+        },
+        "020290": {
+            "id": "020290",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 7",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Tópicos Avançados A",
+            "value": 4
+        },
+        "020362": {
+            "id": "020362",
+            "type": "disciplina",
+            "condition": " ",
+            "tags": [
+                "Perfil 7",
+                "Optativa de Humanas ou Computação"
+            ],
+            "name": "Tópicos Avançados B",
+            "value": 4
+        },
+        "020680": {
+            "id": "020680",
+            "type": "disciplina",
+            "condition": "id('025070') || id('343137') || ((id('481114') || id('343323')) && id('481220'))",
+            "tags": [
+                "Perfil 7",
+                "Obrigatória"
+            ],
+            "name": "Desenvolvimento De Software Para A Web",
+            "value": 4
+        },
+        "023582": {
+            "id": "023582",
+            "type": "disciplina",
+            "condition": "(id('025089') || id('025054') || id('020184') || id('025011') || id('025070') || ((id('481114') || id('343323')) && id('481220')) || id('343137') || id('343250')) && (id('083020') || ((id('092410') || id('020168')) && id('092444')))",
+            "tags": [
+                "Perfil 7",
+                "OPT.PROFIS."
+            ],
+            "name": "Matemática Computacional",
+            "value": 4
+        },
+        "025321": {
+            "id": "025321",
+            "type": "disciplina",
+            "condition": "id('025305') || id('021270') || id('021245')",
+            "tags": [
+                "Perfil 7",
+                "Obrigatória"
+            ],
+            "name": "Sistemas Distribuidos",
+            "value": 4
+        },
+        "026182": {
+            "id": "026182",
+            "type": "disciplina",
+            "condition": "sum(queryAll('done')) >= 140",
+            "tags": [
+                "Perfil 8",
+                "Estágio"
+            ],
+            "name": "Trabalho De Graduacao",
+            "value": 26
+        },
+        "026190": {
+            "id": "026190",
+            "type": "disciplina",
+            "condition": "sum(queryAll('done')) >= 160",
+            "tags": [
+                "Perfil 8",
+                "Estágio"
+            ],
+            "name": "Estágio Em Computação",
+            "value": 24
+        },
+        "026239": {
+            "id": "026239",
+            "type": "disciplina",
+            "condition": "sum(queryAll('done')) >= 160",
+            "tags": [
+                "Perfil 8",
+                "Estágio"
+            ],
+            "name": "Seminários Em Computação",
+            "value": 2
         }
     }
 }
-
