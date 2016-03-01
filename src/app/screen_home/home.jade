@@ -5,12 +5,16 @@ div(layout="row", layout-fill, layout-align="center center")
         layout="column",
         layout-align="center center",
         flex-xs="95",
-        flex-sm="55",
+        flex-sm="60",
         flex-md="40",
         flex-lg="35",
         flex-xl="30"
     )
-        h1 Agrade
+
+        div.title
+            img.logo(src="assets/images/logo.png" alt="Agrade logo")
+            h1 Agrade
+            span.version v{{version}}
         h5 Seu auxiliar de curso
         //span.version v1.0.0
         h3 Selecione sua universidade
@@ -54,7 +58,7 @@ div(layout="row", layout-fill, layout-align="center center")
             md-not-found
                 | Nenhum resultado encontrado
         br
-        md-button.entrar(
+        md-button.md-raised.entrar(
             ng-disabled="!curso",
             ui-sref="grade"
             )
