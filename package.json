@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://gitlab.com/Otho/Agrade.git"
   },
-  "version": "1.0.0-alpha-0",
+  "version": "1.0.0",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-animate": "^1.5.0",
@@ -56,6 +56,7 @@
     "grunt-replace": "^0.11.0",
     "grunt-sass": "^1.0.0",
     "grunt-svgmin": "^3.1.2",
+    "grunt-text-replace": "^0.4.0",
     "ink-docstrap": "^1.0.0",
     "jit-grunt": "^0.9.1",
     "load-grunt-tasks": "^3.3.0",

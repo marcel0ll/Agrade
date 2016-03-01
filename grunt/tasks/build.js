@@ -10,7 +10,8 @@ module.exports = function( grunt ) {
             "sass:dev",
             "babel:dev",
             "injector:dependencies",
-            "injector:dev"
+            "injector:dev",
+            "replace:dev"
         ]);
     });
 
