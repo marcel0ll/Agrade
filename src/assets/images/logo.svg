@@ -16,7 +16,10 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    viewBox="0 0 64 64"
-   sodipodi:docname="logo.svg">
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/otho/workspaces/Agrade/src/assets/images/logo.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs3354">
     <linearGradient
@@ -91,8 +94,8 @@
      id="layer2"
      inkscape:label="check">
     <path
-       style="fill:#289e7f;fill-opacity:1;fill-rule:evenodd;stroke:#145241;stroke-width:0.79227608px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 15.257888,33.577769 8.616304,-5.188646 8.879878,11.822768 6.005028,-27.79327 11.5676,4.070463 -16.595058,33.872833 z"
+       style="fill:#289e7f;fill-opacity:1;fill-rule:evenodd;stroke:#145241;stroke-width:1.06550336px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 8.1252337,34.872891 14.339742,28.875909 26.495846,42.60921 49.174883,10.820335 54.95193,15.496008 26.356844,53.947752 Z"
        id="path4192"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc" />
