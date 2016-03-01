@@ -4,8 +4,8 @@ angular.module("Agrade")
     .config(function( $stateProvider ) {
         $stateProvider
             .state("home", {
-                url: "/a",
-                templateUrl: "app/home/home.html",
+                url: "/",
+                templateUrl: "app/screen_home/home.html",
                 controller: "HomeController",
                 controllerAs: "home"
             });

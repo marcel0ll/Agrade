@@ -17,8 +17,8 @@ body > div {
 
 // /* injector:scss */
  @import '../app/fonts.scss';
- @import '../app/grade/grade.scss';
- @import '../app/home/home.scss';
- @import '../components/sidenav/sidenav.scss';
- @import '../components/topToolbar/topToolbar.scss';
+ @import '../app/general_components/sidenav/sidenav.scss';
+ @import '../app/general_components/topToolbar/topToolbar.scss';
+ @import '../app/screen_grade/grade.scss';
+ @import '../app/screen_home/home.scss';
  /* injectorend */

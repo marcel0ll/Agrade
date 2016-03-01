@@ -4,8 +4,8 @@ angular.module("Agrade")
     .config(function( $stateProvider ) {
         $stateProvider
             .state("grade", {
-                url: "/",
-                templateUrl: "app/grade/grade.html",
+                url: "/grade",
+                templateUrl: "app/screen_grade/grade.html",
                 controller: "GradeController",
                 controllerAs: "grade"
             });
