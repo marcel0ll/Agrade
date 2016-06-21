@@ -13,7 +13,7 @@ module.exports = function( grunt ) {
 
     // Inits configuration
     require("load-grunt-config")( grunt, {
-        configPath: path.join( process.cwd(), "grunt/options/"),
+        configPath: path.join( process.cwd(), "./grunt/options/"),
         data: {
             pkg: grunt.file.readJSON("package.json")
         }

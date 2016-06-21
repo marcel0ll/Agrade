@@ -1,3 +1,4 @@
+$backgroundColor: #F1F1F1;
 $color1: #9D9483;
 $color2: #A0BFAD;
 $color3: #97D2BE;
@@ -12,13 +13,11 @@ $color5: #FFF5D2;
 
 body > div {
     height: 100%;
-    background-color: #F1F1F1
+    background-color: $backgroundColor;
 }
 
 // /* injector:scss */
+ @import '../app/apresentacao/capa/home.scss';
+ @import '../app/apresentacao/grade/grade.scss';
  @import '../app/fonts.scss';
- @import '../app/general_components/sidenav/sidenav.scss';
- @import '../app/general_components/topToolbar/topToolbar.scss';
- @import '../app/screen_grade/grade.scss';
- @import '../app/screen_home/home.scss';
  /* injectorend */
