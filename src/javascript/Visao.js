@@ -221,8 +221,11 @@
 
         lookDown(disciplinasObj, null, -1, this.$listaDeDisciplinas);
 
-        if(typeof infoId !== 'undefined')
-            $($('.info[data-id='+ infoId + ']')[0]).addClass( 'selecionado' );
+        if(typeof infoId !== 'undefined') {
+            var element =  $($('.info[data-id='+ infoId + ']')[0]);
+            element.addClass( 'selecionado' );
+            $('span', element).toggleClass('glyphicon-chevron-left glyphicon-info-sign');
+        }
 
         //Adicione evento no checkbox de cada disciplina
         $('.checkbox', this.$listaDeDisciplinas).click(function ( ) {
