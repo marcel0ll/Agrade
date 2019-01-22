@@ -27,16 +27,16 @@
         this.minimizar = true;
         this.desejaDesfazer = false;
 
-        this.iniciarEvent = new Pogad.Event( this );
-        this.carregarCursoEvent = new Pogad.Event( this );
+        this.iniciarEvent = new Agrade.Event( this );
+        this.carregarCursoEvent = new Agrade.Event( this );
 
-        this.checkboxCliqueEvent = new Pogad.Event( this );
-        this.infoCliqueEvent = new Pogad.Event( this );
+        this.checkboxCliqueEvent = new Agrade.Event( this );
+        this.infoCliqueEvent = new Agrade.Event( this );
 
-        this.separadorCliqueEvent = new Pogad.Event( this );
+        this.separadorCliqueEvent = new Agrade.Event( this );
 
-        this.desfazerTodosEvent = new Pogad.Event( this );
-        this.mudarPesquisaEvent = new Pogad.Event( this );
+        this.desfazerTodosEvent = new Agrade.Event( this );
+        this.mudarPesquisaEvent = new Agrade.Event( this );
 
         $( '.footer-version' ).text( versao );
 
@@ -349,6 +349,6 @@
 
     };
 
-    window.Pogad = window.Pogad || { };
-    window.Pogad.Visao = Visao;
+    window.Agrade = window.Agrade || { };
+    window.Agrade.Visao = Visao;
 })();

@@ -27,6 +27,6 @@
         }
     }
 
-    window.Pogad = window.Pogad || { };
-    window.Pogad.Event = Event;
+    window.Agrade = window.Agrade || { };
+    window.Agrade.Event = Event;
 })();

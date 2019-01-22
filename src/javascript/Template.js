@@ -7,7 +7,7 @@
         this.separadorConteudo = '<div class="separador-conteudo row">';
         this._itemCurso;
 
-        this.caregarItemCursoEvent = new Pogad.Event ( this );
+        this.caregarItemCursoEvent = new Agrade.Event ( this );
 
         this.requisitarArquivosHtml( );
     }
@@ -38,6 +38,6 @@
         }
     });
 
-    window.Pogad = window.Pogad || { };
-    window.Pogad.Template = Template;
+    window.Agrade = window.Agrade || { };
+    window.Agrade.Template = Template;
 } )( );

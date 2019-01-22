@@ -34,7 +34,7 @@
         if( sucesso ){
             this.visao.iniciarSelecaoDeCurso( listaDeCursos );
         }else{
-            throw new Error( 'Erro: Arquivo de setup não encontrado ou inválido.\nPor favor reporte esse em https://github.com/0tho/Pogad/issues' );
+            throw new Error( 'Erro: Arquivo de setup não encontrado ou inválido.\nPor favor reporte esse em https://github.com/0tho/Agrade/issues' );
         }
     };
 
@@ -76,6 +76,6 @@
     };
 
 
-    window.Pogad = window.Pogad || {};
-    window.Pogad.Controlador = Controlador;
+    window.Agrade = window.Agrade || {};
+    window.Agrade.Controlador = Controlador;
 })();

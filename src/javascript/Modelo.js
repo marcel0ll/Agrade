@@ -10,13 +10,13 @@
         this.infoSelected;
         this.ultimoInfo;
 
-        this.carregarCursoEvent = new Pogad.Event(this);
-        this.carregarListaDeCursosEvent = new Pogad.Event(this);
+        this.carregarCursoEvent = new Agrade.Event(this);
+        this.carregarListaDeCursosEvent = new Agrade.Event(this);
 
-        this.pesquisaProcessadaEvent = new Pogad.Event( this );
-        this.itemsModificadosEvent = new Pogad.Event( this );
+        this.pesquisaProcessadaEvent = new Agrade.Event( this );
+        this.itemsModificadosEvent = new Agrade.Event( this );
 
-        this.cabecalhoModificadoEvent = new Pogad.Event( this );
+        this.cabecalhoModificadoEvent = new Agrade.Event( this );
     };
 
     // Função que carrega arquivo json com informações do curso
@@ -513,6 +513,6 @@
         });
     };
 
-    window.Pogad = window.Pogad || { };
-    window.Pogad.Modelo = Modelo
+    window.Agrade = window.Agrade || { };
+    window.Agrade.Modelo = Modelo
 })();
