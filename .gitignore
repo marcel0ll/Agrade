@@ -3,4 +3,6 @@ dist
 .tmp
 bower_components
 
-/projeto
+projeto
+build
+dev
