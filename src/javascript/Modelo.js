@@ -426,7 +426,7 @@ export default class Modelo {
         this.curso.disciplinas.forEach(function(disciplina) {
             disciplina.feita = false;
 
-            libera = $.grep(_this.curso.disciplinas, function(e) {
+            let libera = $.grep(_this.curso.disciplinas, function(e) {
                 return $.inArray(disciplina.id, e.requisitos) !== -1;
             });
             libera.forEach(function(disciplina) {
@@ -453,6 +453,7 @@ export default class Modelo {
             if (disciplina.liberada) {
                 disciplina.feita = !disciplina.feita;
                 disciplinasModificadas.push(disciplina);
+                let libera;
                 if (disciplina.feita) {
                     libera = $.grep(this.curso.disciplinas, function(e) {
                         return $.inArray(id, e.requisitos) !== -1;
@@ -548,7 +549,7 @@ export default class Modelo {
         return true;
     }
     _verificarDisciplinasComCreditosMinimos(modificadas) {
-        var libera = $.grep(this.curso.disciplinas, function(e) {
+        let libera = $.grep(this.curso.disciplinas, function(e) {
                 return typeof e.minCreditos !== "undefined";
             }),
             _this = this;

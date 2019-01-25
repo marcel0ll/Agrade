@@ -308,7 +308,7 @@ export default class Visao {
 
     atualizarDisciplinas(disciplinas) {
         disciplinas.forEach(function(disciplina) {
-            $disciplina = $($(".checkbox[data-id=" + disciplina.id + "]")[0]);
+            let $disciplina = $($(".checkbox[data-id=" + disciplina.id + "]")[0]);
 
             if (disciplina.liberada) {
                 $disciplina.removeClass("trancada");
